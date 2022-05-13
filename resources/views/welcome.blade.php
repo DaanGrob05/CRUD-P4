@@ -9,6 +9,7 @@
         <!-- Fonts -->
 
         <!-- Styles -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     </head>
     <body class="antialiased">
@@ -27,5 +28,7 @@
                 </div>
             @endif
         </div>
+
+        <p class="test">Hoi</p>
     </body>
 </html>

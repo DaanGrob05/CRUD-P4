@@ -1,4 +1,110 @@
-.test {
-  color: plum;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.body {
+  height: 3000px;
+  width: 100%;
+}
+
+.landingSpacer {
+  height: 95vh;
+  width: 100%;
+  background-image: url(https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 80vh;
+  width: 100%;
+}
+.landing .landingContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 80%;
+  width: 75%;
+}
+
+.flightsFormCon {
+  height: 100%;
+  width: 40%;
+  background-color: #f5f5f5;
+}
+
+.flightsNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 20%;
+  width: 100%;
+}
+.flightsNav .flightsNavItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 100%;
+  width: 25%;
+  background-color: aqua;
+}
+.flightsNav .flightsNavItem a {
+  font-size: larger;
+  text-decoration: none;
+}
+.flightsNav .formTitle {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+}
+
+.extraInfo {
+  height: 90%;
+  width: 20%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.contentSpacer {
+  height: 70vh;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.content .contentHeader {
+  height: 20%;
+  width: 75%;
+  background-color: bisque;
+}
+.content .contentBody {
+  height: 80%;
+  width: 75%;
+  background-color: #f5f5f5;
 }
 

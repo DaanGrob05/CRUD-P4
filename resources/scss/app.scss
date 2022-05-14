@@ -29,9 +29,69 @@ $tertiary: #fe6f5e; // tertiary color
     background-size: cover;
 }
 nav {
+    @include customFlex(center, column);
     height: 10vh;
     width: 100%;
-    background-color: $primary;
+    .userItemsCon {
+        @include customFlex(center, row);
+        height: 50%;
+        width: 75%;
+        margin-top: 30px;
+    }
+    .navItemsCon {
+        @include customFlex(none, row);
+        height: 50%;
+        width: 75%;
+    }
+}
+.unifiedLogo {
+    height: 100%;
+    width: fit-content;
+    color: #f5f5f5;
+    font-size: 1.4em;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: #fe6f5e;
+    }
+}
+.userEmptySpace {
+    height: 100%;
+    width: 73%;
+}
+.userItem {
+    @include customFlex(center, row);
+    height: 100%;
+    width: fit-content;
+    color: #f5f5f5;
+    font-size: 0.9em;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: #fe6f5e;
+    }
+}
+.navEmptySpace {
+    height: 100%;
+    width: 55%;
+}
+.navItem {
+    @include customFlex(center, column);
+    height: 100%;
+    width: fit-content;
+    color: #f5f5f5;
+    font-size: 1em;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: #fe6f5e;
+    }
 }
 .landing {
     @include customFlex(center, row);

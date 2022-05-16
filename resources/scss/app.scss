@@ -49,8 +49,10 @@ nav {
     width: fit-content;
     color: #f5f5f5;
     font-size: 1.4em;
+    font-weight: bold;
     padding: 10px;
     text-decoration: none;
+
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
     &:hover {
@@ -85,6 +87,7 @@ nav {
     width: fit-content;
     color: #f5f5f5;
     font-size: 1em;
+
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;

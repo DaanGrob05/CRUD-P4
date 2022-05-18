@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +22,15 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/home', function () {
+    if (Auth::user()->is_admin == 1) {
+        return redirect()->route('admin');
+    } else {
+        return redirect()->route('dashboard');
+    }
+})->name('home');
+
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
 require __DIR__ . '/auth.php';

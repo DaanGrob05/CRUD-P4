@@ -50,7 +50,11 @@
                 <a>Search</a>
             </div>
             <div class="userItem">
+                @if(Auth::check())
+                <a href="{{ route('home') }}">Home</a>
+                @else
                 <a href="{{ route('login') }}">sign in</a>
+                @endif
             </div>
             <div class="userItem">
                 {{-- shoppingcart icon needs to be added --}}

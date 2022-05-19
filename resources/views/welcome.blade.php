@@ -145,5 +145,7 @@
       </div>
     </div>
     <footer></footer>
+    <script type="text/javascript" src="{{ asset('js/slider.js') }}"></script>
     </body>
+    
 </html>

@@ -51,7 +51,7 @@
             </div>
             <div class="userItem">
                 @if(Auth::check())
-                <a href="{{ route('home') }}">Home</a>
+                <a href="{{ route('home') }}">Profile</a>
                 @else
                 <a href="{{ route('login') }}">sign in</a>
                 @endif

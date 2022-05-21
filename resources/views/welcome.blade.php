@@ -98,22 +98,87 @@
           <div class="flightsFormCon">
             <div class="flightsNav">
               <div class="flightsNavItem">
-                <a>example</a>
+                <a>flights</a>
               </div>
               <div class="flightsNavItem">
-                <a>example</a>
+                {{-- <a>example</a> --}}
               </div>
               <div class="flightsNavItem">
-                <a>example</a>
+                {{-- <a>example</a> --}}
               </div>
               <div class="flightsNavItem">
-                <a>example</a>
+                {{-- <a>example</a> --}}
               </div>
             </div>
-            <div class="formTitle">
-              <p>Flight</p>
-            </div>
-            <form></form>
+            <form class="findFlightsForm">
+              <div class="typeTripCon">
+                <label class="radioLabel">
+                  <input
+                    class="radioInput"
+                    type="radio"
+                    name="typeTrip"
+                    id="oneWay"
+                  />
+                  <span class="radioSpan">One-Way</span>
+                </label>
+                <label class="radioLabel">
+                  <input
+                    class="radioInput"
+                    type="radio"
+                    name="typeTrip"
+                    id="roundTrip"
+                  />
+                  <span class="radioSpan">Round-Trip</span>
+              </div>
+              <div class="fromToCon">
+                  <div class="group">
+                    <input class="textInput" type="text" id="name" required="required" />
+                    <label class="textLabel" for="name">from*</label>
+                    <div class="bar"></div>
+                  </div>
+                  <!-- make font bigger before and after -->
+                  <div class="group">
+                    <input class="textInput" type="text" id="name" required="required" />
+                    <label class="textLabel" for="name">to*</label>
+                    <div class="bar"></div>
+                  </div>
+              </div>
+              <div class="datesPassengersCon">
+                <div class="group">
+                    <label class="dateLabel">departure date*</label>
+                    <input class="textInput" type="date" id="date" required="required" />
+                    <div class="bar"></div>
+                </div>
+                <div class="group">
+                    <label class="dateLabel">return date</label>
+                    <input class="textInput" type="date" id="name" required="required" />
+                    <div class="bar"></div>
+                </div>
+              </div>
+              <div class="tripClass">
+                <label class="radioLabel">
+                  <input
+                    class="radioInput"
+                    type="radio"
+                    name="tripClass"
+                    id="economy"
+                  />
+                  <span class="radioSpan">Economy</span>
+                </label>
+                <label class="radioLabel">
+                  <input
+                    class="radioInput"
+                    type="radio"
+                    name="tripClass"
+                    id="business"
+                  />
+                  <span class="radioSpan">Business</span>
+                </label>
+              </div>
+              <div class="findFlightsButton">
+                <button type="button" class="button"> <a href="">find flight</a></button>
+              </div>
+            </form>
           </div>
           <div class="extraInfo">
             <!--  -->

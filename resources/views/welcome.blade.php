@@ -133,24 +133,24 @@
               <div class="fromToCon">
                   <div class="group">
                     <input class="textInput" type="text" id="name" required="required" />
-                    <label class="textLabel" for="name">from*</label>
+                    <label class="textLabel" for="name">From*</label>
                     <div class="bar"></div>
                   </div>
                   <!-- make font bigger before and after -->
                   <div class="group">
                     <input class="textInput" type="text" id="name" required="required" />
-                    <label class="textLabel" for="name">to*</label>
+                    <label class="textLabel" for="name">To*</label>
                     <div class="bar"></div>
                   </div>
               </div>
               <div class="datesPassengersCon">
                 <div class="group">
-                    <label class="dateLabel">departure date*</label>
+                    <label class="dateLabel">Departure date*</label>
                     <input class="textInput" type="date" id="date" required="required" />
                     <div class="bar"></div>
                 </div>
                 <div class="group">
-                    <label class="dateLabel">return date</label>
+                    <label class="dateLabel">Return date</label>
                     <input class="textInput" type="date" id="name" required="required" />
                     <div class="bar"></div>
                 </div>
@@ -176,7 +176,7 @@
                 </label>
               </div>
               <div class="findFlightsButton">
-                <button type="button" class="button"> <a href="">find flight</a></button>
+                <button type="button" class="button"> <a href="">Find flight</a></button>
               </div>
             </form>
           </div>

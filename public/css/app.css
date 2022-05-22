@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-.body {
-  height: 3000px;
-  width: 100%;
-}
-
 .landingSpacer {
   height: 95vh;
   width: 100%;
@@ -25,7 +20,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 10vh;
+  height: 15vh;
   width: 100%;
 }
 nav .userItemsCon {
@@ -293,15 +288,7 @@ nav .navItemsCon {
   background: #002244;
   width: 200px;
   height: 1px;
-  transition: 0.3s ease;
   position: relative;
-}
-.bar:before {
-  content: "";
-  position: absolute;
-  height: 150%;
-  background: #002244;
-  transform: translateX(-100%);
 }
 
 .datesPassengersCon {
@@ -347,6 +334,10 @@ nav .navItemsCon {
   border-radius: 5px;
   background-color: #002244;
   box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s;
+}
+.findFlightsButton .button:hover {
+  background-color: #001429;
 }
 .findFlightsButton .button a {
   font-size: larger;
@@ -388,6 +379,249 @@ nav .navItemsCon {
 
 .test {
   background-color: plum;
+}
+
+.loginSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.loginSpacer #blueNav {
+  background-color: #002244;
+}
+.loginSpacer #blueNav :hover {
+  background-color: #f5f5f5;
+}
+
+.loginCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 89vh;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.loginCon .loginFormCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 100%;
+  width: 100%;
+}
+.loginCon .loginFormCon .loginForm {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+.titleLoginForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 25%;
+  width: 100%;
+  background-color: #002244;
+  border-radius: 5px 5px 0px 0px;
+}
+.titleLoginForm .loginTitleText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 100%;
+  width: 100%;
+  font-size: larger;
+  color: #f5f5f5;
+}
+
+#loginFormGroup {
+  height: 17.5%;
+  width: 55%;
+}
+#loginFormGroup #generalTextInput {
+  padding-top: 16.6666666667px;
+  font-size: 16.6666666667px;
+}
+#loginFormGroup #generalTextInput:valid ~ .textLabel {
+  font: 700 10px Roboto;
+}
+#loginFormGroup #generalTextInput:focus ~ .textLabel {
+  font: 700 12.5px Roboto;
+}
+#loginFormGroup #generalBar {
+  width: 250px;
+}
+
+.loginButtonCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 17%;
+  width: 100%;
+}
+.loginButtonCon .loginButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #002244;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s;
+}
+.loginButtonCon .loginButton:hover {
+  background-color: #001429;
+}
+.loginButtonCon .loginButton a {
+  font-size: larger;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+.rememberMeCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 17.5%;
+  width: 100%;
+}
+
+.forgot-register-Con {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 10%;
+  width: 100%;
+}
+.forgot-register-Con .forgotPass {
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.forgot-register-Con .registerCon {
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.registerSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.registerSpacer #blueNav {
+  background-color: #002244;
+}
+.registerSpacer #blueNav :hover {
+  background-color: black;
+}
+
+.registerCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 89vh;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.registerCon .registerFormCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 100%;
+  width: 100%;
+}
+.registerCon .registerFormCon .registerForm {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: flex-start;
+  height: 70%;
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+.titleRegisterForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 17.5%;
+  width: 100%;
+  background-color: #002244;
+  border-radius: 5px 5px 0px 0px;
+}
+.titleRegisterForm .registerTitleText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 100%;
+  width: 100%;
+  font-size: larger;
+  color: #f5f5f5;
+}
+
+.registeredCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 5%;
+  width: 100%;
+}
+
+#registerFormGroup {
+  height: 18%;
+  width: 55%;
+}
+#registerFormGroup #generalTextInput {
+  padding-top: 16.6666666667px;
+  font-size: 16.6666666667px;
+}
+#registerFormGroup #generalTextInput:valid ~ .textLabel {
+  font: 700 10px Roboto;
+}
+#registerFormGroup #generalTextInput:focus ~ .textLabel {
+  font: 700 12.5px Roboto;
+}
+#registerFormGroup #generalTextInput:focus ~ .bar:before {
+  transform: translateX(0);
+}
+#registerFormGroup #generalBar {
+  width: 250px;
+}
+#registerFormGroup #generalBar:before {
+  content: "";
+  position: absolute;
+  height: 150%;
+  background: #002244;
+  transform: translateX(-100%);
 }
 
 

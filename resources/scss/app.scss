@@ -8,7 +8,9 @@
 // variables
 $primary: #f5f5f5; // primary color
 $secondary: #002244; // secondary color
+
 $tertiary: #f28482; // tertiary color
+$quaternary: #3a3335; // quaternary color
 
 // mixins
 @mixin customFlex($justifyContent, $flexDirection) {
@@ -16,10 +18,6 @@ $tertiary: #f28482; // tertiary color
     justify-content: $justifyContent;
     align-items: center;
     flex-direction: $flexDirection;
-}
-.body {
-    height: 3000px;
-    width: 100%;
 }
 .landingSpacer {
     height: 95vh;
@@ -31,7 +29,7 @@ $tertiary: #f28482; // tertiary color
 }
 nav {
     @include customFlex(center, column);
-    height: 10vh;
+    height: 15vh;
     width: 100%;
     .userItemsCon {
         @include customFlex(center, row);
@@ -260,24 +258,9 @@ $width: 200px;
 
 .bar {
     background: $secondary;
-    // background: rgba(white, 0.5);
-    // content: "";
     width: $width;
-    // height: $width/100;
     height: 1px;
-    // transform: translateX(-100%);
-    transition: 0.3s ease;
-    // margin-top: -2px;
-    //
     position: relative;
-    &:before {
-        content: "";
-        position: absolute;
-        // width: 100%;
-        height: 150%;
-        background: $secondary;
-        transform: translateX(-100%);
-    }
 }
 
 // ::selection {
@@ -313,6 +296,10 @@ $width: 200px;
         border-radius: 5px;
         background-color: $secondary;
         box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.5s;
+        &:hover {
+            background-color: #001429;
+        }
         a {
             font-size: larger;
             text-decoration: none;
@@ -352,4 +339,195 @@ $width: 200px;
 
 .test {
     background-color: plum;
+}
+
+// login page
+.loginSpacer {
+    @include customFlex(none, column);
+    height: 100vh;
+    width: 100%;
+    #blueNav {
+        background-color: $secondary;
+        & :hover {
+            background-color: $primary;
+        }
+    }
+}
+.loginCon {
+    @include customFlex(center, none);
+    height: 89vh;
+    width: 100%;
+    background-color: $primary;
+    .loginFormCon {
+        @include customFlex(center, none);
+        height: 100%;
+        width: 100%;
+        .loginForm {
+            @include customFlex(none, column);
+            height: 50%;
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+.titleLoginForm {
+    @include customFlex(center, none);
+    height: 25%;
+    width: 100%;
+    background-color: $secondary;
+    border-radius: 5px 5px 0px 0px;
+    .loginTitleText {
+        @include customFlex(center, none);
+        height: 100%;
+        width: 100%;
+        font-size: larger;
+        color: $primary;
+    }
+}
+$generalWidth: 250px;
+#loginFormGroup {
+    height: 17.5%;
+    width: 55%;
+    #generalTextInput {
+        padding-top: $generalWidth/15;
+        font-size: $generalWidth/15;
+        &:valid {
+            ~ .textLabel {
+                font: 700 $generalWidth/25 Roboto;
+            }
+        }
+        &:focus {
+            ~ .textLabel {
+                font: 700 $generalWidth/20 Roboto;
+            }
+            // ~ .bar:before {
+            //     transform: translateX(0);
+            // }
+        }
+    }
+    #generalBar {
+        width: $generalWidth;
+    }
+}
+.loginButtonCon {
+    @include customFlex(center, none);
+    height: 17%;
+    width: 100%;
+    .loginButton {
+        @include customFlex(center, none);
+        height: 40px;
+        width: 250px;
+        border-radius: 5px;
+        background-color: $secondary;
+        box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.5s;
+        &:hover {
+            background-color: #001429;
+        }
+        a {
+            font-size: larger;
+            text-decoration: none;
+            color: $primary;
+        }
+    }
+}
+.rememberMeCon {
+    @include customFlex(center, none);
+    height: 17.5%;
+    width: 100%;
+}
+.forgot-register-Con {
+    @include customFlex(space-around, row);
+    height: 10%;
+    width: 100%;
+    .forgotPass {
+        height: 100%;
+        width: fit-content;
+    }
+    .registerCon {
+        height: 100%;
+        width: fit-content;
+    }
+}
+.registerSpacer {
+    @include customFlex(none, column);
+    height: 100vh;
+    width: 100%;
+    #blueNav {
+        background-color: $secondary;
+        & :hover {
+            background-color: black;
+        }
+    }
+}
+.registerCon {
+    @include customFlex(center, none);
+    height: 89vh;
+    width: 100%;
+    background-color: $primary;
+    .registerFormCon {
+        @include customFlex(center, none);
+        height: 100%;
+        width: 100%;
+        .registerForm {
+            @include customFlex(none, column);
+            flex-direction: flex-start;
+            height: 70%;
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+.titleRegisterForm {
+    @include customFlex(center, none);
+    height: 17.5%;
+    width: 100%;
+    background-color: $secondary;
+    border-radius: 5px 5px 0px 0px;
+    .registerTitleText {
+        @include customFlex(center, none);
+        height: 100%;
+        width: 100%;
+        font-size: larger;
+        color: $primary;
+    }
+}
+.registeredCon {
+    @include customFlex(center, none);
+    height: 5%;
+    width: 100%;
+}
+#registerFormGroup {
+    height: 18%;
+    width: 55%;
+    #generalTextInput {
+        padding-top: $generalWidth/15;
+        font-size: $generalWidth/15;
+        &:valid {
+            ~ .textLabel {
+                font: 700 $generalWidth/25 Roboto;
+            }
+        }
+        &:focus {
+            ~ .textLabel {
+                font: 700 $generalWidth/20 Roboto;
+            }
+            ~ .bar:before {
+                transform: translateX(0);
+            }
+        }
+    }
+    #generalBar {
+        width: $generalWidth;
+        &:before {
+            content: "";
+            position: absolute;
+            // width: 100%;
+            height: 150%;
+            background: $secondary;
+            transform: translateX(-100%);
+        }
+    }
 }

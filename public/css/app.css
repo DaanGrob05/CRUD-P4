@@ -12,7 +12,11 @@ body {
 }
 
 .landingSpacer {
-  height: 900px;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
   width: 100%;
   background-image: url(https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: center center;
@@ -33,6 +37,7 @@ nav .userItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  row-gap: 10px;
   height: auto;
   width: 75%;
 }
@@ -65,7 +70,7 @@ nav .navItemsCon {
 
 .userEmptySpace {
   height: auto;
-  width: 80%;
+  width: 70%;
 }
 
 .userItem {
@@ -74,12 +79,10 @@ nav .navItemsCon {
   align-items: center;
   flex-direction: row;
   height: auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: auto;
   color: #f5f5f5;
   font-size: 0.9em;
-  padding: 10px;
+  padding: 15px;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
@@ -117,22 +120,16 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 80vh;
-  width: 100%;
+  height: 700px;
+  width: 75%;
 }
 .landing .landingContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  height: 80%;
-  width: 75%;
-}
-
-.flightsFormCon {
   height: 100%;
-  width: 40%;
-  background-color: #f5f5f5;
+  width: 75%;
 }
 
 .flightsFormCon {
@@ -140,8 +137,8 @@ nav .navItemsCon {
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  height: 100%;
-  width: 40%;
+  height: auto;
+  width: 475px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -154,7 +151,7 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 15%;
+  height: 75px;
   width: 100%;
   background-color: #002244;
   border-top-left-radius: 5px;
@@ -167,6 +164,7 @@ nav .navItemsCon {
   flex-direction: none;
   height: 100%;
   width: 25%;
+  padding: 10px;
 }
 .flightsNav .flightsNavItem a {
   font-size: larger;
@@ -174,23 +172,59 @@ nav .navItemsCon {
   color: #f5f5f5;
 }
 
-.findFlightsForm {
+.formCon {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  height: auto;
   width: 100%;
-  padding: 15px;
 }
-
-.typeTripCon {
+.formCon form {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  row-gap: 20px;
+}
+.formCon form .typeTicketCon {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
-  height: 20%;
+  height: auto;
   width: 100%;
+  row-gap: 10px;
+}
+.formCon form .whereFromCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+}
+.formCon form .whenCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.formCon form .classCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
 }
 
 .radioLabel {
@@ -234,27 +268,17 @@ nav .navItemsCon {
   box-shadow: inset 0 0 0 0.125em #002244;
 }
 
-.fromToCon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  height: 20%;
-  width: 100%;
-}
-
 .group {
-  width: 45%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   position: relative;
 }
 
 .textLabel {
   position: absolute;
-  top: 13.3333333333px;
-  color: rgba(0, 0, 0, 0.5);
-  font: 400 13.3333333333px Roboto;
+  top: 6.6666666667px;
+  color: rgba(0, 0, 0, 0.9);
+  font: 400 20px Roboto;
   cursor: text;
   transition: 0.25s ease;
 }
@@ -267,7 +291,7 @@ nav .navItemsCon {
   border-radius: 5px;
   color: black;
   background: none;
-  font-size: 13.3333333333px;
+  font-size: 20px;
   transition: 0.3s ease;
 }
 .textInput:valid ~ .textLabel {
@@ -295,33 +319,21 @@ nav .navItemsCon {
   position: relative;
 }
 
-.datesPassengersCon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  height: 20%;
-  width: 100%;
+#loginFormGroup #generalTextInput {
+  padding-top: 13.3333333333px;
+  font-size: 13.3333333333px;
 }
-.datesPassengersCon .datesLabel {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: column;
-  font-size: larger;
-  color: #002244;
+#loginFormGroup #generalTextInput:valid ~ .textLabel {
+  font: 700 8px Roboto;
+}
+#loginFormGroup #generalTextInput:focus ~ .textLabel {
+  font: 700 10px Roboto;
+}
+#loginFormGroup #generalBar {
+  width: 200px;
 }
 
-.tripClass {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: row;
-  height: 25%;
-  width: 100%;
-}
-
-.findFlightsButton {
+.flightsButtonCon {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -331,7 +343,7 @@ nav .navItemsCon {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.findFlightsButton .button {
+.flightsButtonCon .flightsButton {
   width: 200px;
   height: 45px;
   border: none;
@@ -340,10 +352,10 @@ nav .navItemsCon {
   box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
   transition: background-color 0.5s;
 }
-.findFlightsButton .button:hover {
+.flightsButtonCon .flightsButton:hover {
   background-color: #001429;
 }
-.findFlightsButton .button a {
+.flightsButtonCon .flightsButton a {
   font-size: larger;
   text-decoration: none;
   color: #f5f5f5;
@@ -381,91 +393,90 @@ nav .navItemsCon {
   background-color: #f5f5f5;
 }
 
-.test {
-  background-color: plum;
-}
-
 .loginSpacer {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 700px;
   width: 100%;
 }
 .loginSpacer #blueNav {
   background-color: #002244;
 }
 
-.loginCon {
+.formCon {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  height: 89vh;
-  width: 100%;
-  background-color: #f5f5f5;
+  height: 525px;
 }
-.loginCon .loginFormCon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: none;
-  height: 100%;
-  width: 100%;
-}
-.loginCon .loginFormCon .loginForm {
+.formCon .loginForms {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  height: 50%;
-  width: 30%;
+  height: auto;
+  width: 475px;
   border-radius: 5px;
+  background-color: #f5f5f5;
   box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
 }
 
-.titleLoginForm {
+.loginHeader {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  height: 25%;
-  width: 100%;
   background-color: #002244;
-  border-radius: 5px 5px 0px 0px;
-}
-.titleLoginForm .loginTitleText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: none;
-  height: 100%;
+  height: auto;
   width: 100%;
-  font-size: larger;
+  border-radius: 5px 5px 0px 0px;
+  padding: 20px;
+  font-size: 20px;
   color: #f5f5f5;
 }
 
-#loginFormGroup {
-  height: 17.5%;
-  width: 55%;
-}
-#loginFormGroup #generalTextInput {
-  padding-top: 16.6666666667px;
-  font-size: 16.6666666667px;
-}
-#loginFormGroup #generalTextInput:valid ~ .textLabel {
-  font: 700 10px Roboto;
-}
-#loginFormGroup #generalTextInput:focus ~ .textLabel {
-  font: 700 12.5px Roboto;
-}
-#loginFormGroup #generalBar {
-  width: 250px;
+.loginFormCon {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
-.emailGroup {
-  margin-top: 20px;
+.loginForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.forgot-register-Con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.forgot-register-Con .forgotPass {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: auto;
+}
+.forgot-register-Con .registerCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: auto;
 }
 
 .loginButtonCon {
@@ -473,7 +484,6 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  height: 17%;
   width: 100%;
 }
 .loginButtonCon .loginButton {
@@ -482,7 +492,7 @@ nav .navItemsCon {
   align-items: center;
   flex-direction: none;
   height: 40px;
-  width: 250px;
+  width: 200px;
   border-radius: 5px;
   background-color: #002244;
   box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
@@ -495,51 +505,6 @@ nav .navItemsCon {
   font-size: larger;
   text-decoration: none;
   color: #f5f5f5;
-}
-
-.rememberMeCon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: none;
-  height: 17.5%;
-  width: 100%;
-}
-.rememberMeCon .rememberMe {
-  margin-bottom: 20px;
-}
-
-.forgot-register-Con {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  height: 10%;
-  width: 100%;
-}
-.forgot-register-Con .forgotPass {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: none;
-  height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-.forgot-register-Con .registerCon {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: none;
-  height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 15px;
-  margin-bottom: 5px;
 }
 
 .registerSpacer {
@@ -618,27 +583,17 @@ nav .navItemsCon {
   width: 55%;
 }
 #registerFormGroup #generalTextInput {
-  padding-top: 16.6666666667px;
-  font-size: 16.6666666667px;
+  padding-top: 13.3333333333px;
+  font-size: 13.3333333333px;
 }
 #registerFormGroup #generalTextInput:valid ~ .textLabel {
-  font: 700 10px Roboto;
+  font: 700 8px Roboto;
 }
 #registerFormGroup #generalTextInput:focus ~ .textLabel {
-  font: 700 12.5px Roboto;
+  font: 700 10px Roboto;
 }
 #registerFormGroup #generalTextInput:focus ~ .bar:before {
   transform: translateX(0);
-}
-#registerFormGroup #generalBar {
-  width: 250px;
-}
-#registerFormGroup #generalBar:before {
-  content: "";
-  position: absolute;
-  height: 150%;
-  background: #002244;
-  transform: translateX(-100%);
 }
 
 .nameGroup {

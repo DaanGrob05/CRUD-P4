@@ -45,11 +45,11 @@
                         <a>Search</a>
                     </div>
                     <div class="userItem">
-                        {{-- @if(Auth::check())
+                        @if(Auth::check())
                         <a href="{{ route('home') }}">Profile</a>
                         @else
                         <a href="{{ route('login') }}">sign in</a>
-                        @endif --}}
+                        @endif
                     </div>
                     <div class="userItem">
                         {{-- shoppingcart icon needs to be added --}}
@@ -87,70 +87,67 @@
                     </div>
 
                 </div>
-        </nav>
-        <div class="loginCon">
-            <div class="loginFormCon">
-                    <form class="loginForm" method="POST" action="{{ route('login') }}">
-                        <div class="titleLoginForm">
-                            <h1 class="loginTitleText">Sign into Unified</h1>
-                        </div>
-                        {{-- @csrf --}}
+            </nav>
+            <div class="formCon">
+              <div class="loginForms">
+                    <div class="loginHeader">
+                            <h1>Sign in</h1>
+                    </div>
+                    <div class="loginFormCon">
                         
-                        <!-- Email Address -->
-                        <div class="group emailGroup" id="loginFormGroup">
-                            {{-- <x-label for="email" :value="__('Email')" />
+                        <form class="loginForm" action="{{ route('login') }}" method="POST">
+                            {{-- email --}}
+                            <div class="group emailGroup" id="loginFormGroup">
+                                {{-- <x-label for="email" :value="__('Email')" />
                             <x-input id="email" class="" type="email" name="email" :value="old('email')" required autofocus /> --}}
                             {{-- bestand van x-input staat in views/auth/input.blade.php --}}
-
-                            <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
-                            <label class="textLabel" for="name">Email*</label>
-                            <div class="bar" id="generalBar"></div>
-                        </div>
-
-                        <!-- Password -->
-                        <div class="group" id="loginFormGroup">
-                            {{-- <x-label for="password" :value="__('Password')" />
+                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                                <label class="textLabel" for="name">Email*</label>
+                                <div class="bar" id="generalBar"></div>
+                            </div>
+                            {{-- password --}}
+                            <div class="group emailGroup" id="loginFormGroup">
+                                {{-- <x-label for="password" :value="__('Password')" />
 
                             <x-input id="password" class=""
                                             type="password"
                                             name="password"
                                             required autocomplete="current-password" /> --}}
-
-                            <input class="textInput" id="generalTextInput"  type="text" id="#" required="required" />
-                            <label class="textLabel"  for="name">Password*</label>
-                            <div class="bar" id="generalBar" ></div>
-                        </div>        
-                        <div class="loginButtonCon">
-                            {{-- <x-button class="button">
+                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                                <label class="textLabel" for="name">Password*</label>
+                                <div class="bar" id="generalBar"></div>
+                            </div>
+                            <div class="loginButtonCon">
+                                {{-- <x-button class="button">
                                 {{ __('Log in') }}
                             </x-button> --}}
-                            <button type="button" class="loginButton"> <a href="">Sign in</a></button>
-                        </div>
-                        <div class="rememberMeCon">
-                            <label for="remember_me" class="inline-flex items-center rem">
-                                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                            </label>
-                        </div>
-                        <div class="forgot-register-Con">
-                            <div class="forgotPass">
-                                @if (Route::has('password.request'))
-                                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                                        {{ __('Forgot your password?') }}
+                                <button type="button" class="loginButton"> <a href="">Sign in</a></button>
+                            </div>
+                            <div class="rememberMeCon">
+                                <label for="remember_me" class="inline-flex items-center rem">
+                                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                                </label>
+                            </div>
+                            <div class="forgot-register-Con">
+                                <div class="forgotPass">
+                                    @if (Route::has('password.request'))
+                                        <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                                            {{ __('Forgot your password?') }}
+                                        </a>
+                                    @endif
+                                </div>
+                                <div class="registerCon">
+                                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                                        {{ __("Don't have an account?") }}
                                     </a>
-                                @endif
+                                </div>
                             </div>
-                            <div class="registerCon">
-                                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
-                                    {{ __("Don't have an account?") }}
-                                </a>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
                     </div>
                 </div>
             </div>
-            <footer></footer>
+        </div>
     </body>
 </html> 
     {{-- </x-auth-card> --}}

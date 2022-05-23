@@ -110,86 +110,91 @@
                 {{-- <a>example</a> --}}
               </div>
             </div>
-            <form class="findFlightsForm">
-              <div class="typeTripCon">
-                <label class="radioLabel">
-                  <input
-                    class="radioInput"
-                    type="radio"
-                    name="typeTrip"
-                    id="oneWay"
-                  />
-                  <span class="radioSpan">One-Way</span>
-                </label>
-                <label class="radioLabel">
-                  <input
-                    class="radioInput"
-                    type="radio"
-                    name="typeTrip"
-                    id="roundTrip"
-                  />
-                  <span class="radioSpan">Round-Trip</span>
-              </div>
-              <div class="fromToCon">
-                  <div class="group">
-                    <input class="textInput" type="text" id="name" required="required" />
-                    <label class="textLabel" for="name">From*</label>
-                    <div class="bar"></div>
+            <div class="formCon">
+              <form action="">
+                
+                <div class="whereFromCon">
+                    <div class="group emailGroup" id="loginFormGroup">
+                      <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                      <label class="textLabel" for="name">from*</label>
+                      <div class="bar" id="generalBar"></div>
                   </div>
-                  <!-- make font bigger before and after -->
-                  <div class="group">
-                    <input class="textInput" type="text" id="name" required="required" />
-                    <label class="textLabel" for="name">To*</label>
-                    <div class="bar"></div>
+                  <div class="group emailGroup" id="loginFormGroup">
+                      <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                      <label class="textLabel" for="name">to*</label>
+                      <div class="bar" id="generalBar"></div>
                   </div>
-              </div>
-              <div class="datesPassengersCon">
-                <div class="group">
-                    <label class="dateLabel">Departure date*</label>
-                    <input class="textInput" type="date" id="date" required="required" />
-                    <div class="bar"></div>
                 </div>
-                <div class="group">
-                    <label class="dateLabel">Return date</label>
-                    <input class="textInput" type="date" id="name" required="required" />
-                    <div class="bar"></div>
+                <div class="typeTicketCon">
+                    <label class="radioLabel">
+                      <input
+                        class="radioInput"
+                        type="radio"
+                        name="typeTrip"
+                        id="oneWay"
+                      />
+                      <span class="radioSpan">One-Way</span>
+                    </label>
+                  <label class="radioLabel">
+                      <input
+                        class="radioInput"
+                        type="radio"
+                        name="typeTrip"
+                        id="oneWay"
+                      />
+                      <span class="radioSpan">One-Way</span>
+                  </label>
                 </div>
-              </div>
-              <div class="tripClass">
-                <label class="radioLabel">
-                  <input
-                    class="radioInput"
-                    type="radio"
-                    name="tripClass"
-                    id="economy"
-                  />
-                  <span class="radioSpan">Economy</span>
-                </label>
-                <label class="radioLabel">
-                  <input
-                    class="radioInput"
-                    type="radio"
-                    name="tripClass"
-                    id="business"
-                  />
-                  <span class="radioSpan">Business</span>
-                </label>
-              </div>
-              <div class="findFlightsButton">
-                <button type="button" class="button"> <a href="">Find flight</a></button>
-              </div>
-            </form>
+                <div class="whenCon">
+                   <div class="group">
+                        <label class="dateLabel">departure date*</label>
+                        <input class="textInput" type="date" id="date" required="required" />
+                        <div class="bar"></div>
+                    </div>
+                    <div class="group">
+                        <label class="dateLabel">return date</label>
+                        <input class="textInput" type="date" id="name" required="required" />
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div class="classCon">
+                  <label class="radioLabel">
+                      <input
+                        class="radioInput"
+                        type="radio"
+                        name="typeTrip"
+                        id="oneWay"
+                      />
+                      <span class="radioSpan">Economy</span>
+                  </label>
+                  <label class="radioLabel">
+                      <input
+                        class="radioInput"
+                        type="radio"
+                        name="typeTrip"
+                        id="oneWay"
+                      />
+                      <span class="radioSpan">Business</span>
+                  </label>
+                  
+                </div>
+                <div class="flightsButtonCon">
+                    <button class="flightsButton"><a>search</a></button>
+                  </div>
+              </form>
+            </div>
           </div>
-          <div class="extraInfo">
-            <!--  -->
-          </div>
+        </div>
+        <div class="extraInfo">
+          <!--  -->
         </div>
       </div>
     </div>
-    <div class="contentSpacer">
-    </div>
-    <footer></footer>
-    <script type="text/javascript" src="{{ asset('js/slider.js') }}"></script>
-    </body>
+  </div>
+  <div class="contentSpacer">
+  </div>
+  <footer></footer>
+  <script type="text/javascript" src="{{ asset('js/slider.js') }}"></script>
+  </body>
     
 </html>

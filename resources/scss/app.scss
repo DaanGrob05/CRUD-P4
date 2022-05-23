@@ -25,7 +25,8 @@ body {
     flex-direction: $flexDirection;
 }
 .landingSpacer {
-    height: 900px;
+    @include customFlex(none, column);
+    height: 700px;
     width: 100%;
     background-image: url(https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-position: center center;
@@ -38,6 +39,7 @@ nav {
     width: 100%;
     .userItemsCon {
         @include customFlex(center, row);
+        row-gap: 10px;
         height: auto;
         width: 75%;
     }
@@ -65,16 +67,15 @@ nav {
 }
 .userEmptySpace {
     height: auto;
-    width: 80%;
+    width: 70%;
 }
 .userItem {
     @include customFlex(center, row);
-
     height: auto;
-    width: fit-content;
+    width: auto;
     color: #f5f5f5;
     font-size: 0.9em;
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
@@ -101,25 +102,21 @@ nav {
         color: $secondary;
     }
 }
+
 .landing {
     @include customFlex(center, row);
-    height: 80vh;
-    width: 100%;
+    height: 700px;
+    width: 75%;
     .landingContent {
         @include customFlex(space-between, row);
-        height: 80%;
+        height: 100%;
         width: 75%;
     }
 }
 .flightsFormCon {
-    height: 100%;
-    width: 40%;
-    background-color: $primary;
-}
-.flightsFormCon {
     @include customFlex(none, column);
-    height: 100%;
-    width: 40%;
+    height: auto;
+    width: 475px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -128,7 +125,7 @@ nav {
 }
 .flightsNav {
     @include customFlex(center, row);
-    height: 15%;
+    height: 75px;
     width: 100%;
     background-color: $secondary;
     border-top-left-radius: 5px;
@@ -137,7 +134,7 @@ nav {
         @include customFlex(center, none);
         height: 100%;
         width: 25%;
-
+        padding: 10px;
         a {
             font-size: larger;
             text-decoration: none;
@@ -146,17 +143,41 @@ nav {
     }
 }
 
-.findFlightsForm {
+.formCon {
     @include customFlex(none, column);
-    height: 100%;
+    height: auto;
     width: 100%;
-    padding: 15px;
-}
-
-.typeTripCon {
-    @include customFlex(none, row);
-    height: 20%;
-    width: 100%;
+    form {
+        @include customFlex(none, column);
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        row-gap: 20px;
+        .typeTicketCon {
+            @include customFlex(none, row);
+            height: auto;
+            width: 100%;
+            row-gap: 10px;
+        }
+        .whereFromCon {
+            @include customFlex(space-between, row);
+            height: auto;
+            width: 100%;
+            row-gap: 10px;
+        }
+        .whenCon {
+            @include customFlex(space-between, row);
+            height: auto;
+            width: 100%;
+            row-gap: 20px;
+        }
+        .classCon {
+            @include customFlex(none, row);
+            height: auto;
+            width: 100%;
+            row-gap: 10px;
+        }
+    }
 }
 .radioLabel {
     display: flex;
@@ -199,25 +220,19 @@ nav {
     }
 }
 
-.fromToCon {
-    @include customFlex(space-between, row);
-    height: 20%;
-    width: 100%;
-}
-
 $width: 200px;
 .group {
-    width: 45%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
     position: relative;
 }
 
 .textLabel {
     position: absolute;
-    top: $width/15;
-    color: rgba(black, 0.5);
-    font: 400 $width/15 Roboto;
+    top: $width/30;
+    color: rgba(black, 0.9);
+    font: 400 $width/10 Roboto;
+
     cursor: text;
     transition: 0.25s ease;
 }
@@ -230,7 +245,7 @@ $width: 200px;
     border-radius: 5px;
     color: black;
     background: none;
-    font-size: $width/15;
+    font-size: 20px;
     transition: 0.3s ease;
     &:valid {
         ~ .textLabel {
@@ -268,34 +283,36 @@ $width: 200px;
     height: 1px;
     position: relative;
 }
-
-// ::selection {
-// background: rgba($secondary-color, 0.3);
-// }
-.datesPassengersCon {
-    @include customFlex(space-between, row);
-    height: 20%;
-    width: 100%;
-    .datesLabel {
-        @include customFlex(none, column);
-        font-size: larger;
-        color: $secondary;
+$generalWidth: 200px;
+#loginFormGroup {
+    #generalTextInput {
+        padding-top: $generalWidth/15;
+        font-size: $generalWidth/15;
+        &:valid {
+            ~ .textLabel {
+                font: 700 $generalWidth/25 Roboto;
+            }
+        }
+        &:focus {
+            ~ .textLabel {
+                font: 700 $generalWidth/20 Roboto;
+            }
+            // ~ .bar:before {
+            //     transform: translateX(0);
+            // }
+        }
+    }
+    #generalBar {
+        width: $generalWidth;
     }
 }
-
-.tripClass {
-    @include customFlex(none, row);
-    height: 25%;
-    width: 100%;
-}
-
-.findFlightsButton {
+.flightsButtonCon {
     @include customFlex(none, none);
     height: 15%;
     width: 100%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    .button {
+    .flightsButton {
         width: 200px;
         height: 45px;
         border: none;
@@ -343,87 +360,72 @@ $width: 200px;
     }
 }
 
-.test {
-    background-color: plum;
-}
-
 // login page
 .loginSpacer {
     @include customFlex(none, column);
-    height: 100vh;
+    height: 700px;
     width: 100%;
     #blueNav {
         background-color: $secondary;
     }
 }
-.loginCon {
+.formCon {
     @include customFlex(center, none);
-    height: 89vh;
-    width: 100%;
-    background-color: $primary;
-    .loginFormCon {
-        @include customFlex(center, none);
-        height: 100%;
-        width: 100%;
-        .loginForm {
-            @include customFlex(none, column);
-            height: 50%;
-            width: 30%;
-            border-radius: 5px;
-            box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
-        }
+    height: 525px;
+
+    .loginForms {
+        @include customFlex(none, column);
+        height: auto;
+        width: 475px;
+        border-radius: 5px;
+        background-color: $primary;
+        box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
     }
 }
-.titleLoginForm {
+
+.loginHeader {
     @include customFlex(center, none);
-    height: 25%;
+    background-color: #002244;
+    height: auto;
     width: 100%;
-    background-color: $secondary;
     border-radius: 5px 5px 0px 0px;
-    .loginTitleText {
-        @include customFlex(center, none);
-        height: 100%;
-        width: 100%;
-        font-size: larger;
-        color: $primary;
-    }
+    padding: 20px;
+    font-size: 20px;
+    color: $primary;
 }
-$generalWidth: 250px;
-#loginFormGroup {
-    height: 17.5%;
-    width: 55%;
-    #generalTextInput {
-        padding-top: $generalWidth/15;
-        font-size: $generalWidth/15;
-        &:valid {
-            ~ .textLabel {
-                font: 700 $generalWidth/25 Roboto;
-            }
-        }
-        &:focus {
-            ~ .textLabel {
-                font: 700 $generalWidth/20 Roboto;
-            }
-            // ~ .bar:before {
-            //     transform: translateX(0);
-            // }
-        }
-    }
-    #generalBar {
-        width: $generalWidth;
-    }
+.loginFormCon {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: $primary;
 }
-.emailGroup {
-    margin-top: 20px;
+.loginForm {
+    @include customFlex(center, column);
+    row-gap: 20px;
+}
+.forgot-register-Con {
+    @include customFlex(space-between, row);
+    height: auto;
+    width: 100%;
+    row-gap: 20px;
+    .forgotPass {
+        @include customFlex(none, none);
+        height: auto;
+        width: auto;
+    }
+    .registerCon {
+        @include customFlex(none, none);
+        height: auto;
+        width: auto;
+    }
 }
 .loginButtonCon {
     @include customFlex(center, none);
-    height: 17%;
     width: 100%;
     .loginButton {
         @include customFlex(center, none);
         height: 40px;
-        width: 250px;
+        width: 200px;
         border-radius: 5px;
         background-color: $secondary;
         box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
@@ -436,33 +438,6 @@ $generalWidth: 250px;
             text-decoration: none;
             color: $primary;
         }
-    }
-}
-.rememberMeCon {
-    @include customFlex(center, none);
-    height: 17.5%;
-    width: 100%;
-    .rememberMe {
-        margin-bottom: 20px;
-    }
-}
-.forgot-register-Con {
-    @include customFlex(space-around, row);
-    height: 10%;
-    width: 100%;
-    .forgotPass {
-        @include customFlex(none, none);
-        height: 100%;
-        width: fit-content;
-        font-size: 15px;
-        margin-bottom: 5px;
-    }
-    .registerCon {
-        @include customFlex(none, none);
-        height: 100%;
-        width: fit-content;
-        font-size: 15px;
-        margin-bottom: 5px;
     }
 }
 // register page
@@ -530,17 +505,6 @@ $generalWidth: 250px;
             ~ .bar:before {
                 transform: translateX(0);
             }
-        }
-    }
-    #generalBar {
-        width: $generalWidth;
-        &:before {
-            content: "";
-            position: absolute;
-            // width: 100%;
-            height: 150%;
-            background: $secondary;
-            transform: translateX(-100%);
         }
     }
 }

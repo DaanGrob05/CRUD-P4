@@ -7,3 +7,6 @@
         {{ __('Log Out') }}
     </x-dropdown-link>
 </form>
+
+<p><a href="{{ route('admin.reizen') }}">Bekijk alle reizen</a></p>
+<p><a href="{{ route('admin.users') }}">Bekijk alle gebruikers</a></p>

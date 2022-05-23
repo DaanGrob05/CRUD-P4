@@ -6,8 +6,13 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
 .landingSpacer {
-  height: 95vh;
+  height: 900px;
   width: 100%;
   background-image: url(https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: center center;
@@ -20,7 +25,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 15vh;
+  height: 125px;
   width: 100%;
 }
 nav .userItemsCon {
@@ -28,21 +33,21 @@ nav .userItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 50%;
+  height: auto;
   width: 75%;
-  margin-top: 30px;
 }
 nav .navItemsCon {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
-  height: 50%;
+  row-gap: 10px;
+  height: auto;
   width: 75%;
 }
 
 .unifiedLogo {
-  height: 100%;
+  height: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -59,8 +64,8 @@ nav .navItemsCon {
 }
 
 .userEmptySpace {
-  height: 100%;
-  width: 73%;
+  height: auto;
+  width: 80%;
 }
 
 .userItem {
@@ -68,7 +73,7 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 100%;
+  height: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -85,18 +90,17 @@ nav .navItemsCon {
 
 .navEmptySpace {
   height: 100%;
-  width: 55%;
+  width: 50%;
 }
 
 .navItem {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  flex-direction: row;
+  margin-left: auto;
+  height: auto;
+  width: auto;
   color: #f5f5f5;
   font-size: 1em;
   padding: 10px;
@@ -392,9 +396,6 @@ nav .navItemsCon {
 .loginSpacer #blueNav {
   background-color: #002244;
 }
-.loginSpacer #blueNav :hover {
-  background-color: #f5f5f5;
-}
 
 .loginCon {
   display: flex;
@@ -463,6 +464,10 @@ nav .navItemsCon {
   width: 250px;
 }
 
+.emailGroup {
+  margin-top: 20px;
+}
+
 .loginButtonCon {
   display: flex;
   justify-content: center;
@@ -500,6 +505,9 @@ nav .navItemsCon {
   height: 17.5%;
   width: 100%;
 }
+.rememberMeCon .rememberMe {
+  margin-bottom: 20px;
+}
 
 .forgot-register-Con {
   display: flex;
@@ -510,16 +518,28 @@ nav .navItemsCon {
   width: 100%;
 }
 .forgot-register-Con .forgotPass {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
   height: 100%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 .forgot-register-Con .registerCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
   height: 100%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 
 .registerSpacer {
@@ -532,9 +552,6 @@ nav .navItemsCon {
 }
 .registerSpacer #blueNav {
   background-color: #002244;
-}
-.registerSpacer #blueNav :hover {
-  background-color: black;
 }
 
 .registerCon {
@@ -571,7 +588,7 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  height: 17.5%;
+  height: 15%;
   width: 100%;
   background-color: #002244;
   border-radius: 5px 5px 0px 0px;
@@ -597,7 +614,7 @@ nav .navItemsCon {
 }
 
 #registerFormGroup {
-  height: 18%;
+  height: 12.5%;
   width: 55%;
 }
 #registerFormGroup #generalTextInput {
@@ -622,6 +639,39 @@ nav .navItemsCon {
   height: 150%;
   background: #002244;
   transform: translateX(-100%);
+}
+
+.nameGroup {
+  margin-top: 20px;
+}
+
+.registerButtonCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 15%;
+  width: 100%;
+}
+.registerButtonCon .registerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #002244;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s;
+}
+.registerButtonCon .registerButton:hover {
+  background-color: #001429;
+}
+.registerButtonCon .registerButton a {
+  font-size: larger;
+  text-decoration: none;
+  color: #f5f5f5;
 }
 
 

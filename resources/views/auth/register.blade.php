@@ -93,11 +93,11 @@
                             <h1 class="registerTitleText">Register to Unified</h1>
                         </div>
                         <!-- Name -->
-                        <div class="group" id="registerFormGroup">
+                        <div class="group nameGroup" id="registerFormGroup">
                             {{-- <x-label for="name" :value="__('Name')" />
                             <x-input id="name" class="" type="text" name="name" :value="old('name')" required autofocus /> --}}
                             <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
-                            <label class="textLabel" for="name">name*</label>
+                            <label class="textLabel" for="name">Name*</label>
                             <div class="bar" id="generalBar"></div>
                         </div>
 
@@ -137,11 +137,17 @@
                             <x-input id="password_confirmation" class=""
                                             type="password"
                                             name="password_confirmation" required /> --}}
+                        <div class="registerButtonCon">
+                            <button class="registerButton" type="submit">
+                                <a>{{ __('Register') }}</a>
+                            </button>
+                        </div>
                         <div class="registeredCon">
                             <a class="" href="{{ route('login') }}">
                                 {{ __('Already registered?') }}
                             </a>
                         </div>
+                        
                     </form>
                 </div>
             </div>

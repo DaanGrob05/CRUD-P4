@@ -97,7 +97,7 @@
                         {{-- @csrf --}}
                         
                         <!-- Email Address -->
-                        <div class="group" id="loginFormGroup">
+                        <div class="group emailGroup" id="loginFormGroup">
                             {{-- <x-label for="email" :value="__('Email')" />
                             <x-input id="email" class="" type="email" name="email" :value="old('email')" required autofocus /> --}}
                             {{-- bestand van x-input staat in views/auth/input.blade.php --}}
@@ -127,7 +127,7 @@
                             <button type="button" class="loginButton"> <a href="">Sign in</a></button>
                         </div>
                         <div class="rememberMeCon">
-                            <label for="remember_me" class="inline-flex items-center">
+                            <label for="remember_me" class="inline-flex items-center rem">
                                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
                                 <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                             </label>

@@ -187,31 +187,6 @@
       </div>
     </div>
     <div class="contentSpacer">
-      <!-- temp name -->
-      <div class="content">
-        <div class="contentHeader">
-          <h1></h1>
-        </div>
-        <div class="contentBody"></div>
-      </div>
-    </div>
-    <div class="contentSpacer">
-      <!-- temp name -->
-      <div class="content">
-        <div class="contentHeader">
-          <h1></h1>
-        </div>
-        <div class="contentBody"></div>
-      </div>
-    </div>
-    <div class="contentSpacer">
-      <!-- temp name -->
-      <div class="content">
-        <div class="contentHeader">
-          <h1></h1>
-        </div>
-        <div class="contentBody"></div>
-      </div>
     </div>
     <footer></footer>
     <script type="text/javascript" src="{{ asset('js/slider.js') }}"></script>

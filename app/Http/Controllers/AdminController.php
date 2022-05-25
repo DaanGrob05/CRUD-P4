@@ -26,4 +26,14 @@ class AdminController extends Controller
     {
         return view('admin.dashboard');
     }
+
+    public function reizen()
+    {
+        return view('admin.reizen');
+    }
+
+    public function users()
+    {
+        return view('admin.users');
+    }
 }

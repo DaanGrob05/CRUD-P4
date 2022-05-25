@@ -34,12 +34,17 @@ Route::get('/home', function () {
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 // TODO : Add reizen in AdminController
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
-Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_detail'])->name('admin.reizen.detail');
+Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name('admin.reizen.show');
 Route::get('/admin/reizen/{id}/edit', [AdminController::class, 'reizen_edit'])->name('admin.reizen.edit');
 Route::post('/admin/reizen/{id}/edit', [AdminController::class, 'reizen_update'])->name('admin.reizen.update');
 Route::get('/admin/reizen/{id}/delete', [AdminController::class, 'reizen_delete'])->name('admin.reizen.delete');
 
+// TODO : Add users in AdminController
+Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+
+// TODO : Add UserController
 // TODO : Add ReisController 
 // TODO : Add ReviewController
+
 
 require __DIR__ . '/auth.php';

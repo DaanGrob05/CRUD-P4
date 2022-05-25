@@ -135,7 +135,7 @@
                       />
                       <span class="radioSpan">One-Way</span>
                     </label>
-                  <label class="radioLabel">
+                    <label class="radioLabel">
                       <input
                         class="radioInput"
                         type="radio"
@@ -143,7 +143,7 @@
                         id="oneWay"
                       />
                       <span class="radioSpan">One-Way</span>
-                  </label>
+                    </label>
                 </div>
                 <div class="whenCon">
                    <div class="group">
@@ -180,7 +180,7 @@
                 </div>
                 <div class="flightsButtonCon">
                     <button class="flightsButton"><a>search</a></button>
-                  </div>
+                </div>
               </form>
             </div>
           </div>

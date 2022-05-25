@@ -16,18 +16,21 @@
         <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 
     </head>
-{{-- <x-guest-layout>
-    <x-auth-card> --}}
-        {{-- <x-slot name="logo">
-            {{-- <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a> --}}
-        {{-- </x-slot> --}}
 
-        <!-- Validation Errors -->
-        {{-- <x-auth-validation-errors class="" :errors="$errors" /> --}}
-<body>
-    <div class="registerSpacer">
+{{-- <x-auth-card>
+    <x-slot name="logo">
+        {{-- <a href="/">
+            <x-application-logo class="" />
+        </a> --}}
+    {{-- </x-slot> --}}
+    
+    <!-- Session Status -->
+    {{-- <x-auth-session-status class="" :status="session('status')" /> --}}
+
+    <!-- Validation Errors -->
+    {{-- <x-auth-validation-errors class="" :errors="$errors" /> --}}
+    <body>
+        <div class="registerSpacer">
             <nav id="blueNav">
                 <div class="userItemsCon">
                     <div class="unifiedLogo">
@@ -42,11 +45,11 @@
                         <a>Search</a>
                     </div>
                     <div class="userItem">
-                        {{-- @if(Auth::check())
+                        @if(Auth::check())
                         <a href="{{ route('home') }}">Profile</a>
                         @else
                         <a href="{{ route('login') }}">sign in</a>
-                        @endif --}}
+                        @endif
                     </div>
                     <div class="userItem">
                         {{-- shoppingcart icon needs to be added --}}
@@ -86,73 +89,69 @@
                 </div>
             </nav>
             <div class="registerCon">
-                <div class="registerFormCon">
-                    <form class="registerForm" method="POST" action="{{ route('register') }}">
-                        {{-- @csrf --}}
-                        <div class="titleRegisterForm">
-                            <h1 class="registerTitleText">Register to Unified</h1>
-                        </div>
-                        <!-- Name -->
-                        <div class="group nameGroup" id="registerFormGroup">
-                            {{-- <x-label for="name" :value="__('Name')" />
-                            <x-input id="name" class="" type="text" name="name" :value="old('name')" required autofocus /> --}}
-                            <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
-                            <label class="textLabel" for="name">Name*</label>
-                            <div class="bar" id="generalBar"></div>
-                        </div>
-
-                        <!-- Email Address -->
-                        <div class="group" id="registerFormGroup">
-                            {{-- <x-label for="email" :value="__('Email')" />
-                            <x-input id="email" class="" type="email" name="email" :value="old('email')" required /> --}}
-                            <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
-                            <label class="textLabel" for="name">Email*</label>
-                            <div class="bar" id="generalBar"></div>
-                        </div>
-
-                        <!-- Password -->
-                        <div class="group" id="registerFormGroup">
-                            {{-- <x-label for="password" :value="__('Password')" />
-                            <x-input id="password" class=""
+              <div class="registerForms">
+                    <div class="registerHeader">
+                            <h1>Register into Unified</h1>
+                    </div>
+                    <div class="registerFormCon">
+                        
+                        <form class="registerForm" action="{{ route('login') }}" method="POST">
+                            {{-- @csrf --}}
+                            {{-- name --}}
+                            <div class="group emailGroup" id="loginFormGroup">
+                                    {{-- <x-label for="name" :value="__('Name')" />
+                                    <x-input id="name" class="" type="text" name="name" :value="old('name')" required autofocus /> --}}
+                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                                <label class="textLabel" for="name">Name*</label>
+                                <div class="bar" id="generalBar"></div>
+                            </div>
+                            {{-- email --}}
+                            <div class="group emailGroup" id="loginFormGroup">
+                                    {{-- <x-label for="email" :value="__('Email')" />
+                                    <x-input id="email" class="" type="email" name="email" :value="old('email')" required /> --}}
+                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                                <label class="textLabel" for="name">Email*</label>
+                                <div class="bar" id="generalBar"></div>
+                            </div>
+                            {{-- password --}}
+                            <div class="group emailGroup" id="loginFormGroup">
+                                    {{-- <x-label for="password" :value="__('Password')" />
+                                    <x-input id="password" class=""
                                             type="password"
                                             name="password"
                                             required autocomplete="new-password" /> --}}
-                            <input class="textInput" id="generalTextInput"  type="text" id="#" required="required" />
-                            <label class="textLabel"  for="name">Password*</label>
-                            <div class="bar" id="generalBar" ></div>
-                        </div>        
-
-                        <!-- Confirm Password -->
-                        <div class="group" id="registerFormGroup">
-                            {{-- <x-label for="password_confirmation" :value="__('Confirm Password')" />
-                            <x-input id="password_confirmation" class=""
-                                            type="password"
-                                            name="password_confirmation" required /> --}}
-                            <input class="textInput" id="generalTextInput"  type="text" id="#" required="required" />
-                            <label class="textLabel"  for="name">Comfirm password*</label>
-                            <div class="bar" id="generalBar" ></div>
-                        </div>        
-                            {{-- <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                            <x-input id="password_confirmation" class=""
-                                            type="password"
-                                            name="password_confirmation" required /> --}}
-                        <div class="registerButtonCon">
-                            <button class="registerButton" type="submit">
-                                <a>{{ __('Register') }}</a>
-                            </button>
-                        </div>
-                        <div class="registeredCon">
-                            <a class="" href="{{ route('login') }}">
-                                {{ __('Already registered?') }}
-                            </a>
-                        </div>
-                        
-                    </form>
+                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                                <label class="textLabel" for="name">Password*</label>
+                                <div class="bar" id="generalBar"></div>
+                            </div>
+                            <div class="group emailGroup" id="loginFormGroup">
+                                    {{-- <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                                     <x-input id="password_confirmation" class=""
+                                        type="password"
+                                        name="password_confirmation" required /> --}}
+                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                                <label class="textLabel" for="name">Comfirm password*</label>
+                                <div class="bar" id="generalBar"></div>
+                            </div>
+                            {{-- button --}}
+                            <div class="registerButtonCon">
+                                {{-- <x-button class="button">
+                                {{ __('register') }}
+                            </x-button> --}}
+                                <button type="button" class="registerButton"> <a href="">register</a></button>
+                            </div>
+                            {{-- already registerd --}}
+                            <div class="forgot-register-Con">
+                                <a class="" href="{{ route('login') }}">
+                                    {{ __('Already registered?') }}
+                                </a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-    </div>
+        </div>
     </body>
-</html>
+</html> 
     {{-- </x-auth-card>
 </x-guest-layout> --}}

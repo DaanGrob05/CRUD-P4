@@ -185,7 +185,6 @@ nav .navItemsCon {
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  height: auto;
   width: 100%;
   padding: 20px;
   row-gap: 20px;
@@ -405,14 +404,14 @@ nav .navItemsCon {
   background-color: #002244;
 }
 
-.formCon {
+.loginCon {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: none;
   height: 525px;
 }
-.formCon .loginForms {
+.loginCon .loginForms {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -512,7 +511,7 @@ nav .navItemsCon {
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 700px;
   width: 100%;
 }
 .registerSpacer #blueNav {
@@ -524,80 +523,57 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  height: 89vh;
-  width: 100%;
-  background-color: #f5f5f5;
+  height: 525px;
 }
-.registerCon .registerFormCon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: none;
-  height: 100%;
-  width: 100%;
-}
-.registerCon .registerFormCon .registerForm {
+.registerCon .registerForms {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  flex-direction: flex-start;
-  height: 70%;
-  width: 30%;
+  height: auto;
+  width: 475px;
   border-radius: 5px;
+  background-color: #f5f5f5;
   box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
 }
 
-.titleRegisterForm {
+.registerHeader {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  height: 15%;
-  width: 100%;
   background-color: #002244;
-  border-radius: 5px 5px 0px 0px;
-}
-.titleRegisterForm .registerTitleText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: none;
-  height: 100%;
+  height: auto;
   width: 100%;
-  font-size: larger;
+  border-radius: 5px 5px 0px 0px;
+  padding: 20px;
+  font-size: 20px;
   color: #f5f5f5;
 }
 
-.registeredCon {
+.registerFormCon {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.registerForm {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: none;
-  height: 5%;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.forgot-register-Con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
   width: 100%;
-}
-
-#registerFormGroup {
-  height: 12.5%;
-  width: 55%;
-}
-#registerFormGroup #generalTextInput {
-  padding-top: 13.3333333333px;
-  font-size: 13.3333333333px;
-}
-#registerFormGroup #generalTextInput:valid ~ .textLabel {
-  font: 700 8px Roboto;
-}
-#registerFormGroup #generalTextInput:focus ~ .textLabel {
-  font: 700 10px Roboto;
-}
-#registerFormGroup #generalTextInput:focus ~ .bar:before {
-  transform: translateX(0);
-}
-
-.nameGroup {
-  margin-top: 20px;
+  row-gap: 20px;
 }
 
 .registerButtonCon {
@@ -605,7 +581,6 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  height: 15%;
   width: 100%;
 }
 .registerButtonCon .registerButton {
@@ -614,7 +589,7 @@ nav .navItemsCon {
   align-items: center;
   flex-direction: none;
   height: 40px;
-  width: 250px;
+  width: 200px;
   border-radius: 5px;
   background-color: #002244;
   box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);

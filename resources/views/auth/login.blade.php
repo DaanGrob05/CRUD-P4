@@ -88,7 +88,7 @@
 
                 </div>
             </nav>
-            <div class="formCon">
+            <div class="loginCon">
               <div class="loginForms">
                     <div class="loginHeader">
                             <h1>Sign in</h1>

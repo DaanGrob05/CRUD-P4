@@ -149,7 +149,7 @@ nav {
     width: 100%;
     form {
         @include customFlex(none, column);
-        height: auto;
+        // height: auto;
         width: 100%;
         padding: 20px;
         row-gap: 20px;
@@ -369,7 +369,7 @@ $generalWidth: 200px;
         background-color: $secondary;
     }
 }
-.formCon {
+.loginCon {
     @include customFlex(center, none);
     height: 525px;
 
@@ -443,7 +443,7 @@ $generalWidth: 200px;
 // register page
 .registerSpacer {
     @include customFlex(none, column);
-    height: 100vh;
+    height: 700px;
     width: 100%;
     #blueNav {
         background-color: $secondary;
@@ -451,74 +451,51 @@ $generalWidth: 200px;
 }
 .registerCon {
     @include customFlex(center, none);
-    height: 89vh;
-    width: 100%;
-    background-color: $primary;
-    .registerFormCon {
-        @include customFlex(center, none);
-        height: 100%;
-        width: 100%;
-        .registerForm {
-            @include customFlex(none, column);
-            flex-direction: flex-start;
-            height: 70%;
-            width: 30%;
-            border-radius: 5px;
-            box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
-        }
+    height: 525px;
+
+    .registerForms {
+        @include customFlex(none, column);
+        height: auto;
+        width: 475px;
+        border-radius: 5px;
+        background-color: $primary;
+        box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
     }
 }
-.titleRegisterForm {
+
+.registerHeader {
     @include customFlex(center, none);
-    height: 15%;
+    background-color: #002244;
+    height: auto;
     width: 100%;
-    background-color: $secondary;
     border-radius: 5px 5px 0px 0px;
-    .registerTitleText {
-        @include customFlex(center, none);
-        height: 100%;
-        width: 100%;
-        font-size: larger;
-        color: $primary;
-    }
+    padding: 20px;
+    font-size: 20px;
+    color: $primary;
 }
-.registeredCon {
-    @include customFlex(center, none);
-    height: 5%;
+.registerFormCon {
     width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: $primary;
 }
-#registerFormGroup {
-    height: 12.5%;
-    width: 55%;
-    #generalTextInput {
-        padding-top: $generalWidth/15;
-        font-size: $generalWidth/15;
-        &:valid {
-            ~ .textLabel {
-                font: 700 $generalWidth/25 Roboto;
-            }
-        }
-        &:focus {
-            ~ .textLabel {
-                font: 700 $generalWidth/20 Roboto;
-            }
-            ~ .bar:before {
-                transform: translateX(0);
-            }
-        }
-    }
+.registerForm {
+    @include customFlex(center, column);
+    row-gap: 20px;
 }
-.nameGroup {
-    margin-top: 20px;
+.forgot-register-Con {
+    @include customFlex(center, row);
+    height: auto;
+    width: 100%;
+    row-gap: 20px;
 }
 .registerButtonCon {
     @include customFlex(center, none);
-    height: 15%;
     width: 100%;
     .registerButton {
         @include customFlex(center, none);
         height: 40px;
-        width: 250px;
+        width: 200px;
         border-radius: 5px;
         background-color: $secondary;
         box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);

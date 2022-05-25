@@ -3,15 +3,20 @@
   padding: 0;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
-.body {
-  height: 3000px;
-  width: 100%;
+body {
+  min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
 .landingSpacer {
-  height: 95vh;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
   width: 100%;
   background-image: url(https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: center center;
@@ -24,7 +29,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 10vh;
+  height: 125px;
   width: 100%;
 }
 nav .userItemsCon {
@@ -32,21 +37,22 @@ nav .userItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 50%;
+  row-gap: 10px;
+  height: auto;
   width: 75%;
-  margin-top: 30px;
 }
 nav .navItemsCon {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
-  height: 50%;
+  row-gap: 10px;
+  height: auto;
   width: 75%;
 }
 
 .unifiedLogo {
-  height: 100%;
+  height: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -59,12 +65,12 @@ nav .navItemsCon {
   transition: all 0.3s ease-in-out;
 }
 .unifiedLogo:hover {
-  color: #fe6f5e;
+  color: #002244;
 }
 
 .userEmptySpace {
-  height: 100%;
-  width: 73%;
+  height: auto;
+  width: 70%;
 }
 
 .userItem {
@@ -72,35 +78,32 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: auto;
+  width: auto;
   color: #f5f5f5;
   font-size: 0.9em;
-  padding: 10px;
+  padding: 15px;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
 .userItem:hover {
-  color: #fe6f5e;
+  color: #002244;
 }
 
 .navEmptySpace {
   height: 100%;
-  width: 55%;
+  width: 50%;
 }
 
 .navItem {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  flex-direction: row;
+  margin-left: auto;
+  height: auto;
+  width: auto;
   color: #f5f5f5;
   font-size: 1em;
   padding: 10px;
@@ -109,7 +112,7 @@ nav .navItemsCon {
   transition: all 0.3s ease-in-out;
 }
 .navItem:hover {
-  color: #fe6f5e;
+  color: #002244;
 }
 
 .landing {
@@ -117,21 +120,29 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 80vh;
-  width: 100%;
+  height: 700px;
+  width: 75%;
 }
 .landing .landingContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  height: 80%;
+  height: 100%;
   width: 75%;
 }
 
 .flightsFormCon {
-  height: 100%;
-  width: 40%;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 475px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: #f5f5f5;
 }
 
@@ -140,8 +151,11 @@ nav .navItemsCon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 20%;
+  height: 75px;
   width: 100%;
+  background-color: #002244;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .flightsNav .flightsNavItem {
   display: flex;
@@ -150,17 +164,200 @@ nav .navItemsCon {
   flex-direction: none;
   height: 100%;
   width: 25%;
-  background-color: aqua;
+  padding: 10px;
 }
 .flightsNav .flightsNavItem a {
   font-size: larger;
   text-decoration: none;
+  color: #f5f5f5;
 }
-.flightsNav .formTitle {
+
+.formCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.formCon form {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  row-gap: 20px;
+}
+.formCon form .typeTicketCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+}
+.formCon form .whereFromCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+}
+.formCon form .whenCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.formCon form .classCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+}
+
+.radioLabel {
+  display: flex;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.375em;
+}
+.radioLabel .radioInput {
+  position: absolute;
+  left: -9999px;
+}
+.radioLabel .radioInput:checked + .radioSpan {
+  background-color: #d6dce1;
+}
+.radioLabel .radioInput:checked + .radioSpan:before {
+  box-shadow: inset 0 0 0 0.4375em #002244;
+}
+.radioLabel .radioSpan {
+  display: flex;
+  align-items: center;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+  border-radius: 99em;
+  transition: 0.25s ease;
+}
+.radioLabel .radioSpan:hover {
+  background-color: #d6dce1;
+}
+.radioLabel .radioSpan:before {
+  display: flex;
+  flex-shrink: 0;
+  content: "";
+  background-color: #fff;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
+  transition: 0.25s ease;
+  box-shadow: inset 0 0 0 0.125em #002244;
+}
+
+.group {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.textLabel {
+  position: absolute;
+  top: 6.6666666667px;
+  color: rgba(0, 0, 0, 0.9);
+  font: 400 20px Roboto;
+  cursor: text;
+  transition: 0.25s ease;
+}
+
+.textInput {
+  display: block;
+  width: 100%;
+  padding-top: 13.3333333333px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  background: none;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+.textInput:valid ~ .textLabel {
+  top: 0;
+  font: 700 8px Roboto;
+  color: rgba(0, 0, 0, 0.5);
+}
+.textInput:focus {
+  outline: none;
+  border-bottom-color: #002244;
+}
+.textInput:focus ~ .textLabel {
+  top: 0;
+  font: 700 10px Roboto;
+  color: #002244;
+}
+.textInput:focus ~ .bar:before {
+  transform: translateX(0);
+}
+
+.bar {
+  background: #002244;
+  width: 200px;
+  height: 1px;
+  position: relative;
+}
+
+#loginFormGroup #generalTextInput {
+  padding-top: 13.3333333333px;
+  font-size: 13.3333333333px;
+}
+#loginFormGroup #generalTextInput:valid ~ .textLabel {
+  font: 700 8px Roboto;
+}
+#loginFormGroup #generalTextInput:focus ~ .textLabel {
+  font: 700 10px Roboto;
+}
+#loginFormGroup #generalBar {
+  width: 200px;
+}
+
+.flightsButtonCon {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: none;
+  height: 15%;
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.flightsButtonCon .flightsButton {
+  width: 200px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  background-color: #002244;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s;
+}
+.flightsButtonCon .flightsButton:hover {
+  background-color: #001429;
+}
+.flightsButtonCon .flightsButton a {
+  font-size: larger;
+  text-decoration: none;
+  color: #f5f5f5;
 }
 
 .extraInfo {
@@ -194,3 +391,217 @@ nav .navItemsCon {
   width: 75%;
   background-color: #f5f5f5;
 }
+
+.loginSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
+  width: 100%;
+}
+.loginSpacer #blueNav {
+  background-color: #002244;
+}
+
+.loginCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 525px;
+}
+.loginCon .loginForms {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 475px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+.loginHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  background-color: #002244;
+  height: auto;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  padding: 20px;
+  font-size: 20px;
+  color: #f5f5f5;
+}
+
+.loginFormCon {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.loginForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.forgot-register-Con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.forgot-register-Con .forgotPass {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: auto;
+}
+.forgot-register-Con .registerCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: auto;
+}
+
+.loginButtonCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  width: 100%;
+}
+.loginButtonCon .loginButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #002244;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s;
+}
+.loginButtonCon .loginButton:hover {
+  background-color: #001429;
+}
+.loginButtonCon .loginButton a {
+  font-size: larger;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+.registerSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
+  width: 100%;
+}
+.registerSpacer #blueNav {
+  background-color: #002244;
+}
+
+.registerCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 525px;
+}
+.registerCon .registerForms {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 475px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+.registerHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  background-color: #002244;
+  height: auto;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  padding: 20px;
+  font-size: 20px;
+  color: #f5f5f5;
+}
+
+.registerFormCon {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.registerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.forgot-register-Con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+
+.registerButtonCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  width: 100%;
+}
+.registerButtonCon .registerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #002244;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s;
+}
+.registerButtonCon .registerButton:hover {
+  background-color: #001429;
+}
+.registerButtonCon .registerButton a {
+  font-size: larger;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+

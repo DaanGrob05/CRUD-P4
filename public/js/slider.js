@@ -2214,16 +2214,13 @@ var landingSpacer = document.querySelector(".landingSpacer"); // function loadIm
 // }
 
 var backgroundSlider = function backgroundSlider() {
-  var backgroundImages = [// "sliderimgs/pexels-photo-460376.jpeg",
-  // "sliderimgs/pexels-photo-2131623.jpeg",
-  // "sliderimgs/pexels-photo-4125993.jpeg",
-  "https://images.pexels.com/photos/460376/pexels-photo-460376.jpeg", "https://images.pexels.com/photos/2131623/pexels-photo-2131623.jpeg", "https://images.pexels.com/photos/4125993/pexels-photo-4125993.jpeg"];
+  var backgroundImages = ["https://images.pexels.com/photos/460376/pexels-photo-460376.jpeg", "https://images.pexels.com/photos/2131623/pexels-photo-2131623.jpeg", "https://images.pexels.com/photos/4125993/pexels-photo-4125993.jpeg"];
   var i = 0;
   setInterval(function () {
     landingSpacer.style.backgroundImage = "url(".concat(backgroundImages[i], ")");
     i++;
 
-    if (i > backgroundImages.length) {
+    if (i === backgroundImages.length) {
       i = 0;
     }
   }, 3000);
@@ -19459,6 +19456,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -19815,7 +19825,8 @@ process.umask = function() { return 0; };
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/slider.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/scss/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/scss/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

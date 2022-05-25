@@ -20,7 +20,7 @@ return new class extends Migration
             $table->double('price', 8, 2);
             $table->text('description');
             $table->text('hotel');
-            $table->binary('image');
+            $table->binary('image')->nullable();
             $table->timestamps();
         });
     }

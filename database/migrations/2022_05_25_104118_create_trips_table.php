@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('flights', function (Blueprint $table) {
-            $table->id('flight_id');
+        Schema::create('trips', function (Blueprint $table) {
+            $table->id('trip_id');
             $table->date('startDate');
             $table->date('endDate');
             $table->double('price', 8, 2);
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('flight');
+        Schema::dropIfExists('trips');
     }
 };

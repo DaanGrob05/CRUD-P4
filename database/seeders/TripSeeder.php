@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class FlightSeeder extends Seeder
+class TripSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,7 @@ class FlightSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('flights')->insert([
+        DB::table('trips')->insert([
             'startDate' => date('2022-10-10'),
             'endDate' => date('2022-10-5'),
             'price' => 100.0,
@@ -24,7 +24,7 @@ class FlightSeeder extends Seeder
             'hotel' => "Hotel",
         ]);
 
-        DB::table('flights')->insert([
+        DB::table('trips')->insert([
             'startDate' => date('2022-09-22'),
             'endDate' => date('2022-09-29'),
             'price' => 670.5,
@@ -32,7 +32,7 @@ class FlightSeeder extends Seeder
             'hotel' => "Ander hotel dan die van hierboven",
         ]);
 
-        DB::table('flights')->insert([
+        DB::table('trips')->insert([
             'startDate' => date('2022-05-02'),
             'endDate' => date('2022-06-02'),
             'price' => 1060.0,
@@ -40,7 +40,7 @@ class FlightSeeder extends Seeder
             'hotel' => "Hotel",
         ]);
 
-        DB::table('flights')->insert([
+        DB::table('trips')->insert([
             'startDate' => date('2022-02-05'),
             'endDate' => date('2022-10-5'),
             'price' => 5000.0,
@@ -48,7 +48,7 @@ class FlightSeeder extends Seeder
             'hotel' => "Ja met hotel",
         ]);
 
-        DB::table('flights')->insert([
+        DB::table('trips')->insert([
             'startDate' => date('2022-09-10'),
             'endDate' => date('2022-09-15'),
             'price' => 450.0,

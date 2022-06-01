@@ -21,7 +21,8 @@ class TripController extends Controller
     {
         $trips = Trip::all();
         // dd($trips);
-        return view('reizen.index')->with('trips', $trips);
+        // return view('reizen.index')->with('trips', $trips);
+        return view('reizen.index', compact('trips'));
     }
 
     /**
@@ -51,8 +52,9 @@ class TripController extends Controller
      * @param  Trip  $trip
      * @return \Illuminate\Http\Response
      */
-    public function show(Trip $trip)
+    public function show($id)
     {
+        $trip = Trip::where('trip_id', $id)->first();
         return view('reizen.show')->with('trip', $trip);
     }
 

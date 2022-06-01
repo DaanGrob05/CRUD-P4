@@ -404,7 +404,7 @@ $generalWidth: 200px;
     row-gap: 20px;
 }
 .forgot-register-Con {
-    @include customFlex(space-between, row);
+    @include customFlex(space-around, row);
     height: auto;
     width: 100%;
     row-gap: 20px;
@@ -481,12 +481,6 @@ $generalWidth: 200px;
 }
 .registerForm {
     @include customFlex(center, column);
-    row-gap: 20px;
-}
-.forgot-register-Con {
-    @include customFlex(center, row);
-    height: auto;
-    width: 100%;
     row-gap: 20px;
 }
 .registerButtonCon {

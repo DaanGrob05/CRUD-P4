@@ -96,43 +96,44 @@
                     <div class="registerFormCon">
                         
                         <form class="registerForm" action="{{ route('login') }}" method="POST">
-                            {{-- @csrf --}}
+                            @csrf
+
                             {{-- name --}}
                             <div class="group emailGroup" id="loginFormGroup">
-                                    {{-- <x-label for="name" :value="__('Name')" />
-                                    <x-input id="name" class="" type="text" name="name" :value="old('name')" required autofocus /> --}}
-                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
-                                <label class="textLabel" for="name">Name*</label>
+                                <x-input id="generalTextInput" class="textInput" type="text" name="name" :value="old('name')" required autofocus />
+                                <x-label class="textLabel" for="name" :value="__('Name')" />
                                 <div class="bar" id="generalBar"></div>
                             </div>
-                            {{-- email --}}
+
+                            <!-- Email Address -->
                             <div class="group emailGroup" id="loginFormGroup">
-                                    {{-- <x-label for="email" :value="__('Email')" />
-                                    <x-input id="email" class="" type="email" name="email" :value="old('email')" required /> --}}
-                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
-                                <label class="textLabel" for="name">Email*</label>
+                                <x-input id="generalTextInput" class="textInput" type="email" name="email" :value="old('email')" required autofocus />
+                                
+                                <x-label class="textLabel" for="email" :value="__('Email')" />
                                 <div class="bar" id="generalBar"></div>
+                                {{-- bestand van x-input staat in views/auth/input.blade.php --}}
                             </div>
-                            {{-- password --}}
+                            
+                            <!-- Password -->
                             <div class="group emailGroup" id="loginFormGroup">
-                                    {{-- <x-label for="password" :value="__('Password')" />
-                                    <x-input id="password" class=""
-                                            type="password"
-                                            name="password"
-                                            required autocomplete="new-password" /> --}}
-                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
-                                <label class="textLabel" for="name">Password*</label>
+                                <x-input id="generalTextInput" class="textInput"
+                                                type="password"
+                                                name="password"
+                                                required autocomplete="current-password" />
+                                <x-label class="textLabel" for="password" :value="__('Password')" />
                                 <div class="bar" id="generalBar"></div>
                             </div>
+
+                            <!-- Password Confirm-->
                             <div class="group emailGroup" id="loginFormGroup">
-                                    {{-- <x-label for="password_confirmation" :value="__('Confirm Password')" />
-                                     <x-input id="password_confirmation" class=""
-                                        type="password"
-                                        name="password_confirmation" required /> --}}
-                                <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
-                                <label class="textLabel" for="name">Comfirm password*</label>
+                                <x-input id="generalTextInput" class="textInput"
+                                                type="password"
+                                                name="password_confirmation"
+                                                required autocomplete="current-password" />
+                                <x-label class="textLabel" for="password" :value="__('Confirm Password')" />
                                 <div class="bar" id="generalBar"></div>
                             </div>
+
                             {{-- button --}}
                             <div class="registerButtonCon">
                                 {{-- <x-button class="button">

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TripController;
 use App\Http\Controllers\AdminController;
 
 /*
@@ -46,5 +47,6 @@ Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users
 // TODO : Add ReisController 
 // TODO : Add ReviewController
 
+Route::resource('reizen', TripController::class);
 
 require __DIR__ . '/auth.php';

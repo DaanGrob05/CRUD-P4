@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Trip;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -29,7 +30,8 @@ class AdminController extends Controller
 
     public function reizen()
     {
-        return view('admin.reizen');
+        $trips = Trip::all();
+        return view('admin.reizen')->with('trips', $trips);
     }
 
     public function users()

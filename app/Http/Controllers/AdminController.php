@@ -34,6 +34,12 @@ class AdminController extends Controller
         return view('admin.reizen')->with('trips', $trips);
     }
 
+    public function reizen_show($id)
+    {
+        $trip = Trip::where('trip_id', $id)->first();
+        return view('admin.show_reis')->with('trip', $trip);
+    }
+
     public function users()
     {
         return view('admin.users');

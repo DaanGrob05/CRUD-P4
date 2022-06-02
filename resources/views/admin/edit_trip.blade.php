@@ -1,3 +1,5 @@
+<x-nav></x-nav>
+
 {{-- Edit --}}
 <form action="{{ route('reizen.update', $trip->trip_id) }}" method="post">
     @csrf

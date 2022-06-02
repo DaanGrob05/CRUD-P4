@@ -21,8 +21,6 @@ class TripController extends Controller
     public function index()
     {
         $trips = Trip::all();
-        // dd($trips);
-        // return view('reizen.index')->with('trips', $trips);
         return view('reizen.index', compact('trips'));
     }
 
@@ -33,7 +31,7 @@ class TripController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.create_trip');
     }
 
     /**
@@ -44,7 +42,25 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'description' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'price' => 'required',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        DB::table('trips')->insert([
+            'description' => $request->description,
+            'startDate' => $request->start_date,
+            'endDate' => $request->end_date,
+            'hotel' => $request->hotel,
+            'price' => $request->price,
+            'image' => $request->image,
+            'updated_at' => now(),
+        ]);
+
+        return to_route('admin.reizen');
     }
 
     /**
@@ -93,20 +109,11 @@ class TripController extends Controller
             'description' => $request->description,
             'startDate' => $request->start_date,
             'endDate' => $request->end_date,
+            'hotel' => $request->hotel,
             'price' => $request->price,
             'image' => $request->image,
             'updated_at' => now(),
         ]);
-
-        // DB::table('trips')
-        //     ->where('id', 1)
-        //     ->update([
-        //         'description' => $request->description,
-        //         'start_date' => $request->start_date,
-        //         'end_date' => $request->end_date,
-        //         'price' => $request->price,
-        //         'image' => $request->image,
-        //     ]);
 
         return to_route('admin.reizen');
     }

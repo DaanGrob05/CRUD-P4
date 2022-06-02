@@ -63,5 +63,5 @@
             :value="@old('price', $trip->endDate)"
         ></x-trip-input>
     </div>
-    <button type="submit">Pas Aan</button>
+    <button type="submit">Aanmaken</button>
 </form>

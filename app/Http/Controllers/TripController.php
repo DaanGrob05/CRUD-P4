@@ -126,6 +126,8 @@ class TripController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('trips')->where('trip_id', $id)->delete();
+
+        return to_route('admin.reizen');
     }
 }

@@ -2,11 +2,11 @@
 
 
 {{-- <div class="loginSpacer"> --}}
-
+{{-- De stijl moet nog verbeterd worden --}}
     <nav id="blueNav" style="background: blue">
         <div class="userItemsCon">
             <div class="unifiedLogo">
-                <a>unified</a>
+                <a href="{{ route('welcome') }}">unified</a>
                 {{-- plane icon needs to be added img on ivan's laptop(downloads) --}}
             </div>
             <div class="userEmptySpace">

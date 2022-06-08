@@ -1,3 +1,4 @@
+<div class="adminSpacer">
 <x-nav></x-nav>
 
 <form action="{{ route('reizen.store') }}" method="post">
@@ -65,3 +66,4 @@
     </div>
     <button type="submit">Aanmaken</button>
 </form>
+</div>

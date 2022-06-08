@@ -400,7 +400,8 @@ nav .navItemsCon {
   height: 700px;
   width: 100%;
 }
-.loginSpacer #blueNav {
+
+#blueNav {
   background-color: #002244;
 }
 
@@ -454,7 +455,7 @@ nav .navItemsCon {
 
 .forgot-register-Con {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   height: auto;
@@ -514,7 +515,8 @@ nav .navItemsCon {
   height: 700px;
   width: 100%;
 }
-.registerSpacer #blueNav {
+
+#blueNav {
   background-color: #002244;
 }
 
@@ -566,16 +568,6 @@ nav .navItemsCon {
   row-gap: 20px;
 }
 
-.forgot-register-Con {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  height: auto;
-  width: 100%;
-  row-gap: 20px;
-}
-
 .registerButtonCon {
   display: flex;
   justify-content: center;
@@ -602,6 +594,15 @@ nav .navItemsCon {
   font-size: larger;
   text-decoration: none;
   color: #f5f5f5;
+}
+
+.adminSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
+  width: 100%;
 }
 
 

@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 
-{{-- <div class="loginSpacer"> --}}
+{{-- <div class="adminSpacer"> --}}
 {{-- De stijl moet nog verbeterd worden --}}
-    <nav id="blueNav" style="background: blue">
+    <nav id="blueNav" style="">
         <div class="userItemsCon">
             <div class="unifiedLogo">
                 <a href="{{ route('welcome') }}">unified</a>

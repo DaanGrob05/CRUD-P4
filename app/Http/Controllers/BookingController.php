@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Trip;
+use App\Models\Booking;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -32,9 +35,10 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($trip_id)
     {
-        //
+        $trip = Trip::find($trip_id);
+        return view('booking.create', ['trip' => $trip]);
     }
 
     /**
@@ -45,7 +49,12 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $booking = Booking::create([
+            'user_id' => $request->user_id,
+            'trip_id' => $request->trip_id,
+        ]);
+
+        return to_route('welcome')->with('success', 'Boeking is geplaatst');
     }
 
     /**

@@ -95,7 +95,7 @@
                     </div>
                     <div class="registerFormCon">
                         
-                        <form class="registerForm" action="{{ route('login') }}" method="POST">
+                        <form class="registerForm" action="{{ route('register') }}" method="POST">
                             @csrf
 
                             {{-- name --}}
@@ -107,7 +107,7 @@
 
                             <!-- Email Address -->
                             <div class="group emailGroup" id="loginFormGroup">
-                                <x-input id="generalTextInput" class="textInput" type="email" name="email" :value="old('email')" required autofocus />
+                                <x-input id="generalTextInput" class="textInput" type="email" name="email" :value="old('email')" required />
                                 
                                 <x-label class="textLabel" for="email" :value="__('Email')" />
                                 <div class="bar" id="generalBar"></div>
@@ -119,7 +119,7 @@
                                 <x-input id="generalTextInput" class="textInput"
                                                 type="password"
                                                 name="password"
-                                                required autocomplete="current-password" />
+                                                required autocomplete="new-password" />
                                 <x-label class="textLabel" for="password" :value="__('Password')" />
                                 <div class="bar" id="generalBar"></div>
                             </div>
@@ -129,17 +129,17 @@
                                 <x-input id="generalTextInput" class="textInput"
                                                 type="password"
                                                 name="password_confirmation"
-                                                required autocomplete="current-password" />
-                                <x-label class="textLabel" for="password" :value="__('Confirm Password')" />
+                                                required />
+                                <x-label class="textLabel" for="password_confirmation" :value="__('Confirm Password')" />
                                 <div class="bar" id="generalBar"></div>
                             </div>
 
                             {{-- button --}}
                             <div class="registerButtonCon">
-                                {{-- <x-button class="button">
-                                {{ __('register') }}
-                            </x-button> --}}
-                                <button type="button" class="registerButton"> <a href="">register</a></button>
+                                <x-button class="registerButton">
+                                    {{ __('register') }}
+                                </x-button>
+                                {{-- <button type="button" class="registerButton"> <a href="">register</a></button> --}}
                             </div>
                             {{-- already registerd --}}
                             <div class="forgot-register-Con">

@@ -21,6 +21,7 @@
     <!-- Main content -->
     <div class="landingSpacer">
       <x-nav></x-nav>
+
       <div class="landing">
         <div class="landingContent">
           <div class="flightsFormCon">

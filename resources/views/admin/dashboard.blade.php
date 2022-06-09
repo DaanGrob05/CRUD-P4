@@ -1,3 +1,7 @@
+<x-nav
+    id="blueNav">
+</x-nav>
+
 <form method="POST" action="{{ route('logout') }}">
     @csrf
 

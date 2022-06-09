@@ -41,7 +41,7 @@
         </div>
         <div class="navItem">
             {{-- <a href="{{ route('about') }}">About</a> --}}
-            <a>About</a>
+            <a href="{{ route('about') }}">About</a>
         </div>
         <div class="navItem">
             {{-- <a href="{{ route('contact') }}">Contact</a> --}}

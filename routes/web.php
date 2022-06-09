@@ -33,15 +33,12 @@ Route::get('/home', function () {
     }
 })->name('home');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
-
-
-// Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name('admin.reizen.show');
-
-// Route::get('/admin/reizen/{id}/edit', [AdminController::class, 'reizen_edit'])->name('admin.reizen.edit');
-// Route::post('/admin/reizen/{id}/edit', [AdminController::class, 'reizen_update'])->name('admin.reizen.update');
-// Route::get('/admin/reizen/{id}/delete', [AdminController::class, 'reizen_delete'])->name('admin.reizen.delete');
 
 // TODO : Add users in AdminController
 Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');

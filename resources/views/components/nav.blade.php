@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 
-{{-- <div class="loginSpacer"> --}}
+{{-- <div class="adminSpacer"> --}}
 {{-- De stijl moet nog verbeterd worden --}}
     <nav id="blueNav">
         <div class="userItemsCon">

@@ -365,9 +365,9 @@ $generalWidth: 200px;
     @include customFlex(none, column);
     height: 700px;
     width: 100%;
-    #blueNav {
-        background-color: $secondary;
-    }
+}
+#blueNav {
+    background-color: $secondary;
 }
 .loginCon {
     @include customFlex(center, none);
@@ -445,9 +445,9 @@ $generalWidth: 200px;
     @include customFlex(none, column);
     height: 700px;
     width: 100%;
-    #blueNav {
-        background-color: $secondary;
-    }
+}
+#blueNav {
+    background-color: $secondary;
 }
 .registerCon {
     @include customFlex(center, none);
@@ -504,12 +504,14 @@ $generalWidth: 200px;
         }
     }
 }
+
 // trip page
 .tripSpacer {
     @include customFlex(none, column);
     height: 700px;
     width: 100%;
 }
+
 #blueNav {
     background-color: $secondary;
 }
@@ -659,4 +661,8 @@ $generalWidth: 200px;
             }
         }
     }
+}
+
+// admin page
+.adminSpacer {
 }

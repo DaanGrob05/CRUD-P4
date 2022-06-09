@@ -1,5 +1,7 @@
 <div class="adminSpacer">
-<x-nav></x-nav>
+<x-nav
+    id="blueNav">
+</x-nav>
 
 <form action="{{ route('reizen.store') }}" method="post">
     @csrf

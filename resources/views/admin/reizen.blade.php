@@ -1,4 +1,6 @@
-<x-nav></x-nav>
+<x-nav
+    id="blueNav">
+</x-nav>
 
 <h1>Admin Reizen Pagina</h1>
 

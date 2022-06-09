@@ -84,7 +84,7 @@ class TripController extends Controller
     public function edit($id)
     {
         $trip = Trip::where('trip_id', $id)->first();
-        return view('admin.edit_reis')->with('trip', $trip);
+        return view('admin.edit_trip')->with('trip', $trip);
     }
 
     /**

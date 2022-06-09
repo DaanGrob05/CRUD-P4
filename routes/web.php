@@ -43,6 +43,7 @@ Route::get('/contact', function () {
 
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
+Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name('admin.reizen.show');
 
 // TODO : Add users in AdminController
 Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');

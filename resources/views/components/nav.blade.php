@@ -47,16 +47,5 @@
             {{-- <a href="{{ route('contact') }}">Contact</a> --}}
             <a href="{{ route('contact') }}">Contact</a>
         </div>
-        <div class="navItem">
-            {{-- for possible extra's --}}
-            {{-- <a href="{{ route('contact') }}">Contact</a> --}}
-            <a>example</a>
-        </div>
-        <div class="navItem">
-            {{-- for possible extra's --}}
-            {{-- <a href="{{ route('contact') }}">Contact</a> --}}
-            <a>example</a>
-        </div>
-
     </div>
 </nav>

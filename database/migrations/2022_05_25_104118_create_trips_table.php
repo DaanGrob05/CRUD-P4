@@ -15,10 +15,16 @@ return new class extends Migration
     {
         Schema::create('trips', function (Blueprint $table) {
             $table->id('trip_id');
+            $table->string('trip_name');
+            $table->string('start_location');
+            $table->tinyInteger('type_of_trip');
+            // type_of_trip = 0 = one-way, type_of_trip = 1 = round-trip
+            $table->string('destination');
             $table->date('startDate');
             $table->date('endDate');
             $table->double('price', 8, 2);
-            $table->text('description');
+            $table->text('small_description');
+            $table->text('full_description');
             $table->text('hotel');
             $table->binary('image')->nullable();
             $table->timestamps();

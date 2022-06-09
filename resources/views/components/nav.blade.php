@@ -3,7 +3,7 @@
 
 {{-- <div class="adminSpacer"> --}}
 {{-- De stijl moet nog verbeterd worden --}}
-    <nav id="blueNav" style="">
+    <nav id="blueNav">
         <div class="userItemsCon">
             <div class="unifiedLogo">
                 <a href="{{ route('welcome') }}">unified</a>

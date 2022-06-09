@@ -504,3 +504,159 @@ $generalWidth: 200px;
         }
     }
 }
+// trip page
+.tripSpacer {
+    @include customFlex(none, column);
+    height: 700px;
+    width: 100%;
+}
+#blueNav {
+    background-color: $secondary;
+}
+.searchSpacer {
+    @include customFlex(center, column);
+    height: 250px;
+    width: 100%;
+    background-color: #e9e9f3;
+}
+.searchTitleCon {
+    @include customFlex(none, column);
+    height: auto;
+    width: 70%;
+    padding-bottom: 10px;
+    .searchFormTitle {
+        @include customFlex(none, none);
+        height: 100%;
+        width: 100%;
+        color: $secondary;
+        font-size: 25px;
+    }
+}
+
+.searchCon {
+    @include customFlex(center, none);
+    height: auto;
+    width: 75%;
+}
+.searchForm {
+    @include customFlex(space-around, row);
+    height: auto;
+    width: 100%;
+    row-gap: 20px;
+    input {
+        height: 60px;
+        width: 70%;
+        box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        border: solid $secondary 3px;
+        padding: 15px;
+    }
+    .searchButton {
+        height: 60px;
+        width: 200px;
+        border-radius: 5px;
+        border: solid $secondary 3px;
+        // background-color: $secondary;
+        box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.5s;
+        &:hover {
+            background-color: #001429;
+            a {
+                color: $primary;
+            }
+        }
+        .buttonA {
+            font-size: larger;
+            text-decoration: none;
+            color: $secondary;
+        }
+    }
+}
+
+.allTripsSpacer {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+}
+.tripsCon {
+    @include customFlex(center, row);
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.tripCon {
+    @include customFlex(none, column);
+    height: 575px;
+    width: 400px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25),
+        0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25),
+        0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+    .tripImageCon {
+        @include customFlex(center, none);
+        height: 375px;
+        width: 100%;
+        background-color: #001429;
+        .tripImage {
+            @include customFlex(center, none);
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .tripInfo {
+        @include customFlex(none, column);
+        height: auto;
+        width: 100%;
+        row-gap: 10px;
+        .tripName {
+            @include customFlex(none, none);
+            height: auto;
+            width: 100%;
+            font-size: 30px;
+        }
+        .tripDescription {
+            @include customFlex(none, none);
+            height: auto;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .tripDate {
+            @include customFlex(none, none);
+            height: auto;
+            width: 100%;
+            font-size: 17.5px;
+        }
+        .moreInfo {
+            @include customFlex(space-between, none);
+            height: auto;
+            width: 100%;
+            .moreInfoButton {
+                @include customFlex(center, none);
+                height: 40px;
+                width: 200px;
+                border-radius: 5px;
+                background-color: $secondary;
+                box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+                transition: background-color 0.5s;
+                &:hover {
+                    background-color: #001429;
+                }
+                a {
+                    font-size: larger;
+                    text-decoration: none;
+                    color: $primary;
+                }
+            }
+            .tripPrice {
+                font-size: 17.5px;
+            }
+        }
+    }
+}

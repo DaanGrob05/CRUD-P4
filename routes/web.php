@@ -37,6 +37,10 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
 

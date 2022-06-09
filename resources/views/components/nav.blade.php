@@ -45,7 +45,7 @@
         </div>
         <div class="navItem">
             {{-- <a href="{{ route('contact') }}">Contact</a> --}}
-            <a>Contact</a>
+            <a href="{{ route('contact') }}">Contact</a>
         </div>
         <div class="navItem">
             {{-- for possible extra's --}}

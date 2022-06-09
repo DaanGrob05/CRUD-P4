@@ -16,83 +16,11 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     </head>
-    <!-- Automatische code voor login en register, voor nu laten staan als voorbeeld -->
+
     <body class="antialiased">
-        {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-        </div> --}}
-
-        <!-- Main content -->
+    <!-- Main content -->
     <div class="landingSpacer">
-      <nav>
-        <div class="userItemsCon">
-            <div class="unifiedLogo">
-                <a>unified</a>
-                {{-- plane icon needs to be added img on ivan's laptop(downloads) --}}
-            </div>
-            <div class="userEmptySpace">
-
-            </div>
-            <div class="userItem">
-                {{-- href to search page --}}
-                <a>Search</a>
-            </div>
-            <div class="userItem">
-                @if(Auth::check())
-                <a href="{{ route('home') }}">Profile</a>
-                @else
-                <a href="{{ route('login') }}">sign in</a>
-                @endif
-            </div>
-            <div class="userItem">
-                {{-- shoppingcart icon needs to be added --}}
-                <a>s</a>
-            </div>
-        </div>
-        <div class="navItemsCon">
-            <div class="navEmptySpace">
-            </div>
-            <div class="navItem">
-                {{-- <a href="{{ route('book') }}">book</a> --}}
-                <a>book</a>
-            </div>
-            <div class="navItem">
-                {{-- <a href="{{ route('myTrips') }}">about</a> --}}
-                <a>my trips</a>
-            </div>
-            <div class="navItem">
-                {{-- <a href="{{ route('about') }}">About</a> --}}
-                <a>About</a>
-            </div>
-            <div class="navItem">
-                {{-- <a href="{{ route('contact') }}">Contact</a> --}}
-                <a>Contact</a>
-            </div>
-            <div class="navItem">
-                {{-- for possible extra's --}}
-                {{-- <a href="{{ route('contact') }}">Contact</a> --}}
-                <a>example</a>
-            </div>
-            <div class="navItem">
-                {{-- for possible extra's --}}
-                {{-- <a href="{{ route('contact') }}">Contact</a> --}}
-                <a>example</a>
-            </div>
-
-        </div>
-      </nav>
+      <x-nav></x-nav>
       <div class="landing">
         <div class="landingContent">
           <div class="flightsFormCon">
@@ -100,6 +28,7 @@
               <div class="flightsNavItem">
                 <a>flights</a>
               </div>
+              {{-- Deze 3 divs zijn voor meerdere onderdelen in de form als die komen --}}
               <div class="flightsNavItem">
                 {{-- <a>example</a> --}}
               </div>

@@ -1,3 +1,6 @@
+@extends('layouts.admin')
+
+@section('mainContent')
 <x-nav
     id="blueNav">
 </x-nav>
@@ -14,3 +17,4 @@
 
 <p><a href="{{ route('admin.reizen') }}">Bekijk alle reizen</a></p>
 <p><a href="{{ route('admin.users') }}">Bekijk alle gebruikers</a></p>
+@endsection

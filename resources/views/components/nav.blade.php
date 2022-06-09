@@ -1,5 +1,6 @@
 @props(['id' => ''])
 
+{{-- Als alle layouts gemaakt zijn kan stijl hier weg --}}
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 

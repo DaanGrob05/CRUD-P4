@@ -47,14 +47,20 @@ class BookingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($trip_id)
     {
-        $booking = Booking::create([
-            'user_id' => $request->user_id,
-            'trip_id' => $request->trip_id,
+        Booking::create([
+            'user_id' => Auth::user()->id,
+            'trip_id' => $trip_id,
         ]);
 
-        return to_route('welcome')->with('success', 'Boeking is geplaatst');
+
+        // $booking = Booking::create([
+        //     'user_id' => $request->user_id,
+        //     'trip_id' => $request->trip_id,
+        // ]);
+
+        // return to_route('welcome')->with('success', 'Boeking is geplaatst');
     }
 
     /**

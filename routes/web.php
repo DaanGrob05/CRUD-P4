@@ -50,6 +50,8 @@ Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users
 // TODO : Add ReviewController
 
 Route::resource('reizen', TripController::class);
+
+Route::get('reizen/{trip_id}/boek', [BookingController::class, 'store'])->name('reizen.boek');
 Route::resource('boeking', BookingController::class);
 
 require __DIR__ . '/auth.php';

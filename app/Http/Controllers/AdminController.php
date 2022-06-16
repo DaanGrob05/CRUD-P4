@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Trip;
+use App\Models\Booking;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -43,5 +44,11 @@ class AdminController extends Controller
     public function users()
     {
         return view('admin.users');
+    }
+
+    public function boekingen()
+    {
+        $boekingen = Booking::all();
+        return view('admin.boekingen')->with('boekingen', $boekingen);
     }
 }

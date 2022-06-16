@@ -41,12 +41,6 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
-Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
-Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name('admin.reizen.show');
-
-// TODO : Add users in AdminController
-Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
 
 // TODO : Add UserController
 // TODO : Add ReviewController
@@ -55,5 +49,16 @@ Route::resource('reizen', TripController::class);
 
 Route::get('reizen/{trip_id}/boek', [BookingController::class, 'store'])->name('reizen.boek');
 Route::resource('boeking', BookingController::class);
+
+Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
+Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
+Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name('admin.reizen.show');
+
+// TODO : Add users in AdminController
+Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+
+Route::get('/admin/boekingen', [AdminController::class, 'boekingen'])->name('admin.boekingen');
+
+
 
 require __DIR__ . '/auth.php';

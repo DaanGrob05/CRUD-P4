@@ -48,6 +48,7 @@ Route::get('/contact', function () {
 Route::resource('reizen', TripController::class);
 
 Route::get('reizen/{trip_id}/boek', [BookingController::class, 'store'])->name('reizen.boek');
+
 Route::resource('boeking', BookingController::class);
 
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
@@ -58,7 +59,8 @@ Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name(
 Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
 
 Route::get('/admin/boekingen', [AdminController::class, 'boekingen'])->name('admin.boekingen');
-
+Route::get('/admin/boekingen/{id}', [AdminController::class, 'boekingen_show'])->name('admin.boekingen.show');
+Route::delete('/admin/boekingen/{id}/verwijder', [AdminController::class, 'boekingen_delete'])->name('admin.boekingen.delete');
 
 
 require __DIR__ . '/auth.php';

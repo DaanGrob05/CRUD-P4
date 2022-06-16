@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Trip;
 use App\Models\Booking;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -50,5 +51,17 @@ class AdminController extends Controller
     {
         $boekingen = Booking::all();
         return view('admin.boekingen')->with('boekingen', $boekingen);
+    }
+
+    public function boekingen_show($id)
+    {
+        $boeking = Booking::where('booking_id', $id)->first();
+        return view('admin.show_boeking')->with('boeking', $boeking);
+    }
+
+    public function boekingen_delete($id)
+    {
+        DB::table('bookings')->where('booking_id', $id)->delete();
+        return redirect()->route('admin.boekingen')->with('success', 'Boeking is verwijderd');
     }
 }

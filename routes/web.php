@@ -41,6 +41,16 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+
+// TODO : Add UserController
+// TODO : Add ReviewController
+
+Route::resource('reizen', TripController::class);
+
+Route::get('reizen/{trip_id}/boek', [BookingController::class, 'store'])->name('reizen.boek');
+
+Route::resource('boeking', BookingController::class);
+
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
 Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name('admin.reizen.show');
@@ -48,10 +58,9 @@ Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name(
 // TODO : Add users in AdminController
 Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
 
-// TODO : Add UserController
-// TODO : Add ReviewController
+Route::get('/admin/boekingen', [AdminController::class, 'boekingen'])->name('admin.boekingen');
+Route::get('/admin/boekingen/{id}', [AdminController::class, 'boekingen_show'])->name('admin.boekingen.show');
+Route::delete('/admin/boekingen/{id}/verwijder', [AdminController::class, 'boekingen_delete'])->name('admin.boekingen.delete');
 
-Route::resource('reizen', TripController::class);
-Route::resource('boeking', BookingController::class);
 
 require __DIR__ . '/auth.php';

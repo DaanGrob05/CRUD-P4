@@ -41,6 +41,14 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
+
+Route::get('/terms', function () {
+    return view('terms');
+})->name('terms');
+
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
 Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name('admin.reizen.show');

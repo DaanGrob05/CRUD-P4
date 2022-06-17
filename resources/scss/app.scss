@@ -11,7 +11,8 @@ $primary: #f5f5f5; // primary color
 $secondary: #002244; // secondary color
 
 $tertiary: #f28482; // tertiary color
-$quaternary: #3a3335; // quaternary color
+$quaternary: #e9e9f3; // quaternary color
+$greyBorder: 1px solid #d4d4d0; // grey border
 
 body {
     min-height: 100vh;
@@ -102,7 +103,29 @@ nav {
         color: $secondary;
     }
 }
+// footer
+footer {
+    @include customFlex(center, none);
+    height: 300px;
+    width: 100%;
+    background-color: $quaternary;
 
+    .footerCon {
+        @include customFlex(center, row);
+        width: 75%;
+        height: 100%;
+
+        .footerItemCon {
+            @include customFlex(space-around, row);
+            width: 100%;
+            height: auto;
+            border-top: $greyBorder;
+            border-bottom: $greyBorder;
+        }
+    }
+}
+
+// landing page
 .landing {
     @include customFlex(center, row);
     height: 700px;
@@ -519,7 +542,7 @@ $generalWidth: 200px;
     @include customFlex(center, column);
     height: 250px;
     width: 100%;
-    background-color: #e9e9f3;
+    background-color: $quaternary;
 }
 .searchTitleCon {
     @include customFlex(none, column);
@@ -665,4 +688,39 @@ $generalWidth: 200px;
 
 // admin page
 .adminSpacer {
+}
+
+// about page
+
+.aboutSpacer {
+    @include customFlex(none, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    padding: 30px;
+    .aboutContentSpacer {
+        @include customFlex(none, column);
+        height: auto;
+        width: 75%;
+        row-gap: 17.5px;
+        .aboutTitle {
+            @include customFlex(none, none);
+            height: auto;
+            width: 100%;
+            font-size: 25px;
+        }
+        .aboutTextCon {
+            @include customFlex(none, column);
+            height: auto;
+            width: 100%;
+            row-gap: 17.5px;
+
+            .aboutText {
+                @include customFlex(none, none);
+                height: auto;
+                width: 100%;
+                font-size: 17.5px;
+            }
+        }
+    }
 }

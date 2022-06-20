@@ -23,10 +23,6 @@
             <a href="{{ route('login') }}">sign in</a>
             @endif
         </div>
-        <div class="userItem">
-            {{-- shoppingcart icon needs to be added --}}
-            <a>s</a>
-        </div>
     </div>
     <div class="navItemsCon">
         <div class="navEmptySpace">

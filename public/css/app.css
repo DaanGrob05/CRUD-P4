@@ -115,6 +115,34 @@ nav .navItemsCon {
   color: #002244;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 300px;
+  width: 100%;
+  background-color: #e9e9f3;
+}
+footer .footerCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 75%;
+  height: 100%;
+}
+footer .footerCon .footerItemCon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #d4d4d0;
+  border-bottom: 1px solid #d4d4d0;
+}
+
 .landing {
   display: flex;
   justify-content: center;
@@ -804,13 +832,51 @@ nav .navItemsCon {
   font-size: 17.5px;
 }
 
-.adminSpacer {
+.aboutSpacer {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  height: 700px;
+  height: auto;
   width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.aboutSpacer .aboutContentSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 75%;
+  row-gap: 17.5px;
+}
+.aboutSpacer .aboutContentSpacer .aboutTitle {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 25px;
+}
+.aboutSpacer .aboutContentSpacer .aboutTextCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 17.5px;
+}
+.aboutSpacer .aboutContentSpacer .aboutTextCon .aboutText {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 17.5px;
 }
 
 

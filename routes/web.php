@@ -42,6 +42,14 @@ Route::get('/contact', function () {
 })->name('contact');
 
 
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
+
+Route::get('/terms', function () {
+    return view('terms');
+})->name('terms');
+
 // TODO : Add UserController
 // TODO : Add ReviewController
 
@@ -50,6 +58,7 @@ Route::resource('reizen', TripController::class);
 Route::get('reizen/{trip_id}/boek', [BookingController::class, 'store'])->name('reizen.boek');
 
 Route::resource('boeking', BookingController::class);
+
 
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');

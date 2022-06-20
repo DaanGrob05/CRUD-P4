@@ -804,13 +804,14 @@ nav .navItemsCon {
   font-size: 17.5px;
 }
 
-.adminSpacer {
+.contactSpacer {
   display: flex;
-  justify-content: none;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 700px;
+  flex-direction: none;
+  height: auto;
   width: 100%;
+  background-color: #f5f5f5;
 }
 
 

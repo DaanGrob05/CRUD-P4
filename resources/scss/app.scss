@@ -666,3 +666,10 @@ $generalWidth: 200px;
 // admin page
 .adminSpacer {
 }
+
+.contactSpacer {
+    @include customFlex(center, none);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+}

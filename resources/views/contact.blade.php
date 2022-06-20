@@ -6,8 +6,10 @@
         <div class="formHeader">
 
         </div>
-        <form action="">
+        <form action="{{route('contact.store') }}" method="POST">
+            @csrf
             <x-contact-input 
+
                 type="text"
                 name="name"
                 field="name"

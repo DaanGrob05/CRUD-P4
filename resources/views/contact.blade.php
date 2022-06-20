@@ -6,10 +6,15 @@
         <div class="formHeader">
 
         </div>
+
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
         <form action="{{route('contact.store') }}" method="POST">
             @csrf
             <x-contact-input 
-
                 type="text"
                 name="name"
                 field="name"
@@ -38,6 +43,7 @@
                 label="Message *"
                 :value="@old('message', $contact->message)"
             ></x-contact-input>
+            <button type="submit">Verstuur Bericht</button>
         </form>
     </div>
 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Trip;
 use App\Models\Booking;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
@@ -17,6 +18,7 @@ class BookingController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('isAdmin')->except('store');
     }
 
 
@@ -47,11 +49,11 @@ class BookingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($trip_id)
     {
-        $booking = Booking::create([
-            'user_id' => $request->user_id,
-            'trip_id' => $request->trip_id,
+        DB::table('bookings')->insert([
+            'user_id' => Auth::user()->id,
+            'trip_id' => $trip_id,
         ]);
 
         return to_route('welcome')->with('success', 'Boeking is geplaatst');

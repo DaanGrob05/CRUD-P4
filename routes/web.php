@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\RecensionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,9 +48,13 @@ Route::get('/contact', function () {
 
 Route::resource('reizen', TripController::class);
 
-Route::get('reizen/{trip_id}/boek', [BookingController::class, 'store'])->name('reizen.boek');
 
+// Boekingen
+Route::get('reizen/{trip_id}/boek', [BookingController::class, 'store'])->name('reizen.boek');
 Route::resource('boeking', BookingController::class);
+
+// Recensies
+Route::get('reizen/{trip_id}/recensie', [RecensionController::class, 'create'])->name('reizen.recension');
 
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');

@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Trip;
 use App\Models\Booking;
-use App\Models\Recension;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
-class RecensionController extends Controller
+class ReviewController extends Controller
 {
     public function __construct()
     {

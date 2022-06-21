@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookingController;
-use App\Http\Controllers\RecensionController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ Route::get('reizen/{trip_id}/boek', [BookingController::class, 'store'])->name('
 Route::resource('boeking', BookingController::class);
 
 // Recensies
-Route::get('reizen/{trip_id}/recensie', [RecensionController::class, 'create'])->name('reizen.recension');
+Route::get('reizen/{trip_id}/recensie', [ReviewController::class, 'create'])->name('reizen.review');
 
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');

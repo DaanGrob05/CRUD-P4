@@ -40,7 +40,7 @@ class ReviewController extends Controller
             return redirect('/');
         }
 
-        return ('success');
+        return view('reviews.create', ['trip_id' => $trip_id]);
     }
 
     /**

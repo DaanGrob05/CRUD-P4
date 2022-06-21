@@ -1,3 +1,9 @@
-@props(['disabled' => false])
+@props(['disabled' => false,'type' => ''  ,'field' => '', 'label' => ''])
 
-<input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge(['class' => '']) !!}>
+<div class="">
+    <label>{{ $label }}</label>
+    <input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge(['class' => '']) !!}>
+    @error($field)
+        <div class="">{{ $message }}</div>
+    @enderror
+</div>

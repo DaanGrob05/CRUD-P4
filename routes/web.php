@@ -39,13 +39,6 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-// Route::get('/contact', function () {
-//     return view('contact');
-// })->name('contact');
-
-Route::resource('contact', contact::class);
-
-
 Route::get('/privacy', function () {
     return view('privacy');
 })->name('privacy');
@@ -54,6 +47,7 @@ Route::get('/terms', function () {
     return view('terms');
 })->name('terms');
 
+Route::resource('contact', contact::class);
 // TODO : Add UserController
 
 Route::resource('reizen', TripController::class);

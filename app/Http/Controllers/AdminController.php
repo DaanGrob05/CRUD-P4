@@ -149,7 +149,19 @@ class AdminController extends Controller
     // Messages Functies
     public function messages()
     {
-        $contact = DB::table('contact')->get();
-        return view('admin.contact')->with('contact', $contact);
+        $messages = DB::table('messages')->get();
+        return view('admin.messages')->with('messages', $messages);
+    }
+
+    public function messages_show($id)
+    {
+        $message = DB::table('messages')->where('id', $id)->first();
+        return view('admin.show_message')->with('message', $message);
+    }
+
+    public function messages_delete($id)
+    {
+        DB::table('messages')->where('id', $id)->delete();
+        return redirect()->route('admin.messages')->with('success', 'Bericht is verwijderd');
     }
 }

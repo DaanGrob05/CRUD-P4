@@ -94,5 +94,10 @@ Route::get('/admin/users/{id}/edit', [AdminController::class, 'users_edit'])->na
 Route::put('/admin/users/{id}', [AdminController::class, 'users_update'])->name('admin.users.update');
 Route::delete('/admin/users/{id}', [AdminController::class, 'users_delete'])->name('admin.users.delete');
 
+// Contact Messages
+Route::get('/admin/messages', [AdminController::class, 'messages'])->name('admin.messages');
+Route::get('/admin/messages/{id}', [AdminController::class, 'messages_show'])->name('admin.messages.show');
+Route::delete('/admin/messages/{id}', [AdminController::class, 'messages_delete'])->name('admin.messages.delete');
+
 
 require __DIR__ . '/auth.php';

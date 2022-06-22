@@ -144,4 +144,12 @@ class AdminController extends Controller
         return redirect()->route('admin.reviews')->with('success', 'Recensie is verwijderd');
     }
     // Einde Reviews Functies
+
+    
+    // Messages Functies
+    public function messages()
+    {
+        $contact = DB::table('contact')->get();
+        return view('admin.contact')->with('contact', $contact);
+    }
 }

@@ -19,5 +19,5 @@
 <form action="{{ route('admin.users.delete', $user->id) }}" method="post">
     @csrf
     @method('DELETE')
-    <button type="submit" onclick="return confirm('Are you sure you want to delete this user?')"">Delete</button>
+    <button type="submit" onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
 </form>

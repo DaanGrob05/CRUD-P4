@@ -144,4 +144,24 @@ class AdminController extends Controller
         return redirect()->route('admin.reviews')->with('success', 'Recensie is verwijderd');
     }
     // Einde Reviews Functies
+
+    
+    // Messages Functies
+    public function messages()
+    {
+        $messages = DB::table('messages')->get();
+        return view('admin.messages')->with('messages', $messages);
+    }
+
+    public function messages_show($id)
+    {
+        $message = DB::table('messages')->where('id', $id)->first();
+        return view('admin.show_message')->with('message', $message);
+    }
+
+    public function messages_delete($id)
+    {
+        DB::table('messages')->where('id', $id)->delete();
+        return redirect()->route('admin.messages')->with('success', 'Bericht is verwijderd');
+    }
 }

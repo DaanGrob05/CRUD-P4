@@ -39,13 +39,6 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-// Route::get('/contact', function () {
-//     return view('contact');
-// })->name('contact');
-
-Route::resource('contact', contact::class);
-
-
 Route::get('/privacy', function () {
     return view('privacy');
 })->name('privacy');
@@ -54,6 +47,7 @@ Route::get('/terms', function () {
     return view('terms');
 })->name('terms');
 
+Route::resource('contact', contact::class);
 // TODO : Add UserController
 
 Route::resource('reizen', TripController::class);
@@ -96,6 +90,11 @@ Route::get('/admin/users/{id}', [AdminController::class, 'users_show'])->name('a
 Route::get('/admin/users/{id}/edit', [AdminController::class, 'users_edit'])->name('admin.users.edit');
 Route::put('/admin/users/{id}', [AdminController::class, 'users_update'])->name('admin.users.update');
 Route::delete('/admin/users/{id}', [AdminController::class, 'users_delete'])->name('admin.users.delete');
+
+// Contact Messages
+Route::get('/admin/messages', [AdminController::class, 'messages'])->name('admin.messages');
+Route::get('/admin/messages/{id}', [AdminController::class, 'messages_show'])->name('admin.messages.show');
+Route::delete('/admin/messages/{id}', [AdminController::class, 'messages_delete'])->name('admin.messages.delete');
 
 
 require __DIR__ . '/auth.php';

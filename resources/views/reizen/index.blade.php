@@ -18,7 +18,9 @@
     </head>
     <body class="antialiased">
         <div class="tripsspacer">
-            <x-nav></x-nav>
+            <x-nav
+                id="blueNav">
+            </x-nav>
             <div class="searchSpacer">
                 <div class="searchTitleCon">
                     <a class="searchFormTitle">Search by destination</a>
@@ -66,6 +68,7 @@
                 @endforelse
             </div>
         </div>
+        <x-footer></x-footer>
     </body>
 </html>
 

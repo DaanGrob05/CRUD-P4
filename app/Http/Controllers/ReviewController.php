@@ -4,23 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Trip;
 use App\Models\Booking;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
-class BookingController extends Controller
+class ReviewController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
-        $this->middleware('auth');
-        $this->middleware('isAdmin')->except('store');
+        $this->middleware('isAdmin', ['only' => 'index']);
     }
-
 
     /**
      * Display a listing of the resource.
@@ -39,8 +33,14 @@ class BookingController extends Controller
      */
     public function create($trip_id)
     {
-        $trip = Trip::find($trip_id);
-        return view('booking.create', ['trip' => $trip]);
+        // Boeking zoeken op basis van de user
+        $boeking = DB::table('bookings')->where('trip_id', $trip_id)->where('user_id', Auth::user()->id)->first();
+
+        if ($boeking == null) {
+            return redirect('/');
+        }
+
+        return view('reviews.create', ['trip_id' => $trip_id]);
     }
 
     /**
@@ -49,23 +49,33 @@ class BookingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($trip_id)
+    public function store(Request $request)
     {
-        DB::table('bookings')->insert([
-            'user_id' => Auth::user()->id,
-            'trip_id' => $trip_id,
+        $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required'
         ]);
 
-        return to_route('welcome')->with('success', 'Boeking is geplaatst');
+        DB::table('reviews')->insert([
+            'title' => $request->title,
+            'content' => $request->content,
+            'trip_id' => $request->trip_id,
+            'user_id' => Auth::user()->id,
+            'validation' => 0,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return to_route('reizen.show', $request->trip_id)->with('success', 'Recensie toegevoegd!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Recension  $recension
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Recension $recension)
     {
         //
     }
@@ -73,10 +83,10 @@ class BookingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Recension  $recension
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Recension $recension)
     {
         //
     }
@@ -85,10 +95,10 @@ class BookingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Recension  $recension
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Recension $recension)
     {
         //
     }
@@ -96,10 +106,10 @@ class BookingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Recension  $recension
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Recension $recension)
     {
         //
     }

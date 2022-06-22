@@ -123,7 +123,7 @@
   </div>
   <div class="contentSpacer">
   </div>
-  <footer></footer>
+  <x-footer></x-footer>
   <script type="text/javascript" src="{{ asset('js/slider.js') }}"></script>
   </body>
     

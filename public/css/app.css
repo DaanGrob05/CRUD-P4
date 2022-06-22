@@ -115,6 +115,86 @@ nav .navItemsCon {
   color: #002244;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  background-color: #e9e9f3;
+}
+footer .footerCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 75%;
+  height: 100%;
+  row-gap: 20px;
+}
+footer .footerCon .footerRowCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+}
+footer .footerCon .footerRowCon .footerRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+footer .footerCon .footerRowCon .footerRow .footerSocial {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 25%;
+  row-gap: 50px;
+}
+footer .footerCon .footerRowCon .footerRow .legalCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 15%;
+}
+footer .footerCon .footerRowCon .footerRow .legalCon .legalA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  color: #002244;
+  font-size: 0.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  color: #002244;
+  font-size: 0.6em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
 .landing {
   display: flex;
   justify-content: center;
@@ -374,10 +454,6 @@ nav .navItemsCon {
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 100%;
   width: 100%;
 }
@@ -808,10 +884,88 @@ nav .navItemsCon {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: none;
+  flex-direction: column;
   height: auto;
   width: 100%;
   background-color: #f5f5f5;
+  padding: 30px;
+  row-gap: 50px;
+}
+.adminSpacer .adminCon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 75%;
+  height: auto;
+}
+.adminSpacer .adminCon .adminItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 425px;
+  width: 200px;
+  transition: ease-in 0.5s;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25), 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
+.adminSpacer .adminCon .adminItem:hover {
+  width: 250px;
+}
+.adminSpacer .logoutCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 75%;
+}
+
+.aboutSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.aboutSpacer .aboutContentSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 75%;
+  row-gap: 17.5px;
+}
+.aboutSpacer .aboutContentSpacer .aboutTitle {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 25px;
+}
+.aboutSpacer .aboutContentSpacer .aboutTextCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 17.5px;
+}
+.aboutSpacer .aboutContentSpacer .aboutTextCon .aboutText {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 17.5px;
 }
 
 

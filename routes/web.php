@@ -69,10 +69,16 @@ Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name(
 // Gebruikers
 Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
 
-// Reviews  
+// Bookings  
 Route::get('/admin/boekingen', [AdminController::class, 'boekingen'])->name('admin.boekingen');
 Route::get('/admin/boekingen/{id}', [AdminController::class, 'boekingen_show'])->name('admin.boekingen.show');
 Route::delete('/admin/boekingen/{id}/verwijder', [AdminController::class, 'boekingen_delete'])->name('admin.boekingen.delete');
+
+// Reviews
+Route::get('/admin/reviews', [AdminController::class, 'reviews'])->name('admin.reviews');
+Route::get('admin.reviews/{id}', [AdminController::class, 'reviews_show'])->name('admin.reviews.show');
+Route::put('admin.reviews/{id}', [AdminController::class, 'reviews_update'])->name('admin.reviews.update');
+Route::delete('admin.reviews/{id}', [AdminController::class, 'reviews_delete'])->name('admin.reviews.delete');
 
 
 require __DIR__ . '/auth.php';

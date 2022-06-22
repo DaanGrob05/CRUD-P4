@@ -15,3 +15,4 @@
 <p><a href="{{ route('admin.reizen') }}">Bekijk alle reizen</a></p>
 <p><a href="{{ route('admin.boekingen') }}">Bekijk alle boekingen</a></p>
 <p><a href="{{ route('admin.users') }}">Bekijk alle gebruikers</a></p>
+<p><a href="{{ route('admin.reviews') }}">Reviews</a></p>

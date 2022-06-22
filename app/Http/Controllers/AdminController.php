@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Trip;
+use App\Models\User;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -30,6 +31,8 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
+
+    // Reizen Functies
     public function reizen()
     {
         // $trips = Trip::all();
@@ -43,13 +46,31 @@ class AdminController extends Controller
         $trip = Trip::where('trip_id', $id)->first();
         return view('admin.show_reis')->with('trip', $trip);
     }
+    // Einde Reizen Functies
 
+
+    // Users Functies
     public function users()
     {
-        return view('admin.users');
+        $users = User::all();
+        return view('admin.users')->with('users', $users);
     }
 
-    // Bookings
+    public function users_show($id)
+    {
+        $user = User::where('id', $id)->first();
+        return view('admin.show_user')->with('user', $user);
+    }
+
+    public function users_edit($id)
+    {
+        $user = User::where('id', $id)->first();
+        return view('admin.edit_user')->with('user', $user);
+    }
+    // Einde Users Functies
+
+
+    // Boekingen Functies
     public function boekingen()
     {
         $boekingen = Booking::all();
@@ -67,11 +88,10 @@ class AdminController extends Controller
         DB::table('bookings')->where('booking_id', $id)->delete();
         return redirect()->route('admin.boekingen')->with('success', 'Boeking is verwijderd');
     }
+    // Einde Bookings Functies
 
-    // Einde Bookings
 
-
-    // Reviews
+    // Reviews Functies
     public function reviews()
     {
         $reviews = DB::table('reviews')->get();
@@ -99,4 +119,5 @@ class AdminController extends Controller
         DB::table('reviews')->where('id', $id)->delete();
         return redirect()->route('admin.reviews')->with('success', 'Recensie is verwijderd');
     }
+    // Einde Reviews Functies
 }

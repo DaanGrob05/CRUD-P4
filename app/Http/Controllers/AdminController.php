@@ -49,6 +49,7 @@ class AdminController extends Controller
         return view('admin.users');
     }
 
+    // Bookings
     public function boekingen()
     {
         $boekingen = Booking::all();
@@ -65,5 +66,37 @@ class AdminController extends Controller
     {
         DB::table('bookings')->where('booking_id', $id)->delete();
         return redirect()->route('admin.boekingen')->with('success', 'Boeking is verwijderd');
+    }
+
+    // Einde Bookings
+
+
+    // Reviews
+    public function reviews()
+    {
+        $reviews = DB::table('reviews')->get();
+        return view('admin.reviews')->with('reviews', $reviews);
+    }
+
+    public function reviews_show($id)
+    {
+        $review = DB::table('reviews')->where('id', $id)->first();
+        return view('admin.show_review')->with('review', $review);
+    }
+
+    public function reviews_update(Request $request, $id)
+    {
+        DB::table('reviews')->where('id', $id)->update([
+            'validation' => $request->validation,
+            'updated_at' => now(),
+        ]);
+
+        return redirect()->route('admin.reviews')->with('success', 'Recensie is aangepast');
+    }
+
+    public function reviews_delete($id)
+    {
+        DB::table('reviews')->where('id', $id)->delete();
+        return redirect()->route('admin.reviews')->with('success', 'Recensie is verwijderd');
     }
 }

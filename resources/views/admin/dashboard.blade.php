@@ -12,6 +12,9 @@
         <div class="adminItem">
             <a href="{{ route('admin.users') }}">Manage all users</a>
         </div>
+        <div class="adminItem">
+            <a href="{{ route('admin.reviews') }}">Manage all reviews</a>
+        </div>
 
         
     </div>
@@ -23,8 +26,8 @@
                     onclick="event.preventDefault();
                                 this.closest('form').submit();">
                 {{ __('Log Out') }}
-
             </x-dropdown-link>
         </form>
      </div>
 </div>
+

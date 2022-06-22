@@ -43,6 +43,14 @@ Route::get('/contact', function () {
 })->name('contact');
 
 
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
+
+Route::get('/terms', function () {
+    return view('terms');
+})->name('terms');
+
 // TODO : Add UserController
 // TODO : Add ReviewController
 
@@ -61,6 +69,7 @@ Route::post('reizen/{trip_id}/recensie', [ReviewController::class, 'store'])->na
 // ADMIN FUNCTIONALITEIT
 
 // Reizen
+
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
 Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name('admin.reizen.show');

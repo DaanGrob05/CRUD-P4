@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -66,6 +67,23 @@ class AdminController extends Controller
     {
         $user = User::where('id', $id)->first();
         return view('admin.edit_user')->with('user', $user);
+    }
+
+    public function users_update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
+            'password' => 'required',
+        ]);
+
+        DB::table('users')->where('id', $id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return to_route('admin.users.show', $id);
     }
     // Einde Users Functies
 

@@ -85,6 +85,12 @@ class AdminController extends Controller
 
         return to_route('admin.users.show', $id);
     }
+
+    public function users_delete($id)
+    {
+        DB::table('users')->where('id', $id)->delete();
+        return to_route('admin.users');
+    }
     // Einde Users Functies
 
 

@@ -52,7 +52,6 @@ Route::get('/terms', function () {
 })->name('terms');
 
 // TODO : Add UserController
-// TODO : Add ReviewController
 
 Route::resource('reizen', TripController::class);
 
@@ -69,7 +68,6 @@ Route::post('reizen/{trip_id}/recensie', [ReviewController::class, 'store'])->na
 // ADMIN FUNCTIONALITEIT
 
 // Reizen
-
 Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin');
 Route::get('/admin/reizen', [AdminController::class, 'reizen'])->name('admin.reizen');
 Route::get('/admin/reizen/{id}', [AdminController::class, 'reizen_show'])->name('admin.reizen.show');
@@ -88,6 +86,13 @@ Route::get('/admin/reviews', [AdminController::class, 'reviews'])->name('admin.r
 Route::get('admin.reviews/{id}', [AdminController::class, 'reviews_show'])->name('admin.reviews.show');
 Route::put('admin.reviews/{id}', [AdminController::class, 'reviews_update'])->name('admin.reviews.update');
 Route::delete('admin.reviews/{id}', [AdminController::class, 'reviews_delete'])->name('admin.reviews.delete');
+
+// Users
+Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+Route::get('/admin/users/{id}', [AdminController::class, 'users_show'])->name('admin.users.show');
+Route::get('/admin/users/{id}/edit', [AdminController::class, 'users_edit'])->name('admin.users.edit');
+Route::put('/admin/users/{id}', [AdminController::class, 'users_update'])->name('admin.users.update');
+Route::delete('/admin/users/{id}', [AdminController::class, 'users_delete'])->name('admin.users.delete');
 
 
 require __DIR__ . '/auth.php';

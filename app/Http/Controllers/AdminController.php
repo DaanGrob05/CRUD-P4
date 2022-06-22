@@ -32,7 +32,9 @@ class AdminController extends Controller
 
     public function reizen()
     {
-        $trips = Trip::all();
+        // $trips = Trip::all();
+        $trips = DB::table('trips')->get();
+        // dd($trips);
         return view('admin.reizen')->with('trips', $trips);
     }
 

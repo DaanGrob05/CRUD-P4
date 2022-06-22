@@ -80,8 +80,8 @@
     <div class="createFormItem">
         <x-trip-input 
             type="text"
-            name="small_Description"
-            field="small_Description"
+            name="small_description"
+            field="small_description"
             label="Small Description"
             :value="@old('small_description', $trip->small_description)"
         ></x-trip-input>
@@ -90,8 +90,8 @@
     <div class="createFormItem">
         <x-trip-input 
             type="text"
-            name="full_Description"
-            field="full_Description"
+            name="full_description"
+            field="full_description"
             label="Full Description"
             :value="@old('full_description', $trip->full_description)"
         ></x-trip-input>

@@ -120,8 +120,9 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  height: 300px;
+  height: auto;
   width: 100%;
+  padding: 20px;
   background-color: #e9e9f3;
 }
 footer .footerCon {
@@ -131,16 +132,67 @@ footer .footerCon {
   flex-direction: row;
   width: 75%;
   height: 100%;
+  row-gap: 20px;
 }
-footer .footerCon .footerItemCon {
+footer .footerCon .footerRowCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+}
+footer .footerCon .footerRowCon .footerRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+footer .footerCon .footerRowCon .footerRow .footerSocial {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  width: 100%;
   height: auto;
-  border-top: 1px solid #d4d4d0;
-  border-bottom: 1px solid #d4d4d0;
+  width: 25%;
+  row-gap: 50px;
+}
+footer .footerCon .footerRowCon .footerRow .legalCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 15%;
+}
+footer .footerCon .footerRowCon .footerRow .legalCon .legalA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  color: #002244;
+  font-size: 0.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  color: #002244;
+  font-size: 0.6em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 
 .landing {
@@ -402,10 +454,6 @@ footer .footerCon .footerItemCon {
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 100%;
   width: 100%;
 }

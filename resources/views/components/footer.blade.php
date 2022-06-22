@@ -2,18 +2,27 @@
     <div class="footerCon">
         <div class="footerRowCon">
             <div class="footerRow">
-                <p>overview</p>
-                <a href="{{ route('about') }}">about</a>
-                <a href="{{ route('contact') }}">contact</a>
-                <a href="{{ route('reizen.index') }}">book</a>
-                <a href="{{ route('login') }}">login</a>
-                <a href="{{ route('register') }}">register</a>
-                
+                {{-- divs for socials --}}
+                <div class="footerSocial">
+                    <img src="{{ asset('images/facebookIcon.png') }}" alt="facebook">
+                    <img src="{{ asset('images/instagramIcon.png') }}" alt="instagram">
+                    <img src="{{ asset('images/twitterIcon.png') }}" alt="twitter">
+
+                </div>
+
             </div>
             <div class="footerRow">
-                <p>legal</p>
-                <a href="{{ route('terms') }}">terms</a>
-                <a href="{{ route('privacy') }}">privacy</a>
+                <div class="legalCon">
+                    <a class="legalA" href="{{ route('terms') }}">terms</a>
+                    <a>/</a>
+                    <a class="legalA" href="{{ route('privacy') }}">privacy</a>
+                </div>
+            </div>
+            <div class="footerRow">
+
+                <div class="copyright">
+                    <p class="copyrightP">© 2022, All Rights Reserved</p>
+                </div>
             </div>
         </div>
     </div>

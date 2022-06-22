@@ -106,21 +106,58 @@ nav {
 // footer
 footer {
     @include customFlex(center, none);
-    height: 300px;
+    height: auto;
     width: 100%;
+    padding: 20px;
     background-color: $quaternary;
-
     .footerCon {
         @include customFlex(center, row);
         width: 75%;
         height: 100%;
-
-        .footerItemCon {
-            @include customFlex(space-around, row);
-            width: 100%;
+        row-gap: 20px;
+        .footerRowCon {
+            @include customFlex(center, column);
             height: auto;
-            border-top: $greyBorder;
-            border-bottom: $greyBorder;
+            width: 100%;
+            row-gap: 10px;
+            .footerRow {
+                @include customFlex(center, row);
+                height: auto;
+                width: 100%;
+                .footerSocial {
+                    @include customFlex(space-around, row);
+                    height: auto;
+                    width: 25%;
+                    row-gap: 50px;
+                }
+                .legalCon {
+                    @include customFlex(space-between, row);
+                    height: auto;
+                    width: 15%;
+                    .legalA {
+                        @include customFlex(center, column);
+                        height: auto;
+                        width: 100%;
+                        color: $secondary;
+                        font-size: 0.8em;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                .copyright {
+                    .copyrightP {
+                        @include customFlex(center, column);
+                        height: auto;
+                        width: 100%;
+                        color: $secondary;
+                        font-size: 0.6em;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
         }
     }
 }
@@ -367,7 +404,6 @@ $generalWidth: 200px;
     background-color: $primary;
 }
 .content {
-    @include customFlex(center, column);
     height: 100%;
     width: 100%;
 

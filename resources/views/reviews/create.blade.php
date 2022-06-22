@@ -7,13 +7,13 @@
 
 <form action="{{ route('reizen.review.store', $trip_id) }}" method="post">
     @csrf
-    <x-input
+    <x-trip-input
         type="text"
         name="title"
         field="title"
         label="Title"
         :value="@old('title')"
-    ></x-input>
+    ></x-trip-input>
     <x-textarea
         name="content"
         field="content"

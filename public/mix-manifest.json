@@ -1,5 +1,8 @@
 {
     "/js/slider.js": "/js/slider.js",
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/images/facebookIcon.png": "/images/facebookIcon.png",
+    "/images/instagramIcon.png": "/images/instagramIcon.png",
+    "/images/twitterIcon.png": "/images/twitterIcon.png"
 }

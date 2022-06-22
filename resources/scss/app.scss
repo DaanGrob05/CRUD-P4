@@ -106,21 +106,58 @@ nav {
 // footer
 footer {
     @include customFlex(center, none);
-    height: 300px;
+    height: auto;
     width: 100%;
+    padding: 20px;
     background-color: $quaternary;
-
     .footerCon {
         @include customFlex(center, row);
         width: 75%;
         height: 100%;
-
-        .footerItemCon {
-            @include customFlex(space-around, row);
-            width: 100%;
+        row-gap: 20px;
+        .footerRowCon {
+            @include customFlex(center, column);
             height: auto;
-            border-top: $greyBorder;
-            border-bottom: $greyBorder;
+            width: 100%;
+            row-gap: 10px;
+            .footerRow {
+                @include customFlex(center, row);
+                height: auto;
+                width: 100%;
+                .footerSocial {
+                    @include customFlex(space-around, row);
+                    height: auto;
+                    width: 25%;
+                    row-gap: 50px;
+                }
+                .legalCon {
+                    @include customFlex(space-between, row);
+                    height: auto;
+                    width: 15%;
+                    .legalA {
+                        @include customFlex(center, column);
+                        height: auto;
+                        width: 100%;
+                        color: $secondary;
+                        font-size: 0.8em;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                .copyright {
+                    .copyrightP {
+                        @include customFlex(center, column);
+                        height: auto;
+                        width: 100%;
+                        color: $secondary;
+                        font-size: 0.6em;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
         }
     }
 }
@@ -367,7 +404,6 @@ $generalWidth: 200px;
     background-color: $primary;
 }
 .content {
-    @include customFlex(center, column);
     height: 100%;
     width: 100%;
 
@@ -688,6 +724,35 @@ $generalWidth: 200px;
 
 // admin page
 .adminSpacer {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    padding: 30px;
+    row-gap: 50px;
+    .adminCon {
+        @include customFlex(space-around, row);
+        width: 75%;
+        height: auto;
+        .adminItem {
+            @include customFlex(center, column);
+            height: 425px;
+            width: 200px;
+            transition: ease-in 0.5s;
+            -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25),
+                0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25),
+                0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+            &:hover {
+                width: 250px;
+            }
+        }
+    }
+    .logoutCon {
+        @include customFlex(center, none);
+        height: auto;
+        width: 75%;
+    }
 }
 
 // about page

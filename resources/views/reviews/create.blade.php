@@ -9,14 +9,18 @@
     @csrf
     <x-input
         type="text"
+        name="title"
         field="title"
         label="Title"
+        :value="@old('title')"
     ></x-input>
-    <x-input
-        type="text"
+    <x-textarea
+        name="content"
         field="content"
         label="Content"
-    ></x-input>
-    {{-- <input type="contect" name="contect" placeholder="Contect"> --}}
-
+        rows="10"
+        placeholder="Write your review here"
+        :value="@old('content')"
+    ></x-textarea>
+    <button type="submit">Submit</button>
 </form>

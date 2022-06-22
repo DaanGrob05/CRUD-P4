@@ -51,7 +51,22 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required'
+        ]);
+
+        DB::table('reviews')->insert([
+            'title' => $request->title,
+            'content' => $request->content,
+            'trip_id' => $request->trip_id,
+            'user_id' => Auth::user()->id,
+            'validation' => 0,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return to_route('reizen.show', $request->trip_id)->with('success', 'Recensie toegevoegd!');
     }
 
     /**

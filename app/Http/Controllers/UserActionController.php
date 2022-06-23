@@ -27,4 +27,17 @@ class UserActionController extends Controller
         // dd($bookings);
         return view('user.bookings')->with('bookings', $bookings);
     }
+
+    public function booking($id)
+    {
+        $booking = DB::table('bookings')
+            ->where('booking_id', $id)
+            ->first();
+
+        $trip = DB::table('trips')
+            ->where('trip_id', $booking->trip_id)
+            ->first();
+
+        return view('user.booking')->with('booking', $booking)->with('trip', $trip);
+    }
 }

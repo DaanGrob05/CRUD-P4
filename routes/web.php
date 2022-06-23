@@ -52,7 +52,7 @@ Route::resource('reizen', TripController::class);
 Route::get('profile', [UserActionController::class, 'dashboard'])->name('profile');
 Route::get('profile/bookings', [UserActionController::class, 'bookings'])->name('profile.bookings');
 Route::get('profile/bookings/{id}', [UserActionController::class, 'booking'])->name('profile.bookings.show');
-Route::delete('profile/bookings/{id}', [UserActionController::class, 'deleteBooking'])->name('profile.bookings.delete');
+Route::delete('profile/bookings/{id}', [UserActionController::class, 'booking_delete'])->name('profile.bookings.delete');
 Route::get('profile/edit', [UserActionController::class, 'edit'])->name('profile.edit');
 Route::post('profile/update', [UserActionController::class, 'update'])->name('profile.update');
 

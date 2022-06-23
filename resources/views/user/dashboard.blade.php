@@ -12,11 +12,26 @@
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
                 {{-- Bookings --}}
+                <div class="">
+                    <a href="{{ route('profile.bookings') }}">Bookings</a>
+                </div>
                 
-
                 {{-- Pas Gegevens aan --}}
+                <div class="">
+                    <a href="{{ route('profile.edit') }}">Edit Profile Information</a>
+                </div>
 
-
+                <div class="logoutCon">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+            
+                        <x-dropdown-link :href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </x-dropdown-link>
+                    </form>
+                 </div>
             </div>
         </div>
     </div>

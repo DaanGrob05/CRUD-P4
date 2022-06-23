@@ -40,4 +40,16 @@ class UserActionController extends Controller
 
         return view('user.booking')->with('booking', $booking)->with('trip', $trip);
     }
+
+    public function booking_delete($id)
+    {
+        DB::table('bookings')
+            ->where('booking_id', $id)
+            ->delete();
+    }
+
+    public function edit()
+    {
+        return view('user.edit');
+    }
 }

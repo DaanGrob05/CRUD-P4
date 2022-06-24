@@ -27,7 +27,6 @@ class TripController extends Controller
             ['trip_name', 'like', '%' . $name . '%'],
             ['full_description', 'like', '%' . $desc . '%'],
         ])->get();
-        dd($trips);
         return view('reizen.index', compact('trips'));
     }
 

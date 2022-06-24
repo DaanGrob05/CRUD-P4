@@ -6,6 +6,7 @@ use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserActionController extends Controller
 {
@@ -51,5 +52,16 @@ class UserActionController extends Controller
     public function edit()
     {
         return view('user.edit');
+    }
+
+    public function update(Request $request)
+    {
+        DB::table('users')->where('id', Auth::user()->id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return to_route('profile');
     }
 }

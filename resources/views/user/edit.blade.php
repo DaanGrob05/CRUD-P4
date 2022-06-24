@@ -6,6 +6,7 @@
     @csrf
     @method('PUT')
 
+    {{-- Name --}}
     <div class="">
         <x-general-input
             label="Name"
@@ -15,6 +16,7 @@
         ></x-general-input>
     </div>
 
+    {{-- Email --}}
     <div class="">
         <x-general-input
             label="Email"
@@ -24,6 +26,7 @@
         ></x-general-input>
     </div>
 
+    {{-- Password --}}
     <div class="">
         <x-general-input
             label="Password"

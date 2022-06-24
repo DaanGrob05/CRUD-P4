@@ -21,3 +21,5 @@ mix.js("resources/js/app.js", "public/js").postCss(
 mix.sass("resources/scss/app.scss", "public/css");
 
 mix.copyDirectory("resources/images", "public/images");
+
+mix.copyDirectory("resources/js/sliderimgs", "public/js/sliderimgs");

@@ -124,7 +124,8 @@
   <div class="contentSpacer">
   </div>
   <x-footer></x-footer>
-  <script type="text/javascript" src="{{ asset('js/slider.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/slider.js') }}">
+  </script>
   </body>
     
 </html>

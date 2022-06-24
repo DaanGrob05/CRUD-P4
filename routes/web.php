@@ -1,12 +1,13 @@
 <?php
 
+use App\Http\Controllers\contact;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\BookingController;
-use App\Http\Controllers\contact;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\UserActionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,15 +24,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
 Route::get('/home', function () {
     if (Auth::user()->is_admin == 1) {
         return redirect()->route('admin');
     } else {
-        return redirect()->route('dashboard');
+        return redirect()->route('profile');
     }
 })->name('home');
 
@@ -48,9 +45,16 @@ Route::get('/terms', function () {
 })->name('terms');
 
 Route::resource('contact', contact::class);
-// TODO : Add UserController
 
 Route::resource('reizen', TripController::class);
+
+// User Functies
+Route::get('profile', [UserActionController::class, 'dashboard'])->name('profile');
+Route::get('profile/bookings', [UserActionController::class, 'bookings'])->name('profile.bookings');
+Route::get('profile/bookings/{id}', [UserActionController::class, 'booking'])->name('profile.bookings.show');
+Route::delete('profile/bookings/{id}', [UserActionController::class, 'booking_delete'])->name('profile.bookings.delete');
+Route::get('profile/edit', [UserActionController::class, 'edit'])->name('profile.edit');
+Route::put('profile/update', [UserActionController::class, 'update'])->name('profile.update');
 
 
 // Boekingen

@@ -15,8 +15,9 @@
         <div class="adminItem">
             <a href="{{ route('admin.reviews') }}">Manage all reviews</a>
         </div>
-
-        
+        <div class="adminItem">
+            <a href="{{ route('admin.messages') }}">Manage all messages</a>
+        </div>  
     </div>
     <div class="logoutCon">
         <form method="POST" action="{{ route('logout') }}">
@@ -30,4 +31,3 @@
         </form>
      </div>
 </div>
-

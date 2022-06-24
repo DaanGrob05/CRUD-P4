@@ -64,5 +64,3 @@
         <a  href="{{ route('admin') }}">back</a>
     </button>  
 </div>
-
-

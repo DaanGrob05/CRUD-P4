@@ -957,3 +957,10 @@ $generalWidth: 200px;
         }
     }
 }
+
+.contactSpacer {
+    @include customFlex(center, none);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+}

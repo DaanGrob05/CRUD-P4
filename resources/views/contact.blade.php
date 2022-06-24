@@ -43,7 +43,7 @@
                 label="Message *"
                 :value="@old('message', $contact->message)"
             ></x-contact-input>
-            <button type="submit">Verstuur Bericht</button>
+            <button type="submit">Send Message</button>
         </form>
     </div>
 </div>

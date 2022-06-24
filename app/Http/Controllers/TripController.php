@@ -18,9 +18,16 @@ class TripController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $trips = Trip::all();
+        $name = $request->name;
+        $desc = $request->desc;
+
+        $trips = Trip::where([
+            ['trip_name', 'like', '%' . $name . '%'],
+            ['full_description', 'like', '%' . $desc . '%'],
+        ])->get();
+        dd($trips);
         return view('reizen.index', compact('trips'));
     }
 

@@ -26,8 +26,8 @@
                     <a class="searchFormTitle">Search by destination</a>
                 </div>
                 <div class="searchCon">                
-                    <form class="searchForm" action="#" method="GET">
-                        <input class="searchInput" type="text" name="search" placeholder="Search">
+                    <form class="searchForm" action="" method="GET">
+                        <input class="searchInput" type="text" name="name" placeholder="Search">
                         <button class="searchButton" type="submit">
                             <a class="buttonA">search</a>
                         </button>

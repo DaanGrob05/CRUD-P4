@@ -101,7 +101,7 @@ class TripController extends Controller
             ['validation', 1],
         ])->get();
 
-        dd($reviews);
+        // dd($reviews);
 
         return view('reizen.show')->with('trip', $trip)->with('reviews', $reviews);
     }

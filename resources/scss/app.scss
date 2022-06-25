@@ -721,6 +721,60 @@ $generalWidth: 200px;
         }
     }
 }
+// show trip page
+
+.showTripSpacer {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    padding: 30px;
+    row-gap: 50px;
+    .tripShowCon {
+        @include customFlex(center, column);
+        height: auto;
+        width: 100%;
+        row-gap: 50px;
+
+        .tripShowInfoCon {
+            @include customFlex(none, column);
+            height: auto;
+            max-width: 900px;
+            padding: 30px;
+            row-gap: 20px;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+            .tripShowImageCon {
+                @include customFlex(space-around, row);
+                height: 375px;
+                width: 100%;
+
+                .tripShowImage {
+                    @include customFlex(center, none);
+                    height: 100%;
+                    width: auto;
+                }
+            }
+            .tripShowInfo {
+                @include customFlex(none, column);
+                height: auto;
+                width: 100%;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+.reizenShowTitleCon {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    .reizenShowTitle {
+        @include customFlex(center, none);
+        height: auto;
+        width: 100%;
+        font-size: 35px;
+    }
+}
 
 // admin page
 .adminSpacer {

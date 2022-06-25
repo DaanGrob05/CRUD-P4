@@ -48,4 +48,7 @@
             </div>
         </div>
     </div>
+    <button class="generalButton">
+        <a  href="{{ route('admin') }}">Back</a>
+    </button>   
 </div>

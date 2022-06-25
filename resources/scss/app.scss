@@ -972,7 +972,7 @@ $generalWidth: 200px;
             padding: 5px;
 
             .userItemCon {
-                @include customFlex(space-around, none);
+                @include customFlex(space-around, row);
                 height: auto;
                 width: 100%;
                 padding: 15px;
@@ -986,6 +986,52 @@ $generalWidth: 200px;
             }
         }
     }
+}
+// side by side tabel
+.sideBySideTable {
+    @include customFlex(center, column);
+    height: auto;
+    max-width: 800px;
+    background-color: $primary;
+    row-gap: 30px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+    .sideBySideTableRow {
+        @include customFlex(space-between, row);
+        height: auto;
+        width: 100%;
+
+        border-bottom: 1px solid #d4d4d0;
+        .sideBySideTableCTitle {
+            @include customFlex(center, none);
+            height: auto;
+            width: 50%;
+            font-size: 17.5px;
+            padding: 15px;
+        }
+        .sideBySideTableItemInfo {
+            @include customFlex(center, row);
+            height: auto;
+            width: 50%;
+            padding: 15px;
+            font-size: 17.5px;
+
+            #validateReview {
+                @include customFlex(space-around, row);
+                height: auto;
+                width: 100%;
+                .validateReviewSelect {
+                    @include customFlex(center, none);
+                    height: 40px;
+                    width: 125px;
+                    font-size: 17.5px;
+                }
+            }
+        }
+    }
+}
+#ContentP {
+    font-size: 12.5px;
 }
 // about page
 

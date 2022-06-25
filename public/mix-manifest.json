@@ -1,11 +1,5 @@
 {
     "/js/slider.js": "/js/slider.js",
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/images/facebookIcon.png": "/images/facebookIcon.png",
-    "/images/instagramIcon.png": "/images/instagramIcon.png",
-    "/images/twitterIcon.png": "/images/twitterIcon.png",
-    "/js/sliderimgs/pexels-photo-2131623.jpeg": "/js/sliderimgs/pexels-photo-2131623.jpeg",
-    "/js/sliderimgs/pexels-photo-4125993.jpeg": "/js/sliderimgs/pexels-photo-4125993.jpeg",
-    "/js/sliderimgs/pexels-photo-460376.jpeg": "/js/sliderimgs/pexels-photo-460376.jpeg"
+    "/css/app.css": "/css/app.css"
 }

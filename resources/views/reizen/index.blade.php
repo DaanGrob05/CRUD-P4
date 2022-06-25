@@ -26,8 +26,8 @@
                     <a class="searchFormTitle">Search by destination</a>
                 </div>
                 <div class="searchCon">                
-                    <form class="searchForm" action="#" method="GET">
-                        <input class="searchInput" type="text" name="search" placeholder="Search">
+                    <form class="searchForm" action="" method="GET">
+                        <input class="searchInput" type="text" name="name" placeholder="Search">
                         <button class="searchButton" type="submit">
                             <a class="buttonA">search</a>
                         </button>
@@ -67,14 +67,12 @@
                 <p>Er zijn geen reizen gevonden.</p>
                 @endforelse
             </div>
+
+            {{-- Knop om terug naar boven te gaan --}}
+            <button class="generalButton" id="toTopButton" title="Go to top"><a>Back To Top</a></button>
         </div>
+        <x-footer></x-footer>
+
+        <script type="text/javascript" src="{{ asset('js/to_top_button.js') }}"></script>
     </body>
 </html>
-
-{{-- @forelse ($trips as $trip)
-<a href="{{ route('reizen.show', $trip->trip_id) }}">
-    <p>{{ $trip->description }}</p>
-</a>
-@empty
-<p>Er zijn geen reizen gevonden.</p>
-@endforelse --}}

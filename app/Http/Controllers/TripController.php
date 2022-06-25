@@ -18,9 +18,21 @@ class TripController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $trips = Trip::all();
+        $name = $request->name;
+        $desc = $request->desc;
+
+        $start = $request->startDate;
+        $end = $request->endDate;
+
+        $trips = Trip::where([
+            ['trip_name', 'like', '%' . $name . '%'],
+            ['full_description', 'like', '%' . $desc . '%'],
+        ])->get();
+
+        // $trips = Trip::whereBetween('startDate', [$start, $end])->whereBetween('endDate', [$start, $end])->get();
+
         return view('reizen.index', compact('trips'));
     }
 
@@ -43,20 +55,32 @@ class TripController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'description' => 'required',
-            'start_date' => 'required',
-            'end_date' => 'required',
-            'price' => 'required',
+            'trip_name' => 'required|string|max:255',
+            'start_location' => 'required|string|max:255',
+            'type_of_trip' => 'required|integer',
+            'destination' => 'required|string|max:255',
+            'startDate' => 'required|date',
+            'endDate' => 'required|date',
+            'price' => 'required|numeric',
+            'small_description' => 'required|string|max:255',
+            'full_description' => 'required|string|max:255',
+            'hotel' => 'required|string|max:255',
             // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
         ]);
 
         DB::table('trips')->insert([
-            'description' => $request->description,
-            'startDate' => $request->start_date,
-            'endDate' => $request->end_date,
-            'hotel' => $request->hotel,
+            'trip_name' => $request->trip_name,
+            'start_location' => $request->start_location,
+            'type_of_trip' => $request->type_of_trip,
+            'destination' => $request->destination,
+            'startDate' => $request->startDate,
+            'endDate' => $request->endDate,
             'price' => $request->price,
-            'image' => $request->image,
+            'small_description' => $request->small_description,
+            'full_description' => $request->full_description,
+            'hotel' => $request->hotel,
+            // 'image' => $request->image,
             'updated_at' => now(),
         ]);
 
@@ -72,7 +96,14 @@ class TripController extends Controller
     public function show($id)
     {
         $trip = Trip::where('trip_id', $id)->first();
-        return view('reizen.show')->with('trip', $trip);
+        $reviews = DB::table('reviews')->where([
+            ['trip_id', $id],
+            ['validation', 1],
+        ])->get();
+
+        dd($reviews);
+
+        return view('reizen.show')->with('trip', $trip)->with('reviews', $reviews);
     }
 
     /**
@@ -97,21 +128,33 @@ class TripController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'description' => 'required',
-            'start_date' => 'required',
-            'end_date' => 'required',
-            'price' => 'required',
+            'trip_name' => 'required|string|max:255',
+            'start_location' => 'required|string|max:255',
+            'type_of_trip' => 'required|integer',
+            'destination' => 'required|string|max:255',
+            'startDate' => 'required|date',
+            'endDate' => 'required|date',
+            'price' => 'required|numeric',
+            'small_description' => 'required|string|max:255',
+            'full_description' => 'required|string|max:255',
+            'hotel' => 'required|string|max:255',
             // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
         ]);
 
         // TODO Update
         DB::table('trips')->where('trip_id', $id)->update([
-            'description' => $request->description,
-            'startDate' => $request->start_date,
-            'endDate' => $request->end_date,
-            'hotel' => $request->hotel,
-            'price' => $request->price,
-            'image' => $request->image,
+            'trip_name' => 'required|string|max:255',
+            'start_location' => 'required|string|max:255',
+            'type_of_trip' => 'required|integer',
+            'destination' => 'required|string|max:255',
+            'startDate' => 'required|date',
+            'endDate' => 'required|date',
+            'price' => 'required|numeric',
+            'small_description' => 'required|string|max:255',
+            'full_description' => 'required|string|max:255',
+            'hotel' => 'required|string|max:255',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'updated_at' => now(),
         ]);
 

@@ -41,7 +41,7 @@
               </div>
             </div>
             <div class="formCon">
-              <form action="">
+              <form action="{{ route('reizen.index') }}">
                 
                 <div class="whereFromCon">
                     <div class="group emailGroup" id="loginFormGroup">
@@ -78,12 +78,12 @@
                 <div class="whenCon">
                    <div class="group">
                         <label class="dateLabel">departure date*</label>
-                        <input class="textInput" type="date" id="date" required="required" />
+                        <input class="textInput" type="date" id="date" name="startDate" required="required" />
                         <div class="bar"></div>
                     </div>
                     <div class="group">
                         <label class="dateLabel">return date</label>
-                        <input class="textInput" type="date" id="name" required="required" />
+                        <input class="textInput" type="date" id="name" name="endDate" required="required" />
                         <div class="bar"></div>
                     </div>
                 </div>
@@ -124,7 +124,8 @@
   <div class="contentSpacer">
   </div>
   <x-footer></x-footer>
-  <script type="text/javascript" src="{{ asset('js/slider.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/slider.js') }}">
+  </script>
   </body>
     
 </html>

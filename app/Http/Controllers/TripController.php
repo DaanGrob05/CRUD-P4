@@ -23,10 +23,16 @@ class TripController extends Controller
         $name = $request->name;
         $desc = $request->desc;
 
+        $start = $request->startDate;
+        $end = $request->endDate;
+
         $trips = Trip::where([
             ['trip_name', 'like', '%' . $name . '%'],
             ['full_description', 'like', '%' . $desc . '%'],
         ])->get();
+
+        // $trips = Trip::whereBetween('startDate', [$start, $end])->whereBetween('endDate', [$start, $end])->get();
+
         return view('reizen.index', compact('trips'));
     }
 

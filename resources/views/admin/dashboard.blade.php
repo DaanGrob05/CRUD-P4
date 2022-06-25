@@ -17,9 +17,8 @@
         </div>
         <div class="adminItem">
             <a href="{{ route('admin.messages') }}">Manage all messages</a>
-        </div>
+        </div>  
     </div>
-    
     <div class="logoutCon">
         <form method="POST" action="{{ route('logout') }}">
             @csrf
@@ -32,4 +31,3 @@
         </form>
      </div>
 </div>
-

@@ -2,8 +2,5 @@
     "/js/slider.js": "/js/slider.js",
     "/js/to_top_button.js": "/js/to_top_button.js",
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/images/facebookIcon.png": "/images/facebookIcon.png",
-    "/images/instagramIcon.png": "/images/instagramIcon.png",
-    "/images/twitterIcon.png": "/images/twitterIcon.png"
+    "/css/app.css": "/css/app.css"
 }

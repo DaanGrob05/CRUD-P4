@@ -96,7 +96,14 @@ class TripController extends Controller
     public function show($id)
     {
         $trip = Trip::where('trip_id', $id)->first();
-        return view('reizen.show')->with('trip', $trip);
+        $reviews = DB::table('reviews')->where([
+            ['trip_id', $id],
+            ['validation', 1],
+        ])->get();
+
+        dd($reviews);
+
+        return view('reizen.show')->with('trip', $trip)->with('reviews', $reviews);
     }
 
     /**

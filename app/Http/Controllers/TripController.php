@@ -54,20 +54,30 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'trip_name' => 'required|string|max:255',
-            'start_location' => 'required|string|max:255',
-            'type_of_trip' => 'required|integer',
-            'destination' => 'required|string|max:255',
-            'startDate' => 'required|date',
-            'endDate' => 'required|date',
-            'price' => 'required|numeric',
-            'small_description' => 'required|string|max:255',
-            'full_description' => 'required|string|max:255',
-            'hotel' => 'required|string|max:255',
-            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // $request->validate([
+        //     'trip_name' => 'required|string|max:255',
+        //     'start_location' => 'required|string|max:255',
+        //     'type_of_trip' => 'required|integer',
+        //     'destination' => 'required|string|max:255',
+        //     'startDate' => 'required|date',
+        //     'endDate' => 'required|date',
+        //     'price' => 'required|numeric',
+        //     'small_description' => 'required|string|max:255',
+        //     'full_description' => 'required|string|max:255',
+        //     'hotel' => 'required|string|max:255',
+        //     // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
-        ]);
+        // ]);
+
+        $requestData = $request->all();
+        $fileName = time() . $request->file('image')->getClientOriginalName();
+        $path = $request->file('image')->storeAs('images', $fileName, 'public');
+        $image = '/storage/' . $path;
+
+        return view('test')->with('image', $image);
+        // dd($fileName);
+        // return ($request->image);
+
 
         DB::table('trips')->insert([
             'trip_name' => $request->trip_name,

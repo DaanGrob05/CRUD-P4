@@ -3,7 +3,7 @@
     id="blueNav">
 </x-nav>
 
-<form action="{{ route('reizen.store') }}" method="post">
+<form action="{{ route('reizen.store') }}" method="post" enctype="multipart/form-data">
     @csrf
     {{-- tripname --}}
     <div class="createFormItem">

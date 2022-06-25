@@ -790,9 +790,23 @@ $generalWidth: 200px;
     }
 }
 
-.contactSpacer {
-    @include customFlex(center, none);
+// privacy/terms page
+.legalSpacer {
+    @include customFlex(none, column);
     height: auto;
     width: 100%;
     background-color: $primary;
+    padding: 30px;
+    .legalContentSpacer {
+        @include customFlex(none, column);
+        height: auto;
+        width: 75%;
+        row-gap: 17.5px;
+        .legalTitle {
+            @include customFlex(none, none);
+            height: auto;
+            width: 100%;
+            font-size: 25px;
+        }
+    }
 }

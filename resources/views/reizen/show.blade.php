@@ -6,4 +6,4 @@
 <h2>{{ $trip->description }}</h2>
 
 @csrf
-<a href="{{ route('reizen.boek', ['trip_id' => $trip->trip_id]) }}">Reis Boeken</a>
+    <a href="{{ route('reizen.boek', ['trip_id' => $trip->trip_id]) }}">Reis Boeken</a>

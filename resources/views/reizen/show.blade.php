@@ -2,12 +2,12 @@
     id="blueNav">
 </x-nav>
 <div class="showTripSpacer">
-     <div class="tripShowTitleCon">
-            <h1 class="tripShowTitle">{{ $trip->trip_name }}</h1>
-        </div>
+     
         
     <div class="tripShowCon">
-       
+       <div class="tripShowTitleCon">
+            <h1 class="tripShowTitle">{{ $trip->trip_name }}</h1>
+        </div>
         <div class="tripShowInfoCon">
             <div class="tripShowImageCon">
                 <img class="tripShowImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="">
@@ -21,38 +21,53 @@
                 <div class="tripShowInfoDate">
                     <p class="tripShowInfoDate">{{ $trip->startDate }} / {{ $trip->endDate }}</p>
                 </div>
-                <div class="tripShowInfoPrice">
-                    <p class="tripShowInfoPrice">€{{ $trip->price }},-</p>
-                </div>
+                
             </div>
             <div class="tripShowInfo">
-                <div class="tripShowInfoTitle">
+                <div class="tripShowInfoTitleCon">
                     <h3 class="tripShowInfoTitle">Description</h3>
                 </div>
                 <div class="tripShowInfoDescription">
-                    <p class="tripShowInfoDescription">{{ $trip->full_description }}</p>
+                    <p class="tripShowInfoContent">{{ $trip->full_description }}</p>
                 </div>
             </div>
             <div class="tripShowInfo">
-                <div class="tripShowInfoTitle">
-                    <h3 class="tripShowInfoTitle">Location</h3>
+                <div class="tripShowInfoTitleCon">
+                    <h3 class="tripShowInfoTitle">Destination</h3>
                 </div>
-                <div class="tripShowInfoDescription">
-                    <p class="tripShowInfoDescription">{{ $trip->location }}</p>
+                <div class="tripShowInfoContentCon">
+                    <p class="tripShowInfoContent">{{ $trip->start_location }} / {{ $trip->destination}}</p>
                 </div>
             </div>
             <div class="tripShowInfo">
-                <div class="tripShowInfo">
+                <div class="tripShowInfoTitleCon">
+                    <h3 class="tripShowInfoTitle">Price</h3>
+                </div>
+                <div class="tripShowInfoContentCon">
+                    <p class="tripShowInfoPriceContent">€{{ $trip->price }},-</p>
+                </div>
+            </div>
+            <div class="tripShowInfo" id="tripShowInfoRow">
+                <div class="tripShowInfoContentCon">
+                @csrf
+                    <button class="generalButton">
+                        <a href="{{ route('reizen.boek', ['trip_id' => $trip->trip_id]) }}">Reis Boeken</a>
+                    </button>
+                </div>
+                <div class="tripShowInfoContentCon">
+                    @csrf
+                    <button class="generalButton">
+                        <a href="{{ route('reizen.review', ['trip_id' => $trip->trip_id]) }}">Review</a>
+
+                    </button>
+                </div>
+
+                
             </div>
         </div>
     </div>
-    
+    <button class="generalButton">
+        <a  href="{{ route('reizen.index') }}">Back</a>
+    </button>   
 </div>
 <x-footer></x-footer>
-{{-- <h1>Beschrijving</h1>
-<h2>{{ $trip->description }}</h2> --}}
-
-{{-- @csrf
-    <a href="{{ route('reizen.boek', ['trip_id' => $trip->trip_id]) }}">Reis Boeken</a>
-@csrf
-<a href="{{ route('reizen.review', ['trip_id' => $trip->trip_id]) }}">Review</a> --}}

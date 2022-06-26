@@ -565,10 +565,12 @@ $generalWidth: 200px;
 }
 
 // trip page
-.tripSpacer {
+.tripsSpacer {
     @include customFlex(none, column);
-    height: 700px;
+    height: auto;
     width: 100%;
+    background-color: $primary;
+    row-gap: 30px;
 }
 
 #blueNav {
@@ -728,14 +730,14 @@ $generalWidth: 200px;
     height: auto;
     width: 100%;
     background-color: $primary;
-    padding: 30px;
     row-gap: 50px;
+    padding: 30px;
     .tripShowCon {
         @include customFlex(center, column);
         height: auto;
         width: 100%;
         row-gap: 50px;
-
+        padding: 30px;
         .tripShowInfoCon {
             @include customFlex(none, column);
             height: auto;
@@ -758,6 +760,14 @@ $generalWidth: 200px;
                 @include customFlex(none, column);
                 height: auto;
                 width: 100%;
+                row-gap: 10px;
+                align-items: flex-start;
+            }
+            #tripShowInfoRow {
+                @include customFlex(space-around, row);
+                height: auto;
+                width: 100%;
+                row-gap: 10px;
                 align-items: flex-start;
             }
         }
@@ -773,6 +783,68 @@ $generalWidth: 200px;
         height: auto;
         width: 100%;
         font-size: 35px;
+    }
+}
+// review Page
+.reviewSpacer {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    padding: 30px;
+    row-gap: 50px;
+}
+.reviewCon {
+    @include customFlex(center, none);
+    height: auto;
+
+    .reviewForms {
+        @include customFlex(none, column);
+        height: auto;
+        width: auto;
+        border-radius: 5px;
+        background-color: $primary;
+        box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+        .reviewHeader {
+            @include customFlex(center, none);
+            background-color: #002244;
+            height: auto;
+            width: 100%;
+            border-radius: 5px 5px 0px 0px;
+            padding: 20px;
+            font-size: 20px;
+            color: $primary;
+        }
+        .reviewFormCon {
+            @include customFlex(center, none);
+            height: auto;
+            width: 100%;
+            padding: 20px;
+            font-size: 20px;
+            form {
+                @include customFlex(center, column);
+                height: auto;
+                width: 100%;
+                row-gap: 20px;
+                .reviewFormItem {
+                    @include customFlex(center, row);
+                    height: auto;
+                    width: 100%;
+                    .reviewFormItemInput {
+                        @include customFlex(center, none);
+                        height: auto;
+                        width: 100%;
+                        font-size: 20px;
+                    }
+                    .reviewFormItemTextarea {
+                        @include customFlex(center, none);
+                        height: 150px;
+                        width: 225px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -906,6 +978,23 @@ $generalWidth: 200px;
         font-size: 35px;
     }
     .adminSubTitle {
+        @include customFlex(center, none);
+        height: auto;
+        width: 100%;
+        font-size: 17.5px;
+    }
+}
+.TitleCon {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    .Title {
+        @include customFlex(center, none);
+        height: auto;
+        width: 100%;
+        font-size: 35px;
+    }
+    .SubTitle {
         @include customFlex(center, none);
         height: auto;
         width: 100%;
@@ -1094,12 +1183,13 @@ $generalWidth: 200px;
     height: auto;
     width: 100%;
     background-color: $primary;
-    padding: 30px;
+
     .aboutContentSpacer {
         @include customFlex(none, column);
         height: auto;
         width: 75%;
         row-gap: 17.5px;
+        padding: 30px;
         .aboutTitle {
             @include customFlex(none, none);
             height: auto;

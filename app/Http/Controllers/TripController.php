@@ -73,11 +73,6 @@ class TripController extends Controller
         $path = $request->file('image')->storeAs('images', $fileName, 'public');
         $image = '/storage/' . $path;
 
-        // return view('test')->with('image', $image);
-        // dd($fileName);
-        // return ($request->image);
-
-
         DB::table('trips')->insert([
             'trip_name' => $request->trip_name,
             'start_location' => $request->start_location,

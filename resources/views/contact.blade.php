@@ -10,6 +10,11 @@
         </div>
         <div class="contactUsFormCon">
             <div class="contactUsForm">
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
                 <form action="{{ route('contact.store') }}" method="POST">
                     @csrf
                     <div class="contactInput_Label">
@@ -65,11 +70,7 @@
 <x-footer></x-footer>
 
 
-{{-- @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status') }}
-            </div>
-        @endif
+{{--     
         <form action="{{route('contact.store') }}" method="POST">
             @csrf
             

@@ -120,8 +120,9 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  height: 300px;
+  height: auto;
   width: 100%;
+  padding: 20px;
   background-color: #e9e9f3;
 }
 footer .footerCon {
@@ -131,16 +132,67 @@ footer .footerCon {
   flex-direction: row;
   width: 75%;
   height: 100%;
+  row-gap: 20px;
 }
-footer .footerCon .footerItemCon {
+footer .footerCon .footerRowCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+}
+footer .footerCon .footerRowCon .footerRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+footer .footerCon .footerRowCon .footerRow .footerSocial {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  width: 100%;
   height: auto;
-  border-top: 1px solid #d4d4d0;
-  border-bottom: 1px solid #d4d4d0;
+  width: 25%;
+  row-gap: 50px;
+}
+footer .footerCon .footerRowCon .footerRow .legalCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 15%;
+}
+footer .footerCon .footerRowCon .footerRow .legalCon .legalA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  color: #002244;
+  font-size: 0.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  color: #002244;
+  font-size: 0.6em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 
 .landing {
@@ -402,10 +454,6 @@ footer .footerCon .footerItemCon {
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 100%;
   width: 100%;
 }
@@ -832,6 +880,425 @@ footer .footerCon .footerItemCon {
   font-size: 17.5px;
 }
 
+.adminSpacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+  row-gap: 50px;
+}
+.adminSpacer .adminCon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 75%;
+  height: auto;
+}
+.adminSpacer .adminCon .adminItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 425px;
+  width: 200px;
+  transition: ease-in 0.5s;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25), 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
+.adminSpacer .adminCon .adminItem:hover {
+  width: 250px;
+}
+.adminSpacer .logoutCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 75%;
+}
+
+.adminTripsSpacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+  row-gap: 50px;
+}
+.adminTripsSpacer .createTripCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 75%;
+}
+.adminTripsSpacer .tripConAdmin {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25), 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
+.adminTripsSpacer .tripConAdmin .tripImageCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 375px;
+  width: 100%;
+  background-color: #001429;
+}
+.adminTripsSpacer .tripConAdmin .tripImageCon .tripImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 100%;
+  width: 100%;
+}
+.adminTripsSpacer .tripConAdmin .tripInfo {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+}
+.adminTripsSpacer .tripConAdmin .tripInfo .tripName {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 30px;
+}
+.adminTripsSpacer .tripConAdmin .tripInfo .tripDescription {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+}
+.adminTripsSpacer .tripConAdmin .tripInfo .tripDate {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 17.5px;
+}
+.adminTripsSpacer .tripConAdmin .tripInfo .moreInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+}
+.adminTripsSpacer .tripConAdmin .tripInfo .moreInfo .moreInfoButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #002244;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s;
+}
+.adminTripsSpacer .tripConAdmin .tripInfo .moreInfo .moreInfoButton:hover {
+  background-color: #001429;
+}
+.adminTripsSpacer .tripConAdmin .tripInfo .moreInfo .moreInfoButton a {
+  font-size: larger;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+.adminTripsSpacer .tripConAdmin .tripInfo .moreInfo .tripPrice {
+  font-size: 17.5px;
+}
+
+.adminTitleCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.adminTitleCon .adminTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 35px;
+}
+.adminTitleCon .adminSubTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 17.5px;
+}
+
+.moreInfoAdmin {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  row-gap: 10px;
+}
+
+.generalButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #002244;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s;
+}
+.generalButton:hover {
+  background-color: #001429;
+}
+.generalButton a {
+  font-size: larger;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+.SgeneralButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 40px;
+  width: 75px;
+  border-radius: 5px;
+  background-color: #002244;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s;
+}
+.SgeneralButton:hover {
+  background-color: #001429;
+}
+.SgeneralButton a {
+  font-size: medium;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+.adminFormCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: auto;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.adminFormCon .adminForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+}
+.adminFormCon .adminForm form {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+}
+.adminFormCon .adminForm form .adminInput_label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+.adminFormCon .adminForm form .adminInput_label .adminLabel {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+}
+.adminFormCon .adminForm form .adminInput_label .adminInput {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  border: 1px solid #f5f5f5;
+  padding: 10px;
+  font-size: 17.5px;
+}
+
+.adminUsersCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.adminUsersCon .usersCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 500px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+}
+.adminUsersCon .usersCon .usersColumns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid #d4d4d0;
+}
+.adminUsersCon .usersCon .usersColumns .usersColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+}
+.adminUsersCon .usersCon .userItemsCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 5px;
+}
+.adminUsersCon .usersCon .userItemsCon .userItemCon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #d4d4d0;
+}
+.adminUsersCon .usersCon .userItemsCon .userItemCon .userItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 17.5px;
+}
+
+.sideBySideTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  max-width: 800px;
+  background-color: #f5f5f5;
+  row-gap: 30px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.sideBySideTable .sideBySideTableRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid #d4d4d0;
+}
+.sideBySideTable .sideBySideTableRow .sideBySideTableCTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 50%;
+  font-size: 17.5px;
+  padding: 15px;
+}
+.sideBySideTable .sideBySideTableRow .sideBySideTableItemInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 50%;
+  padding: 15px;
+  font-size: 17.5px;
+}
+.sideBySideTable .sideBySideTableRow .sideBySideTableItemInfo #validateReview {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+.sideBySideTable .sideBySideTableRow .sideBySideTableItemInfo #validateReview .validateReviewSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 40px;
+  width: 125px;
+  font-size: 17.5px;
+}
+
+#ContentP {
+  font-size: 12.5px;
+}
+
 .aboutSpacer {
   display: flex;
   justify-content: none;
@@ -877,6 +1344,46 @@ footer .footerCon .footerItemCon {
   height: auto;
   width: 100%;
   font-size: 17.5px;
+}
+
+.contactSpacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+
+.legalSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.legalSpacer .legalContentSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 75%;
+  row-gap: 17.5px;
+}
+.legalSpacer .legalContentSpacer .legalTitle {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 25px;
 }
 
 

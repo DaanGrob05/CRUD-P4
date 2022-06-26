@@ -10,7 +10,7 @@
     </div>
     <div class="adminFormCon">
         <div class="adminForm">
-            <form action="{{ route('reizen.update', $trip->trip_id) }}" method="post">
+            <form action="{{ route('reizen.update', $trip->trip_id) }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             {{-- Name --}}
@@ -118,7 +118,7 @@
                 <x-trip-input 
                     class="adminInput"
                     type="date"
-                    name="startdDate"
+                    name="startDate"
                     field="startDate"
                     :value="@old('price', $trip->startDate)"
                 ></x-trip-input>

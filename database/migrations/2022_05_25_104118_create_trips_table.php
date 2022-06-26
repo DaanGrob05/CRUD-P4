@@ -26,7 +26,7 @@ return new class extends Migration
             $table->text('small_description');
             $table->text('full_description');
             $table->text('hotel');
-            $table->binary('image')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

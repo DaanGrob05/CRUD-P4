@@ -54,27 +54,26 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'trip_name' => 'required|string|max:255',
-        //     'start_location' => 'required|string|max:255',
-        //     'type_of_trip' => 'required|integer',
-        //     'destination' => 'required|string|max:255',
-        //     'startDate' => 'required|date',
-        //     'endDate' => 'required|date',
-        //     'price' => 'required|numeric',
-        //     'small_description' => 'required|string|max:255',
-        //     'full_description' => 'required|string|max:255',
-        //     'hotel' => 'required|string|max:255',
-        //     // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        $request->validate([
+            'trip_name' => 'required|string|max:255',
+            'start_location' => 'required|string|max:255',
+            'type_of_trip' => 'required|integer',
+            'destination' => 'required|string|max:255',
+            'startDate' => 'required|date',
+            'endDate' => 'required|date',
+            'price' => 'required|numeric',
+            'small_description' => 'required|string|max:255',
+            'full_description' => 'required|string|max:255',
+            'hotel' => 'required|string|max:255',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
-        // ]);
+        ]);
 
-        $requestData = $request->all();
         $fileName = time() . $request->file('image')->getClientOriginalName();
         $path = $request->file('image')->storeAs('images', $fileName, 'public');
         $image = '/storage/' . $path;
 
-        return view('test')->with('image', $image);
+        // return view('test')->with('image', $image);
         // dd($fileName);
         // return ($request->image);
 
@@ -90,7 +89,7 @@ class TripController extends Controller
             'small_description' => $request->small_description,
             'full_description' => $request->full_description,
             'hotel' => $request->hotel,
-            // 'image' => $request->image,
+            'image' => $image,
             'updated_at' => now(),
         ]);
 
@@ -110,8 +109,6 @@ class TripController extends Controller
             ['trip_id', $id],
             ['validation', 1],
         ])->get();
-
-        dd($reviews);
 
         return view('reizen.show')->with('trip', $trip)->with('reviews', $reviews);
     }
@@ -137,6 +134,7 @@ class TripController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $request->validate([
             'trip_name' => 'required|string|max:255',
             'start_location' => 'required|string|max:255',
@@ -152,19 +150,28 @@ class TripController extends Controller
 
         ]);
 
-        // TODO Update
+
+        if ($request->image) {
+            $fileName = time() . $request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs('images', $fileName, 'public');
+            $image = '/storage/' . $path;
+        } else {
+            $oldImage = Trip::where('trip_id', $id)->first()->image;
+            $image = $oldImage;
+        }
+
         DB::table('trips')->where('trip_id', $id)->update([
-            'trip_name' => 'required|string|max:255',
-            'start_location' => 'required|string|max:255',
-            'type_of_trip' => 'required|integer',
-            'destination' => 'required|string|max:255',
-            'startDate' => 'required|date',
-            'endDate' => 'required|date',
-            'price' => 'required|numeric',
-            'small_description' => 'required|string|max:255',
-            'full_description' => 'required|string|max:255',
-            'hotel' => 'required|string|max:255',
-            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'trip_name' => $request->trip_name,
+            'start_location' => $request->start_location,
+            'type_of_trip' => $request->type_of_trip,
+            'destination' => $request->destination,
+            'startDate' => $request->startDate,
+            'endDate' => $request->endDate,
+            'price' => $request->price,
+            'small_description' => $request->small_description,
+            'full_description' => $request->full_description,
+            'hotel' => $request->hotel,
+            'image' => $image,
             'updated_at' => now(),
         ]);
 

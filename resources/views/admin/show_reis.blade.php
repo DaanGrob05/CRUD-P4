@@ -10,5 +10,5 @@
 <form action="{{ route('reizen.destroy', $trip->trip_id) }}" method="post">
     @csrf
     @method('DELETE')
-    <button type="submit" class="" onclick="return confirm('Weet je zeker dat je deze reis wilt verwijderen?')">Verwijder Reis</button>
+    <button type="submit" class="moreInfo" onclick="return confirm('Weet je zeker dat je deze reis wilt verwijderen?')">Delete Trip</button>
 </form>

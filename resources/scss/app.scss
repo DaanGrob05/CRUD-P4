@@ -755,6 +755,284 @@ $generalWidth: 200px;
     }
 }
 
+// admin reizen page
+.adminTripsSpacer {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    padding: 30px;
+    row-gap: 50px;
+
+    .createTripCon {
+        @include customFlex(center, none);
+        height: auto;
+        width: 75%;
+    }
+    .tripConAdmin {
+        @include customFlex(none, column);
+        height: 400px;
+        width: 400px;
+        padding: 10px;
+        -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25),
+            0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25),
+            0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+        .tripImageCon {
+            @include customFlex(center, none);
+            height: 375px;
+            width: 100%;
+            background-color: #001429;
+            .tripImage {
+                @include customFlex(center, none);
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .tripInfo {
+            @include customFlex(none, column);
+            height: auto;
+            width: 100%;
+            row-gap: 10px;
+            .tripName {
+                @include customFlex(none, none);
+                height: auto;
+                width: 100%;
+                font-size: 30px;
+            }
+            .tripDescription {
+                @include customFlex(none, none);
+                height: auto;
+                width: 100%;
+                font-size: 20px;
+            }
+
+            .tripDate {
+                @include customFlex(none, none);
+                height: auto;
+                width: 100%;
+                font-size: 17.5px;
+            }
+            .moreInfo {
+                @include customFlex(space-between, none);
+                height: auto;
+                width: 100%;
+                .moreInfoButton {
+                    @include customFlex(center, none);
+                    height: 40px;
+                    width: 200px;
+                    border-radius: 5px;
+                    background-color: $secondary;
+                    box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+                    transition: background-color 0.5s;
+                    &:hover {
+                        background-color: #001429;
+                    }
+                    a {
+                        font-size: larger;
+                        text-decoration: none;
+                        color: $primary;
+                    }
+                }
+                .tripPrice {
+                    font-size: 17.5px;
+                }
+            }
+        }
+    }
+}
+.adminTitleCon {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    .adminTitle {
+        @include customFlex(center, none);
+        height: auto;
+        width: 100%;
+        font-size: 35px;
+    }
+    .adminSubTitle {
+        @include customFlex(center, none);
+        height: auto;
+        width: 100%;
+        font-size: 17.5px;
+    }
+}
+.moreInfoAdmin {
+    @include customFlex(none, row);
+    width: 100%;
+    height: auto;
+    row-gap: 10px;
+}
+
+.generalButton {
+    @include customFlex(center, none);
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: $secondary;
+    box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.5s;
+    &:hover {
+        background-color: #001429;
+    }
+    a {
+        font-size: larger;
+        text-decoration: none;
+        color: $primary;
+    }
+}
+.SgeneralButton {
+    @include customFlex(center, none);
+    height: 40px;
+    width: 75px;
+    border-radius: 5px;
+    background-color: $secondary;
+    box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.5s;
+    &:hover {
+        background-color: #001429;
+    }
+    a {
+        font-size: medium;
+        text-decoration: none;
+        color: $primary;
+    }
+}
+// admin edit page
+
+.adminFormCon {
+    @include customFlex(center, none);
+    height: auto;
+    width: auto;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+    .adminForm {
+        @include customFlex(center, none);
+        height: auto;
+        width: 100%;
+        form {
+            @include customFlex(none, column);
+            height: auto;
+            width: 100%;
+            row-gap: 10px;
+            .adminInput_label {
+                @include customFlex(space-between, row);
+                height: auto;
+                width: 100%;
+                // font-size: 17.5px;
+                .adminLabel {
+                    @include customFlex(none, none);
+                    height: auto;
+                    width: 100%;
+                    font-size: 20px;
+                }
+                .adminInput {
+                    @include customFlex(none, none);
+                    height: auto;
+                    width: auto;
+                    border-radius: 5px;
+                    border: 1px solid $primary;
+                    padding: 10px;
+                    font-size: 17.5px;
+                }
+            }
+        }
+    }
+}
+
+// admin user page
+.adminUsersCon {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    padding: 30px;
+    .usersCon {
+        @include customFlex(center, column);
+        height: auto;
+        width: 500px;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+        padding: 15px;
+
+        .usersColumns {
+            @include customFlex(space-around, row);
+            height: auto;
+            width: 100%;
+            padding: 5px;
+            border-bottom: 1px solid #d4d4d0;
+            .usersColumn {
+                @include customFlex(center, none);
+            }
+        }
+        .userItemsCon {
+            @include customFlex(center, column);
+            height: auto;
+            width: 100%;
+            padding: 5px;
+
+            .userItemCon {
+                @include customFlex(space-around, row);
+                height: auto;
+                width: 100%;
+                padding: 15px;
+                border-bottom: 1px solid #d4d4d0;
+                .userItem {
+                    @include customFlex(center, none);
+                    height: auto;
+                    width: 100%;
+                    font-size: 17.5px;
+                }
+            }
+        }
+    }
+}
+// side by side tabel
+.sideBySideTable {
+    @include customFlex(center, column);
+    height: auto;
+    max-width: 800px;
+    background-color: $primary;
+    row-gap: 30px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+    .sideBySideTableRow {
+        @include customFlex(space-between, row);
+        height: auto;
+        width: 100%;
+
+        border-bottom: 1px solid #d4d4d0;
+        .sideBySideTableCTitle {
+            @include customFlex(center, none);
+            height: auto;
+            width: 50%;
+            font-size: 17.5px;
+            padding: 15px;
+        }
+        .sideBySideTableItemInfo {
+            @include customFlex(center, row);
+            height: auto;
+            width: 50%;
+            padding: 15px;
+            font-size: 17.5px;
+
+            #validateReview {
+                @include customFlex(space-around, row);
+                height: auto;
+                width: 100%;
+                .validateReviewSelect {
+                    @include customFlex(center, none);
+                    height: 40px;
+                    width: 125px;
+                    font-size: 17.5px;
+                }
+            }
+        }
+    }
+}
+#ContentP {
+    font-size: 12.5px;
+}
 // about page
 
 .aboutSpacer {
@@ -790,9 +1068,23 @@ $generalWidth: 200px;
     }
 }
 
-.contactSpacer {
-    @include customFlex(center, none);
+// privacy/terms page
+.legalSpacer {
+    @include customFlex(none, column);
     height: auto;
     width: 100%;
     background-color: $primary;
+    padding: 30px;
+    .legalContentSpacer {
+        @include customFlex(none, column);
+        height: auto;
+        width: 75%;
+        row-gap: 17.5px;
+        .legalTitle {
+            @include customFlex(none, none);
+            height: auto;
+            width: 100%;
+            font-size: 25px;
+        }
+    }
 }

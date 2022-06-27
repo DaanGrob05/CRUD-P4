@@ -11,7 +11,7 @@
                 <a class="searchFormTitle">Search by destination</a>
             </div>
             <div class="searchCon">                
-                <form class="searchForm" action="" method="GET">
+                <form class="searchForm" id="searchForm" action="" method="GET">
                     <input class="searchInput" type="text" name="name" placeholder="Search">
                     <button class="searchButton" type="submit">
                         <a class="buttonA">search</a>
@@ -65,4 +65,15 @@
         <x-footer></x-footer>
 
         <script type="text/javascript" src="{{ asset('js/to_top_button.js') }}"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+                $('#searchForm').keyup(function(){
+                    var search = $(this).val();
+                    console.log(search);
+                });
+            });
+
+        </script>
 </div> 

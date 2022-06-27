@@ -2,6 +2,10 @@
 <x-nav
     id="blueNav">
 </x-nav>
+
+
+
+{{-- uh --}}
 <div class="adminSpacer">
     <div class="adminTitleCon">
         <h1 class="adminTitle">Create</h1>
@@ -9,7 +13,7 @@
     </div>
     <div class="adminFormCon">
         <div class="adminForm">
-            <form action="{{ route('reizen.store') }}" method="post">
+            <form action="{{ route('reizen.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 {{-- tripname --}}
                 <div class="adminInput_Label">

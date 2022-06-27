@@ -2,14 +2,18 @@
 <x-nav
     id="blueNav">
 </x-nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <div class="tripsSpacer">
         <div class="searchSpacer">
             <div class="searchTitleCon">
                 <a class="searchFormTitle">Search by destination</a>
             </div>
             <div class="searchCon">                
-                <form class="searchForm" action="" method="GET">
-                    <input class="searchInput" type="text" name="name" placeholder="Search">
+                <form class="searchForm"  action="{{ route('reizen.index') }}" method="GET">
+                    @csrf
+                    <input class="searchInput" id="name" type="text" name="name" placeholder="Search">
                     <button class="searchButton" type="submit">
                         <a class="buttonA">search</a>
                     </button>
@@ -62,4 +66,34 @@
         <x-footer></x-footer>
 
         <script type="text/javascript" src="{{ asset('js/to_top_button.js') }}"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#name').on('keyup',function () {
+                    var query = $(this).val();
+                    // console.log(query);
+
+                    $.ajax({
+                        url: "{{ route('ajaxSearch') }}",
+                        method: 'GET',
+                        data: {
+                            'name': query
+                        },
+                        success: function (data) {
+                            // console.log(data);
+                            var item = '';
+                            $('.tripsCon').html('');
+
+                            // console.log(value.image);
+                            $.each(JSON.parse(data), function(index, value){
+                                item = '<div class="tripCon"> <div class="tripImageCon"> @if ($trip->image) <img class="tripImage" src="{{ asset($trip->image) }}" alt=""> @else <img class="tripImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt=""> @endif </div> <div class="tripInfo"> <div class="tripName"> <p>' + value.trip_name + '</p> </div> <div class="tripDescription"> <p>' + value.small_description + '</p> </div> <div class="tripDate"> <p>' + value.startDate + ' - ' + value.endDate + '</p> </div> <div class="moreInfo"> <p class="tripPrice">€' + value.price + ',-</p> <button class="moreInfoButton"> <a class="moreInfoA" href="{{ route('reizen.show', $trip->trip_id) }}">more info</a> </button> </div> </div> </div>';
+                                
+                                $('.tripsCon').append(item);
+                            });
+                        }
+                    });
+                });
+            });
+
+        </script>
 </div> 

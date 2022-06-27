@@ -22,7 +22,11 @@
                 
                     <div class="tripCon">
                             <div class="tripImageCon">
-                                <img class="tripImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="">
+                                @if ($trip->image)
+                                    <img class="tripImage" src="{{ asset($trip->image) }}" alt="">
+                                @else
+                                    <img class="tripImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="">
+                                @endif
                             </div>
                             <div class="tripInfo">
                                 <div class="tripName">

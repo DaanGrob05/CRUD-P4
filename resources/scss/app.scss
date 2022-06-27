@@ -1088,3 +1088,37 @@ $generalWidth: 200px;
         }
     }
 }
+// user profile page
+
+.userProfileSpacer {
+    @include customFlex(none, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    padding: 30px;
+    .userProfileContentSpacer {
+        @include customFlex(none, column);
+        height: auto;
+        width: 75%;
+        row-gap: 17.5px;
+        .userProfileTitle {
+            @include customFlex(center, none);
+            height: auto;
+            width: 100%;
+            font-size: 25px;
+        }
+        .userProfileTextCon {
+            @include customFlex(none, column);
+            height: auto;
+            width: 100%;
+            row-gap: 17.5px;
+
+            .userProfileText {
+                @include customFlex(none, none);
+                height: auto;
+                width: 100%;
+                font-size: 17.5px;
+            }
+        }
+    }
+}

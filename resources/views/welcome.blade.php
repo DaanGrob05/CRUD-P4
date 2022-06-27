@@ -116,13 +116,64 @@
             </div>
           </div>
         </div>
-        <div class="extraInfo">
-          <!--  -->
-        </div>
       </div>
     </div>
-  </div>
-  <div class="contentSpacer">
+  <div class="welcomeContentSpacer">
+
+    <div class="welcomeTitle">
+      <h1>Welcome to Unified Travel Agency</h1>
+    </div>
+    <div class="welcomeContent">
+      <div class="welcomeText">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Donec euismod, nisl eget consectetur sagittis, nisl nunc
+          consectetur nisi, euismod aliquam nisi nisl euismod.
+          Pellentesque habitant morbi tristique senectus et netus et
+          malesuada fames ac turpis egestas. euismod aliquam nisi nisl euismod.
+          Pellentesque habitant morbi tristique senectus et netus et
+          malesuada fames ac turpis egestas.
+        </p>
+      </div>
+      <div class="welcomeItems">
+        <a class="ItemA" href="{{ route('reizen.index') }}">
+          <div class="welcomeItem">
+            <div class="welcomeItemImage">
+              <img src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="welcome2" />
+            </div>
+            <div class="welcomeItemText">
+              <p>
+                book your next trip with us
+              </p>
+            </div>
+          </div>
+        </a>
+        <a class="ItemA" href="{{ route('about') }}">
+          <div class="welcomeItem">
+            <div class="welcomeItemImage">
+              <img src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" />
+            </div>
+            <div class="welcomeItemText">
+              <p>
+                about us
+              </p>
+            </div>
+          </div>
+        </a>
+        <a class="ItemA" href="{{ route('contact.create') }}">
+          <div class="welcomeItem">
+            <div class="welcomeItemImage">
+              <img src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="welcome3" />
+            </div>
+            <div class="welcomeItemText">
+              <p>
+                contact us
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
   <x-footer></x-footer>
   <script type="text/javascript" src="{{ asset('js/slider.js') }}">

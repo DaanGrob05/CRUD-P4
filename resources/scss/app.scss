@@ -29,7 +29,7 @@ body {
     @include customFlex(none, column);
     height: 700px;
     width: 100%;
-    background-image: url(https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(https://images.pexels.com/photos/424172/pexels-photo-424172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,8 +62,16 @@ nav {
 
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
-    &:hover {
-        color: $secondary;
+    a {
+        color: #f5f5f5;
+        font-size: 1.3em;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $secondary;
+        }
     }
 }
 .userEmptySpace {
@@ -80,10 +88,19 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
-    &:hover {
-        color: $secondary;
+    a {
+        color: #f5f5f5;
+        font-size: 1em;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $secondary;
+        }
     }
 }
+
 .navEmptySpace {
     height: 100%;
     width: 50%;
@@ -99,10 +116,51 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
-    &:hover {
-        color: $secondary;
+    a {
+        color: #f5f5f5;
+        font-size: 1em;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $secondary;
+        }
     }
 }
+#blueNav {
+    background-color: $secondary;
+    .userItemsCon {
+        .unifiedLogo {
+            a {
+                color: $primary;
+                text-decoration: none;
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+        .userItem {
+            a {
+                color: $primary;
+                text-decoration: none;
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+        .navItem {
+            a {
+                color: $primary;
+                text-decoration: none;
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
 // footer
 footer {
     @include customFlex(center, none);
@@ -164,11 +222,11 @@ footer {
 
 // landing page
 .landing {
-    @include customFlex(center, row);
+    @include customFlex(flex-start, row);
     height: 700px;
     width: 75%;
     .landingContent {
-        @include customFlex(space-between, row);
+        @include customFlex(none, row);
         height: 100%;
         width: 75%;
     }
@@ -419,15 +477,85 @@ $generalWidth: 200px;
     }
 }
 
+.welcomeContentSpacer {
+    @include customFlex(center, column);
+    height: auto;
+    width: auto;
+    background-color: $primary;
+    row-gap: 30px;
+    padding: 30px;
+    .welcomeTitle {
+        @include customFlex(center, column);
+        height: auto;
+        width: auto;
+        font-size: 30px;
+        font-weight: bold;
+        color: $secondary;
+    }
+    .welcomeContent {
+        @include customFlex(center, column);
+        height: auto;
+        width: 100%;
+        row-gap: 50px;
+        .welcomeText {
+            @include customFlex(center, column);
+            height: auto;
+            width: 75%;
+            font-size: 15px;
+        }
+        .welcomeItems {
+            @include customFlex(space-around, row);
+            height: auto;
+            width: 90%;
+            a {
+                text-decoration: none;
+                color: $secondary;
+                font-size: 20px;
+                font-weight: bold;
+                .welcomeItem {
+                    @include customFlex(center, column);
+                    height: auto;
+                    width: 325px;
+                    box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+                    row-gap: 20px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    transition: ease-in 0.5s;
+                    &:hover {
+                        width: 350px;
+                    }
+                    .welcomeItemImage {
+                        @include customFlex(center, column);
+                        height: 100%;
+                        width: 100%;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    .welcomeItemText {
+                        @include customFlex(center, none);
+                        height: auto;
+                        width: 100%;
+
+                        p {
+                            font-size: 15px;
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // login page
 .loginSpacer {
     @include customFlex(none, column);
     height: 700px;
     width: 100%;
 }
-#blueNav {
-    background-color: $secondary;
-}
+
 .loginCon {
     @include customFlex(center, none);
     height: 525px;
@@ -1219,12 +1347,12 @@ $generalWidth: 200px;
     height: auto;
     width: 100%;
     background-color: $primary;
-    padding: 30px;
     .legalContentSpacer {
         @include customFlex(none, column);
         height: auto;
         width: 75%;
         row-gap: 17.5px;
+        padding: 30px;
         .legalTitle {
             @include customFlex(none, none);
             height: auto;

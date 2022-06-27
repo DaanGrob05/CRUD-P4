@@ -82,6 +82,7 @@
                 </div>
                 <div class="reviewsCon">
                     <div class="reviewsTitle">
+                        <h2>Your Reviews</h2>
                     </div>
                     <div class="reviewsBody">
                         @forelse ($reviews as $review)

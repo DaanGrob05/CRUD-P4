@@ -21,19 +21,26 @@ class TripController extends Controller
     public function index(Request $request)
     {
         $name = $request->name;
-        $desc = $request->desc;
 
         $start = $request->startDate;
         $end = $request->endDate;
 
-        $trips = Trip::where([
-            ['trip_name', 'like', '%' . $name . '%'],
-            ['full_description', 'like', '%' . $desc . '%'],
-        ])->get();
+        // Bepaal op basis van datums welke query word ingevoerd.
+        if ($start && $end) {
+            // Als er ook een naam is meegegeven zoek dat op, anders alleen datum
+            if ($name) {
+                $trips = Trip::whereBetween('startDate', [$start, $end])->whereBetween('endDate', [$start, $end])->where('trip_name', 'like', '%' . $name . '%')->get();
+            } else {
+                $trips = Trip::whereBetween('startDate', [$start, $end])->whereBetween('endDate', [$start, $end])->get();
+            }
+        } else {
+            // Als er geen datum is opgegeven, zoek dan alleen op naam
+            $trips = Trip::where([
+                ['trip_name', 'like', '%' . $name . '%'],
+            ])->get();
+        }
 
-        // $trips = Trip::whereBetween('startDate', [$start, $end])->whereBetween('endDate', [$start, $end])->get();
-
-        return view('reizen.index', compact('trips'));
+        return view('reizen.index')->with('trips', $trips);
     }
 
     /**
@@ -69,9 +76,15 @@ class TripController extends Controller
 
         ]);
 
-        $fileName = time() . $request->file('image')->getClientOriginalName();
-        $path = $request->file('image')->storeAs('images', $fileName, 'public');
-        $image = '/storage/' . $path;
+        if ($request->hasFile('image')) {
+            $fileName = time() . $request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs('images', $fileName, 'public');
+            $image = '/storage/' . $path;
+        } else {
+            $image = null;
+        }
+
+
 
         DB::table('trips')->insert([
             'trip_name' => $request->trip_name,

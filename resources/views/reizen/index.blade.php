@@ -12,6 +12,7 @@
             </div>
             <div class="searchCon">                
                 <form class="searchForm" id="searchForm" action="" method="GET">
+                    @csrf
                     <input class="searchInput" type="text" name="name" placeholder="Search">
                     <button class="searchButton" type="submit">
                         <a class="buttonA">search</a>

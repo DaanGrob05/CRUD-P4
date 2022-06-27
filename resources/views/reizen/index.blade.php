@@ -2,6 +2,9 @@
 <x-nav
     id="blueNav">
 </x-nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <div class="tripsSpacer">
         <div class="searchSpacer">
             <div class="searchTitleCon">

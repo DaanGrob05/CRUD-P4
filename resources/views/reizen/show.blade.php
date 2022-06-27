@@ -10,7 +10,12 @@
         </div>
         <div class="tripShowInfoCon">
             <div class="tripShowImageCon">
-                <img class="tripShowImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="">
+                @if ($trip->image)
+                    <img class="tripShowImage" src="{{ asset($trip->image) }}" alt="">
+                @else
+                    <img class="tripShowImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="">
+                @endif
+
                 <img class="tripShowImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="">
             </div>
             <div class="tripShowInfo">

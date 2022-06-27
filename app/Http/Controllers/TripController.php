@@ -21,7 +21,6 @@ class TripController extends Controller
     public function index(Request $request)
     {
         $name = $request->name;
-
         $start = $request->startDate;
         $end = $request->endDate;
 
@@ -41,6 +40,23 @@ class TripController extends Controller
         }
 
         return view('reizen.index')->with('trips', $trips);
+    }
+
+    public function ajaxSearch(Request $request)
+    {
+        $trips = Trip::where('trip_name', 'like', '%' . $request->get('name') . '%')->get();
+        return json_encode($trips);
+
+
+        // // $request->get('name');
+        // if ($request->has('ajax')) {
+        //     $trips = Trip::where('trip_name', 'like', '%' . $request->get('name') . '%')->get();
+        //     return json_encode($trips);
+        // } else {
+        //     $trips = Trip::all();
+        // }
+        // // $trips = Trip::where('trip_name', 'like', '%' . $request->get('name') . '%')->get();
+        // // return json_encode($trips);
     }
 
     /**

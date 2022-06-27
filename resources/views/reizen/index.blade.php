@@ -11,9 +11,9 @@
                 <a class="searchFormTitle">Search by destination</a>
             </div>
             <div class="searchCon">                
-                <form class="searchForm" id="searchForm" action="" method="GET">
+                <form class="searchForm"  action="{{ route('reizen.index') }}" method="GET">
                     @csrf
-                    <input class="searchInput" type="text" name="name" placeholder="Search">
+                    <input class="searchInput" id="name" type="text" name="name" placeholder="Search">
                     <button class="searchButton" type="submit">
                         <a class="buttonA">search</a>
                     </button>
@@ -68,12 +68,39 @@
         <script type="text/javascript" src="{{ asset('js/to_top_button.js') }}"></script>
 
         <script type="text/javascript">
+            // $.ajaxSetup({
+            //     headers: {
+            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            //     }
+            // });
 
             $(document).ready(function(){
-                $('#searchForm').keyup(function(){
-                    var search = $(this).val();
-                    console.log(search);
+                $('#name').on('keyup',function () {
+                    var query = $(this).val();
+                    // console.log(query);
+
+                    if(query != ''){
+                        $.ajax({
+                            url: "{{ route('ajaxSearch') }}",
+                            method: 'GET',
+                            data: {
+                                'name': query
+                            },
+                            success: function (data) {
+                                // console.log(data);
+                                $('.tripsCon').html('');
+
+                            }
+                        });
+                    } 
+
                 });
+
+                // $(document).on('click', 'li', function(){
+                //     var value = $(this).text();
+                //     $('#name').val(value);
+                //     $('#product_list').html("");
+                // });
             });
 
         </script>

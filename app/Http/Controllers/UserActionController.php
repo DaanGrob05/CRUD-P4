@@ -20,7 +20,7 @@ class UserActionController extends Controller
         $bookings = DB::table('bookings')
             ->where('user_id', Auth::user()->id)
             ->get();
-
+            
         $reviews = DB::table('reviews')
             ->where('user_id', Auth::user()->id)
             ->get();

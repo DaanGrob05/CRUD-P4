@@ -46,6 +46,7 @@ Route::get('/terms', function () {
 
 Route::resource('contact', contact::class);
 
+Route::get('ajaxSearch', [TripController::class, 'ajaxSearch'])->name('ajaxSearch');
 Route::resource('reizen', TripController::class);
 
 // User Functies

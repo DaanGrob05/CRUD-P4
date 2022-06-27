@@ -1737,4 +1737,137 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   row-gap: 20px;
 }
 
+.contactSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.contactSpacer .contactContentSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 75%;
+  row-gap: 30px;
+}
+.contactSpacer .contactContentSpacer .contactTitle {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 5px;
+}
+.contactSpacer .contactContentSpacer .contactUsFormCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 100%;
+  width: 100%;
+}
+.contactSpacer .contactContentSpacer .contactUsFormCon .contactUsForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: auto;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.contactSpacer .contactContentSpacer .contactUsFormCon .contactUsForm form {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 15px;
+}
+.contactSpacer .contactContentSpacer .contactUsFormCon .contactUsForm form .contactInput_label {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.contactSpacer .contactContentSpacer .contactUsFormCon .contactUsForm form .contactInput_label .contactLabel {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+}
+.contactSpacer .contactContentSpacer .contactUsFormCon .contactUsForm form .contactInput_label .contactInput {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  border: 1px solid #f5f5f5;
+  padding: 10px;
+  font-size: 17.5px;
+}
+
+.userProfileSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.userProfileSpacer .userProfileContentSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 75%;
+  row-gap: 17.5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 25px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileTextCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 17.5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileTextCon .userProfileText {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 17.5px;
+}
+
 

@@ -41,16 +41,17 @@
               </div>
             </div>
             <div class="formCon">
-              <form action="{{ route('reizen.index') }}">
-                
+              <form action="{{ route('reizen.index') }}" method="get">
+                @csrf
+                {{-- name is aangepast naar naam --}}
                 <div class="whereFromCon">
                     <div class="group emailGroup" id="loginFormGroup">
-                      <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                      <input name="name" class="textInput" id="generalTextInput" type="text" id="#" required="required" />
                       <label class="textLabel" for="name">from*</label>
                       <div class="bar" id="generalBar"></div>
                   </div>
                   <div class="group emailGroup" id="loginFormGroup">
-                      <input class="textInput" id="generalTextInput" type="text" id="#" required="required" />
+                      <input class="textInput" id="generalTextInput" type="text" id="#" />
                       <label class="textLabel" for="name">to*</label>
                       <div class="bar" id="generalBar"></div>
                   </div>

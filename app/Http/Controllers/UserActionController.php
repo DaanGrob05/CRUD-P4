@@ -17,9 +17,13 @@ class UserActionController extends Controller
 
     public function dashboard()
     {
-        return view('user.dashboard');
+        $bookings = DB::table('bookings')
+            ->where('user_id', Auth::user()->id)
+            ->get();
+        return view('user.dashboard')->with('bookings', $bookings);
     }
 
+    // Kan waarschijnlijk weg
     public function bookings()
     {
         $bookings = DB::table('bookings')

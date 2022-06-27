@@ -63,11 +63,8 @@
                     @csrf
                     <button class="generalButton">
                         <a href="{{ route('reizen.review', ['trip_id' => $trip->trip_id]) }}">Review</a>
-
                     </button>
                 </div>
-
-                
             </div>
         </div>
     </div>

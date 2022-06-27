@@ -796,6 +796,7 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   width: 400px;
   padding: 10px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25), 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
 }
 .tripCon .tripImageCon {
   display: flex;
@@ -1580,11 +1581,7 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   font-size: 25px;
 }
 
-<<<<<<< HEAD
-.contactSpacer {
-=======
 .userProfileSpacer {
->>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
   display: flex;
   justify-content: none;
   align-items: center;
@@ -1594,25 +1591,37 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   background-color: #f5f5f5;
   padding: 30px;
 }
-<<<<<<< HEAD
-.contactSpacer .contactContentSpacer {
-=======
 .userProfileSpacer .userProfileContentSpacer {
->>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
   height: auto;
   width: 75%;
-<<<<<<< HEAD
   row-gap: 30px;
 }
-.contactSpacer .contactContentSpacer .contactTitle {
-=======
-  row-gap: 17.5px;
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 100px;
 }
-.userProfileSpacer .userProfileContentSpacer .userProfileTitle {
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  row-gap: 30px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileInfoTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1621,15 +1630,139 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   width: 100%;
   font-size: 25px;
 }
-.userProfileSpacer .userProfileContentSpacer .userProfileTextCon {
->>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileBody .userProfileDetailCon {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
   height: auto;
   width: 100%;
-<<<<<<< HEAD
+  row-gap: 5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileBody .userProfileDetailCon .userProfileDetailTitle {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 17.5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileBody .userProfileDetailCon .userProfileDetail {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 15px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-left: 100px;
+  row-gap: 30px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .bookingsCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 30px;
+  row-gap: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .bookingsCon .bookingsTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 15px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .bookingsCon .bookingsBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .reviewsCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 30px;
+  row-gap: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .reviewsCon .reviewsTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 15px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .reviewsCon .reviewsBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+
+.contactSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.contactSpacer .contactContentSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 75%;
+  row-gap: 30px;
+}
+.contactSpacer .contactContentSpacer .contactTitle {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
   row-gap: 5px;
 }
 .contactSpacer .contactContentSpacer .contactUsFormCon {
@@ -1669,18 +1802,12 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   row-gap: 20px;
 }
 .contactSpacer .contactContentSpacer .contactUsFormCon .contactUsForm form .contactInput_label .contactLabel {
-=======
-  row-gap: 17.5px;
-}
-.userProfileSpacer .userProfileContentSpacer .userProfileTextCon .userProfileText {
->>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: none;
   height: auto;
   width: 100%;
-<<<<<<< HEAD
   font-size: 20px;
 }
 .contactSpacer .contactContentSpacer .contactUsFormCon .contactUsForm form .contactInput_label .contactInput {
@@ -1693,8 +1820,53 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   border-radius: 5px;
   border: 1px solid #f5f5f5;
   padding: 10px;
-=======
->>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
+  font-size: 17.5px;
+}
+
+.userProfileSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.userProfileSpacer .userProfileContentSpacer {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 75%;
+  row-gap: 17.5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 25px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileTextCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 17.5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileTextCon .userProfileText {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
   font-size: 17.5px;
 }
 

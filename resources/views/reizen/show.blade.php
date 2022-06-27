@@ -68,6 +68,30 @@
             </div>
         </div>
     </div>
+    <div class="reviewsSpacer">
+        <div class="reviewsCon">
+            <div class="reviewsTitle">
+                <h2>Reviews</h2>
+            </div>
+            <div class="reviewsBody">
+                @forelse ($reviews as $review)
+                    <div class="reviewsBodyCon">
+                        <div class="reviewsBodyTitle">
+                            <h3 class="reviewsBodyTitle">{{ $review->title }}</h3>
+                        </div>
+                        <div class="reviewsBodyContent">
+                            <p class="reviewsBodyContent">{{ $review->content }}</p>
+                        </div>
+                        <div class="reviewsBodyDate">
+                            <p class="reviewsBodyDate">{{ $review->created_at }}</p>
+                        </div>
+                    </div>
+                @empty
+                    <p>There are no Reviews for this Trip</p>
+                @endforelse
+            </div>
+        </div>
+    </div>
     <button class="generalButton">
         <a  href="{{ route('reizen.index') }}">Back</a>
     </button>   

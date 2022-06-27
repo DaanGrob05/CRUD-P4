@@ -82,8 +82,8 @@
 
                             {{-- button --}}
                             <div class="registerButtonCon">
-                                <x-button class="registerButton">
-                                    {{ __('register') }}
+                                <x-button class="generalButton">
+                                    <a>{{ __('register') }}</a>
                                 </x-button>
                                 {{-- <button type="button" class="registerButton"> <a href="">register</a></button> --}}
                             </div>

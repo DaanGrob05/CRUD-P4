@@ -796,6 +796,7 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   width: 400px;
   padding: 10px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25), 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
 }
 .tripCon .tripImageCon {
   display: flex;
@@ -1597,9 +1598,30 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   flex-direction: column;
   height: auto;
   width: 75%;
-  row-gap: 17.5px;
+  row-gap: 30px;
 }
-.userProfileSpacer .userProfileContentSpacer .userProfileTitle {
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 100px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  row-gap: 30px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileInfoTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1608,16 +1630,25 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   width: 100%;
   font-size: 25px;
 }
-.userProfileSpacer .userProfileContentSpacer .userProfileTextCon {
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileBody .userProfileDetailCon {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
   height: auto;
   width: 100%;
-  row-gap: 17.5px;
+  row-gap: 5px;
 }
-.userProfileSpacer .userProfileContentSpacer .userProfileTextCon .userProfileText {
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileBody .userProfileDetailCon .userProfileDetailTitle {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -1625,6 +1656,85 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   height: auto;
   width: 100%;
   font-size: 17.5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userProfileInfo .userProfileBody .userProfileDetailCon .userProfileDetail {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 15px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-left: 100px;
+  row-gap: 30px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .bookingsCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 30px;
+  row-gap: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .bookingsCon .bookingsTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 15px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .bookingsCon .bookingsBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .reviewsCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 30px;
+  row-gap: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .reviewsCon .reviewsTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 15px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .reviewsCon .reviewsBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
 }
 
 

@@ -20,7 +20,12 @@ class UserActionController extends Controller
         $bookings = DB::table('bookings')
             ->where('user_id', Auth::user()->id)
             ->get();
-        return view('user.dashboard')->with('bookings', $bookings);
+
+        $reviews = DB::table('reviews')
+            ->where('user_id', Auth::user()->id)
+            ->get();
+
+        return view('user.dashboard')->with('bookings', $bookings)->with('reviews', $reviews);
     }
 
     // Kan waarschijnlijk weg
@@ -51,6 +56,7 @@ class UserActionController extends Controller
         DB::table('bookings')
             ->where('booking_id', $id)
             ->delete();
+            return to_route('profile');
     }
 
     public function edit()

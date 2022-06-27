@@ -1,40 +1,20 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Noto+Sans:ital,wght@1,700&family=Open+Sans:ital,wght@1,500&family=Playfair+Display:ital,wght@1,900&family=Roboto&display=swap"
-        rel="stylesheet"
-        />
-        <title> {{ config('app.name') }}</title>
 
-        <!-- Fonts -->
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-    </head>
-    <body class="antialiased">
-        <div class="tripsspacer">
-            <x-nav
-                id="blueNav">
-            </x-nav>
-            <div class="searchSpacer">
-                <div class="searchTitleCon">
-                    <a class="searchFormTitle">Search by destination</a>
-                </div>
-                <div class="searchCon">                
-                    <form class="searchForm" action="" method="GET">
-                        <input class="searchInput" type="text" name="name" placeholder="Search">
-                        <button class="searchButton" type="submit">
-                            <a class="buttonA">search</a>
-                        </button>
-                    </form> 
-                </div>
+<x-nav
+    id="blueNav">
+</x-nav>
+<div class="tripsSpacer">
+        <div class="searchSpacer">
+            <div class="searchTitleCon">
+                <a class="searchFormTitle">Search by destination</a>
             </div>
-            
+            <div class="searchCon">                
+                <form class="searchForm" action="" method="GET">
+                    <input class="searchInput" type="text" name="name" placeholder="Search">
+                    <button class="searchButton" type="submit">
+                        <a class="buttonA">search</a>
+                    </button>
+                </form> 
+            </div>
         </div>
         <div class="allTripsSpacer">
             <div class="tripsCon">
@@ -73,10 +53,13 @@
             </div>
 
             {{-- Knop om terug naar boven te gaan --}}
+
+        </div> 
+        <div class="buttonSpacer">
             <button class="generalButton" id="toTopButton" title="Go to top"><a>Back To Top</a></button>
-        </div>
+        </div>           
+        
         <x-footer></x-footer>
 
         <script type="text/javascript" src="{{ asset('js/to_top_button.js') }}"></script>
-    </body>
-</html>
+</div> 

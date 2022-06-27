@@ -81,8 +81,8 @@ nav .navItemsCon {
   height: auto;
   width: auto;
   color: #f5f5f5;
-  font-size: 0.9em;
-  padding: 15px;
+  font-size: 1em;
+  padding: 10px;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
@@ -672,13 +672,15 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   color: #f5f5f5;
 }
 
-.tripSpacer {
+.tripsSpacer {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  height: 700px;
+  height: auto;
   width: 100%;
+  background-color: #f5f5f5;
+  row-gap: 30px;
 }
 
 #blueNav {
@@ -880,6 +882,182 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   font-size: 17.5px;
 }
 
+.showTripSpacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  row-gap: 50px;
+  padding: 30px;
+}
+.showTripSpacer .tripShowCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 50px;
+  padding: 30px;
+}
+.showTripSpacer .tripShowCon .tripShowInfoCon {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  max-width: 900px;
+  padding: 30px;
+  row-gap: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.showTripSpacer .tripShowCon .tripShowInfoCon .tripShowImageCon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 375px;
+  width: 100%;
+}
+.showTripSpacer .tripShowCon .tripShowInfoCon .tripShowImageCon .tripShowImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 100%;
+  width: auto;
+}
+.showTripSpacer .tripShowCon .tripShowInfoCon .tripShowInfo {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+  align-items: flex-start;
+}
+.showTripSpacer .tripShowCon .tripShowInfoCon #tripShowInfoRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 10px;
+  align-items: flex-start;
+}
+
+.reizenShowTitleCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.reizenShowTitleCon .reizenShowTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 35px;
+}
+
+.reviewSpacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+  row-gap: 50px;
+}
+
+.reviewCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+}
+.reviewCon .reviewForms {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+}
+.reviewCon .reviewForms .reviewHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  background-color: #002244;
+  height: auto;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  padding: 20px;
+  font-size: 20px;
+  color: #f5f5f5;
+}
+.reviewCon .reviewForms .reviewFormCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+}
+.reviewCon .reviewForms .reviewFormCon form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.reviewCon .reviewForms .reviewFormCon form .reviewFormItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+.reviewCon .reviewForms .reviewFormCon form .reviewFormItem .reviewFormItemInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+}
+.reviewCon .reviewForms .reviewFormCon form .reviewFormItem .reviewFormItemTextarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: 150px;
+  width: 225px;
+  font-size: 20px;
+}
+
 .adminSpacer {
   display: flex;
   justify-content: center;
@@ -1053,6 +1231,33 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   font-size: 35px;
 }
 .adminTitleCon .adminSubTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 17.5px;
+}
+
+.TitleCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.TitleCon .Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 35px;
+}
+.TitleCon .SubTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1307,7 +1512,6 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   height: auto;
   width: 100%;
   background-color: #f5f5f5;
-  padding: 30px;
 }
 .aboutSpacer .aboutContentSpacer {
   display: flex;
@@ -1317,6 +1521,7 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   height: auto;
   width: 75%;
   row-gap: 17.5px;
+  padding: 30px;
 }
 .aboutSpacer .aboutContentSpacer .aboutTitle {
   display: flex;
@@ -1375,7 +1580,11 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   font-size: 25px;
 }
 
+<<<<<<< HEAD
 .contactSpacer {
+=======
+.userProfileSpacer {
+>>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
   display: flex;
   justify-content: none;
   align-items: center;
@@ -1385,22 +1594,42 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   background-color: #f5f5f5;
   padding: 30px;
 }
+<<<<<<< HEAD
 .contactSpacer .contactContentSpacer {
+=======
+.userProfileSpacer .userProfileContentSpacer {
+>>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
   height: auto;
   width: 75%;
+<<<<<<< HEAD
   row-gap: 30px;
 }
 .contactSpacer .contactContentSpacer .contactTitle {
+=======
+  row-gap: 17.5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  height: auto;
+  width: 100%;
+  font-size: 25px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileTextCon {
+>>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
   height: auto;
   width: 100%;
+<<<<<<< HEAD
   row-gap: 5px;
 }
 .contactSpacer .contactContentSpacer .contactUsFormCon {
@@ -1440,12 +1669,18 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   row-gap: 20px;
 }
 .contactSpacer .contactContentSpacer .contactUsFormCon .contactUsForm form .contactInput_label .contactLabel {
+=======
+  row-gap: 17.5px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileTextCon .userProfileText {
+>>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: none;
   height: auto;
   width: 100%;
+<<<<<<< HEAD
   font-size: 20px;
 }
 .contactSpacer .contactContentSpacer .contactUsFormCon .contactUsForm form .contactInput_label .contactInput {
@@ -1458,6 +1693,8 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   border-radius: 5px;
   border: 1px solid #f5f5f5;
   padding: 10px;
+=======
+>>>>>>> 9722a6d0a7276e3565f357c2284a8bf2eb469b92
   font-size: 17.5px;
 }
 

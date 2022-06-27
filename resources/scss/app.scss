@@ -75,8 +75,8 @@ nav {
     height: auto;
     width: auto;
     color: #f5f5f5;
-    font-size: 0.9em;
-    padding: 15px;
+    font-size: 1em;
+    padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
@@ -565,10 +565,12 @@ $generalWidth: 200px;
 }
 
 // trip page
-.tripSpacer {
+.tripsSpacer {
     @include customFlex(none, column);
-    height: 700px;
+    height: auto;
     width: 100%;
+    background-color: $primary;
+    row-gap: 30px;
 }
 
 #blueNav {
@@ -721,6 +723,130 @@ $generalWidth: 200px;
         }
     }
 }
+// show trip page
+
+.showTripSpacer {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    row-gap: 50px;
+    padding: 30px;
+    .tripShowCon {
+        @include customFlex(center, column);
+        height: auto;
+        width: 100%;
+        row-gap: 50px;
+        padding: 30px;
+        .tripShowInfoCon {
+            @include customFlex(none, column);
+            height: auto;
+            max-width: 900px;
+            padding: 30px;
+            row-gap: 20px;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+            .tripShowImageCon {
+                @include customFlex(space-around, row);
+                height: 375px;
+                width: 100%;
+
+                .tripShowImage {
+                    @include customFlex(center, none);
+                    height: 100%;
+                    width: auto;
+                }
+            }
+            .tripShowInfo {
+                @include customFlex(none, column);
+                height: auto;
+                width: 100%;
+                row-gap: 10px;
+                align-items: flex-start;
+            }
+            #tripShowInfoRow {
+                @include customFlex(space-around, row);
+                height: auto;
+                width: 100%;
+                row-gap: 10px;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+.reizenShowTitleCon {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    .reizenShowTitle {
+        @include customFlex(center, none);
+        height: auto;
+        width: 100%;
+        font-size: 35px;
+    }
+}
+// review Page
+.reviewSpacer {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    padding: 30px;
+    row-gap: 50px;
+}
+.reviewCon {
+    @include customFlex(center, none);
+    height: auto;
+
+    .reviewForms {
+        @include customFlex(none, column);
+        height: auto;
+        width: auto;
+        border-radius: 5px;
+        background-color: $primary;
+        box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.15);
+        .reviewHeader {
+            @include customFlex(center, none);
+            background-color: #002244;
+            height: auto;
+            width: 100%;
+            border-radius: 5px 5px 0px 0px;
+            padding: 20px;
+            font-size: 20px;
+            color: $primary;
+        }
+        .reviewFormCon {
+            @include customFlex(center, none);
+            height: auto;
+            width: 100%;
+            padding: 20px;
+            font-size: 20px;
+            form {
+                @include customFlex(center, column);
+                height: auto;
+                width: 100%;
+                row-gap: 20px;
+                .reviewFormItem {
+                    @include customFlex(center, row);
+                    height: auto;
+                    width: 100%;
+                    .reviewFormItemInput {
+                        @include customFlex(center, none);
+                        height: auto;
+                        width: 100%;
+                        font-size: 20px;
+                    }
+                    .reviewFormItemTextarea {
+                        @include customFlex(center, none);
+                        height: 150px;
+                        width: 225px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // admin page
 .adminSpacer {
@@ -852,6 +978,23 @@ $generalWidth: 200px;
         font-size: 35px;
     }
     .adminSubTitle {
+        @include customFlex(center, none);
+        height: auto;
+        width: 100%;
+        font-size: 17.5px;
+    }
+}
+.TitleCon {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    .Title {
+        @include customFlex(center, none);
+        height: auto;
+        width: 100%;
+        font-size: 35px;
+    }
+    .SubTitle {
         @include customFlex(center, none);
         height: auto;
         width: 100%;
@@ -1040,12 +1183,13 @@ $generalWidth: 200px;
     height: auto;
     width: 100%;
     background-color: $primary;
-    padding: 30px;
+
     .aboutContentSpacer {
         @include customFlex(none, column);
         height: auto;
         width: 75%;
         row-gap: 17.5px;
+        padding: 30px;
         .aboutTitle {
             @include customFlex(none, none);
             height: auto;
@@ -1147,6 +1291,41 @@ $generalWidth: 200px;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+// user profile page
+.userProfileSpacer {
+    @include customFlex(none, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    padding: 30px;
+
+    .userProfileContentSpacer {
+        @include customFlex(none, column);
+        height: auto;
+        width: 75%;
+        row-gap: 17.5px;
+        .userProfileTitle {
+            @include customFlex(center, none);
+            height: auto;
+            width: 100%;
+            font-size: 25px;
+        }
+        .userProfileTextCon {
+            @include customFlex(none, column);
+            height: auto;
+            width: 100%;
+            row-gap: 17.5px;
+
+            .userProfileText {
+                @include customFlex(none, none);
+                height: auto;
+                width: 100%;
+                font-size: 17.5px;
             }
         }
     }

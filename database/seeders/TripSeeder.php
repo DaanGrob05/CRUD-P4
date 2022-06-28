@@ -26,6 +26,7 @@ class TripSeeder extends Seeder
             'startDate' => date('2022-10-10'),
             'endDate' => date('2022-10-5'),
             'price' => 100.0,
+            'image' => "/storage/images/1656399162pexels-chris-molloy-1308940.jpg",
             'hotel' => "Hotel",
         ]);
 
@@ -39,6 +40,7 @@ class TripSeeder extends Seeder
             'startDate' => date('2022-10-10'),
             'endDate' => date('2022-10-5'),
             'price' => 100.0,
+            'image' => "/storage/images/1656399209pexels-pixabay-460672.jpg",
             'hotel' => "Hotel",
         ]);
 
@@ -52,6 +54,7 @@ class TripSeeder extends Seeder
             'startDate' => date('2022-10-10'),
             'endDate' => date('2022-10-5'),
             'price' => 100.0,
+            'image' => "/storage/images/1656399237pexels-mark-neal-2225442.jpg",
             'hotel' => "Hotel",
         ]);
 
@@ -65,6 +68,7 @@ class TripSeeder extends Seeder
             'startDate' => date('2022-10-10'),
             'endDate' => date('2022-10-5'),
             'price' => 100.0,
+            'image' => "/storage/images/1656399260pexels-annam-w-1057840.jpg",
             'hotel' => "Hotel",
         ]);
 
@@ -78,6 +82,7 @@ class TripSeeder extends Seeder
             'startDate' => date('2022-10-10'),
             'endDate' => date('2022-10-5'),
             'price' => 100.0,
+            'image' => "/storage/images/1656399292pexels-aleksandar-pasaric-2506923.jpg",
             'hotel' => "Hotel",
         ]);
     }

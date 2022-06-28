@@ -88,7 +88,7 @@
                         @forelse ($reviews as $review)
                             <div class="reviewProfileCon">
                                 <a href="{{ route('reizen.show', $review->trip_id) }}">{{ $review->title }}</a>
-                                {{-- <div class="SgeneralButton"> --}}
+                                <div class="SgeneralButton">
                                     {{-- <a href="{{ route('reviews.delete', $review->review_id) }}">Delete</a> --}}
                                     <form action="{{ route('profile.reviews.delete', $review->id) }}" method="POST">
                                         @csrf

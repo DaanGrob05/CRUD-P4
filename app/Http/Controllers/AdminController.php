@@ -83,7 +83,7 @@ class AdminController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return to_route('admin.users.show', $id);
+        return to_route('admin.users', $id);
     }
 
     public function users_delete($id)
@@ -145,7 +145,7 @@ class AdminController extends Controller
     }
     // Einde Reviews Functies
 
-    
+
     // Messages Functies
     public function messages()
     {

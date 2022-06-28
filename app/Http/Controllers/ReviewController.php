@@ -37,7 +37,7 @@ class ReviewController extends Controller
         $boeking = DB::table('bookings')->where('trip_id', $trip_id)->where('user_id', Auth::user()->id)->first();
 
         if ($boeking == null) {
-            return redirect('/');
+            return to_route('reizen.show', $trip_id);
         }
 
         return view('reviews.create', ['trip_id' => $trip_id]);

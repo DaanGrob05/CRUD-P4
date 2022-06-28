@@ -488,9 +488,11 @@ $generalWidth: 200px;
         @include customFlex(center, column);
         height: auto;
         width: auto;
-        font-size: 30px;
-        font-weight: bold;
-        color: $secondary;
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            color: $secondary;
+        }
     }
     .welcomeContent {
         @include customFlex(center, column);
@@ -914,6 +916,62 @@ $generalWidth: 200px;
         font-size: 35px;
     }
 }
+
+.reviewsSpacer {
+    @include customFlex(center, column);
+    height: auto;
+    width: 100%;
+    background-color: $primary;
+    row-gap: 50px;
+    padding: 30px;
+    .reviewsCon {
+        @include customFlex(center, column);
+        height: auto;
+        width: 100%;
+        row-gap: 50px;
+        padding: 30px;
+        .reviewTitle {
+            @include customFlex(center, column);
+            height: auto;
+            width: 100%;
+            h2 {
+                font-size: 35px;
+            }
+        }
+        .reviewsBody {
+            @include customFlex(space-around, row);
+            height: auto;
+            width: 100%;
+            row-gap: 20px;
+            padding: 30px;
+            .reviewsBodyCon {
+                @include customFlex(center, column);
+                height: auto;
+                width: auto;
+                row-gap: 20px;
+                padding: 30px;
+                box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+                .reviewsBodyTitle {
+                    @include customFlex(center, column);
+                    height: auto;
+                    width: 100%;
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+                .reviewsBodyText {
+                    @include customFlex(center, column);
+                    height: auto;
+                    width: 100%;
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // review Page
 .reviewSpacer {
     @include customFlex(center, column);
@@ -1565,6 +1623,65 @@ $generalWidth: 200px;
                 width: 100%;
                 font-size: 17.5px;
             }
+        }
+    }
+}
+
+// media querry
+@media screen and (max-width: 420px) {
+    .landing {
+        @include customFlex(center, column);
+        padding: 5px;
+        width: 100%;
+    }
+    .flightsFormCon {
+        width: 400px;
+    }
+    .landingContent {
+        @include customFlex(center, column);
+        .landingBody {
+            @include customFlex(center, column);
+            height: auto;
+            width: 100%;
+            row-gap: 30px;
+            .landingBodyText {
+                @include customFlex(none, none);
+                height: auto;
+                width: 100%;
+                font-size: 17.5px;
+            }
+        }
+    }
+    .userItemsCon {
+        flex-wrap: wrap;
+    }
+    .welcomeItems {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .userItemsCon {
+        @include customFlex(center, row);
+        row-gap: 10px;
+        height: auto;
+        width: 100%;
+    }
+    .userEmptySpace {
+        display: none;
+    }
+    .navItemsCon {
+        @include customFlex(none, row);
+        row-gap: 10px;
+        height: auto;
+        width: 100%;
+    }
+    .unifiedLogo {
+        a {
+            font-size: 1em;
+        }
+    }
+    .userItem {
+        a {
+            font-size: 0, 9em;
         }
     }
 }

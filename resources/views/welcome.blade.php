@@ -17,7 +17,7 @@
 
     </head>
 
-    <body class="antialiased">
+  <body class="antialiased">
     <!-- Main content -->
     <div class="landingSpacer">
       <x-nav></x-nav>
@@ -178,6 +178,6 @@
   <x-footer></x-footer>
   <script type="text/javascript" src="{{ asset('js/slider.js') }}">
   </script>
-  </body>
+</body>
     
 </html>

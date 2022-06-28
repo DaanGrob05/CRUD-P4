@@ -535,7 +535,9 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   flex-direction: column;
   height: auto;
   width: auto;
-  font-size: 30px;
+}
+.welcomeContentSpacer .welcomeTitle h1 {
+  font-size: 60px;
   font-weight: bold;
   color: #002244;
 }
@@ -1107,6 +1109,82 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   flex-direction: none;
   height: auto;
   width: 100%;
+  font-size: 35px;
+}
+
+.reviewsSpacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  row-gap: 50px;
+  padding: 30px;
+}
+.reviewsSpacer .reviewsCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 50px;
+  padding: 30px;
+}
+.reviewsSpacer .reviewsCon .reviewTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.reviewsSpacer .reviewsCon .reviewTitle h2 {
+  font-size: 35px;
+}
+.reviewsSpacer .reviewsCon .reviewsBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+  padding: 30px;
+}
+.reviewsSpacer .reviewsCon .reviewsBody .reviewsBodyCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  row-gap: 20px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.reviewsSpacer .reviewsCon .reviewsBody .reviewsBodyCon .reviewsBodyTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.reviewsSpacer .reviewsCon .reviewsBody .reviewsBodyCon .reviewsBodyTitle h2 {
+  font-size: 35px;
+}
+.reviewsSpacer .reviewsCon .reviewsBody .reviewsBodyCon .reviewsBodyText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.reviewsSpacer .reviewsCon .reviewsBody .reviewsBodyCon .reviewsBodyText h2 {
   font-size: 35px;
 }
 
@@ -2017,6 +2095,87 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
   height: auto;
   width: 100%;
   font-size: 17.5px;
+}
+
+@media screen and (max-width: 420px) {
+  .landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .flightsFormCon {
+    width: 400px;
+  }
+
+  .landingContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .landingContent .landingBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    row-gap: 30px;
+  }
+  .landingContent .landingBody .landingBodyText {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: none;
+    height: auto;
+    width: 100%;
+    font-size: 17.5px;
+  }
+
+  .userItemsCon {
+    flex-wrap: wrap;
+  }
+
+  .welcomeItems {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .userItemsCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    row-gap: 10px;
+    height: auto;
+    width: 100%;
+  }
+
+  .userEmptySpace {
+    display: none;
+  }
+
+  .navItemsCon {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+    row-gap: 10px;
+    height: auto;
+    width: 100%;
+  }
+
+  .unifiedLogo a {
+    font-size: 1em;
+  }
+
+  .userItem a {
+    font-size: 0, 9em;
+  }
 }
 
 

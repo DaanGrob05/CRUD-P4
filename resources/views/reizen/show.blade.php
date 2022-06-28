@@ -3,7 +3,6 @@
 </x-nav>
 <div class="showTripSpacer">
      
-        
     <div class="tripShowCon">
        <div class="tripShowTitleCon">
             <h1 class="tripShowTitle">{{ $trip->trip_name }}</h1>

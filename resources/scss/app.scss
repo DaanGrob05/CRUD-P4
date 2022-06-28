@@ -1461,10 +1461,15 @@ $generalWidth: 200px;
                         font-size: 15px;
                     }
                     .reviewsBody {
-                        @include customFlex(space-around, row);
+                        @include customFlex(center, column);
                         height: auto;
                         width: 100%;
                         row-gap: 20px;
+                        .reviewProfileCon {
+                            @include customFlex(space-around, row);
+                            height: auto;
+                            width: 100%;
+                        }
                     }
                 }
             }

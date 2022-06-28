@@ -20,7 +20,7 @@ class UserActionController extends Controller
         $bookings = DB::table('bookings')
             ->where('user_id', Auth::user()->id)
             ->get();
-            
+
         $reviews = DB::table('reviews')
             ->where('user_id', Auth::user()->id)
             ->get();
@@ -56,7 +56,7 @@ class UserActionController extends Controller
         DB::table('bookings')
             ->where('booking_id', $id)
             ->delete();
-            return to_route('profile');
+        return to_route('profile');
     }
 
     public function edit()
@@ -72,6 +72,14 @@ class UserActionController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
+        return to_route('profile');
+    }
+
+    public function review_delete($id)
+    {
+        DB::table('reviews')
+            ->where('id', $id)
+            ->delete();
         return to_route('profile');
     }
 }

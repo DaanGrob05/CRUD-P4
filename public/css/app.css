@@ -1870,12 +1870,20 @@ footer .footerCon .footerRowCon .footerRow .copyright .copyrightP {
 }
 .userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .reviewsCon .reviewsBody {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  row-gap: 20px;
+}
+.userProfileSpacer .userProfileContentSpacer .userProfileContentCon .userActionsShow .reviewsCon .reviewsBody .reviewProfileCon {
+  display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
   height: auto;
   width: 100%;
-  row-gap: 20px;
 }
 
 .contactSpacer {

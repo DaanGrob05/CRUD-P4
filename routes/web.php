@@ -54,6 +54,7 @@ Route::get('profile', [UserActionController::class, 'dashboard'])->name('profile
 Route::get('profile/bookings', [UserActionController::class, 'bookings'])->name('profile.bookings');
 Route::get('profile/bookings/{id}', [UserActionController::class, 'booking'])->name('profile.bookings.show');
 Route::delete('profile/bookings/{id}', [UserActionController::class, 'booking_delete'])->name('profile.bookings.delete');
+Route::delete('profile/reviews/{id}', [UserActionController::class, 'review_delete'])->name('profile.reviews.delete');
 Route::get('profile/edit', [UserActionController::class, 'edit'])->name('profile.edit');
 Route::put('profile/update', [UserActionController::class, 'update'])->name('profile.update');
 

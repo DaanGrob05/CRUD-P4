@@ -86,15 +86,22 @@
                     </div>
                     <div class="reviewsBody">
                         @forelse ($reviews as $review)
-                            <a>{{ $review->title }}</a>
-                            <div class="SgeneralButton">
-                                {{-- <a href="{{ route('reviews.delete', $review->review_id) }}">Delete</a> --}}
-                                <a>Delete</a>
+                            <div class="reviewProfileCon">
+                                <a href="{{ route('reizen.show', $review->trip_id) }}">{{ $review->title }}</a>
+                                {{-- <div class="SgeneralButton"> --}}
+                                    {{-- <a href="{{ route('reviews.delete', $review->review_id) }}">Delete</a> --}}
+                                    <form action="{{ route('profile.reviews.delete', $review->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="SgeneralButton" type="submit" onclick="return confirm('Are you sure you want to cancel this review?')"><a>Cancel</a></button>
+                                    </form>
+                                </div>
                             </div>
-                                @empty
-                                    <p>No reviews yet</p>
-
+                        @empty
+                            <p>No reviews yet</p>
                         @endforelse
+                        
+                            
                     </div>
                 </div>
             </div>

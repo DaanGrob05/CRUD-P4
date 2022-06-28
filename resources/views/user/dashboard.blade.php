@@ -18,7 +18,7 @@
                             <h3>Name</h3>
                         </div>
                         <div class="userProfileDetail">
-                            <p>{{ Auth::user()->name }} Sins</p>
+                            <p>{{ Auth::user()->name }}</p>
                         </div>
                     </div>
                     <div class="userProfileDetailCon">

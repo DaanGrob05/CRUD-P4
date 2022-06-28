@@ -15,12 +15,13 @@
                         {{ session('status') }}
                     </div>
                 @endif
-                <form action="{{ route('contact.store') }}" method="POST">
+                <form action="{{ route('contact.store') }}" id="contact" method="POST">
                     @csrf
                     <div class="contactInput_Label">
                         <label class="contactLabel" for="name">Name *</label>
                             <x-contact-input 
                             class="contactInput"
+                            id="name"
                             type="text"
                             name="name"
                             field="name"
@@ -31,7 +32,8 @@
                     <div class="contactInput_Label">
                         <label class="contactLabel" for="email">Email *</label>
                         <x-contact-input
-                            class="contactInput" 
+                            class="contactInput"
+                            id="email"
                             type="text"
                             name="email"
                             field="email"
@@ -54,6 +56,7 @@
                         <label class="contactLabel" for="message">Message *</label>
                         <x-contact-input
                             class="contactInput" 
+                            id="message"
                             type="text"
                             name="message"
                             field="message"
@@ -69,14 +72,4 @@
 </div>
 <x-footer></x-footer>
 
-
-{{--     
-        <form action="{{route('contact.store') }}" method="POST">
-            @csrf
-            
-            
-            
-
-            
-            <button type="submit">Send Message</button>
-        </form> --}}
+<script src="{{ asset('js/formValidation.js') }}"></script>

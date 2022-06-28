@@ -2,6 +2,7 @@ const mix = require("laravel-mix");
 
 mix.js("resources/js/slider.js", "public/js/slider.js");
 mix.js("resources/js/to_top_button.js", "public/js/to_top_button.js");
+mix.js("resources/js/formValidation.js", "public/js/formValidation.js");
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management

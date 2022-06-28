@@ -57,7 +57,7 @@
                 </div>
             </div>
         @empty
-        <p>Er zijn geen reizen gevonden.</p>
+        <p>No Trips</p>
         @endforelse
     </div>  
     <button class="generalButton">

@@ -15,8 +15,6 @@
                 @else
                     <img class="tripShowImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="">
                 @endif
-
-                <img class="tripShowImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt="">
             </div>
             <div class="tripShowInfo">
                 <div class="tripShowInfoTitle">

@@ -7,5 +7,5 @@
 <form action="{{ route('admin.boekingen.delete', $boeking->booking_id) }}" method="post">
     @csrf
     @method('DELETE')
-    <button type="submit" class="" onclick="return confirm('Weet je zeker dat je deze boeking wilt verwijderen?')">Verwijder Boeking</button>
+    <button type="submit" class="" onclick="return confirm('Are you sure you want to delete this booking?')">Delete Booking</button>
 </form>

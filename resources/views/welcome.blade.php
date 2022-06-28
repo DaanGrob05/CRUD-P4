@@ -73,7 +73,7 @@
                         name="typeTrip"
                         id="oneWay"
                       />
-                      <span class="radioSpan">One-Way</span>
+                      <span class="radioSpan">Retour</span>
                     </label>
                 </div>
                 <div class="whenCon">

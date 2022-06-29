@@ -68,29 +68,29 @@
         <script type="text/javascript" src="{{ asset('js/to_top_button.js') }}"></script>
 
         <script type="text/javascript">
-            $(document).ready(function(){
-                $('#name').on('keyup',function () {
-                    var query = $(this).val();
-                    // console.log(query);
-                    $.ajax({
-                        url: "{{ route('ajaxSearch') }}",
-                        method: 'GET',
-                        data: {
-                            'name': query
-                        },
-                        success: function (data) {
-                            // console.log(data);
-                            var item = '';
-                            $('.tripsCon').html('');
-                            // console.log(value.image);
-                            $.each(JSON.parse(data), function(index, value){
-                                item = '<div class="tripCon"> <div class="tripImageCon"> @if ($trip->image) <img class="tripImage" src="{{ asset($trip->image) }}" alt=""> @else <img class="tripImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt=""> @endif </div> <div class="tripInfo"> <div class="tripName"> <p>' + value.trip_name + '</p> </div> <div class="tripDescription"> <p>' + value.small_description + '</p> </div> <div class="tripDate"> <p>' + value.startDate + ' - ' + value.endDate + '</p> </div> <div class="moreInfo"> <p class="tripPrice">€' + value.price + ',-</p> <button class="moreInfoButton"> <a class="moreInfoA" href="{{ route('reizen.show', $trip->trip_id) }}">more info</a> </button> </div> </div> </div>';
+            // $(document).ready(function(){
+            //     $('#name').on('keyup',function () {
+            //         var query = $(this).val();
+            //         // console.log(query);
+            //         $.ajax({
+            //             url: "{{ route('ajaxSearch') }}",
+            //             method: 'GET',
+            //             data: {
+            //                 'name': query
+            //             },
+            //             success: function (data) {
+            //                 // console.log(data);
+            //                 var item = '';
+            //                 $('.tripsCon').html('');
+            //                 // console.log(value.image);
+            //                 $.each(JSON.parse(data), function(index, value){
+            //                     item = '<div class="tripCon"> <div class="tripImageCon"> @if ($trip->image) <img class="tripImage" src="{{ asset($trip->image) }}" alt=""> @else <img class="tripImage" src="https://deconova.eu/wp-content/uploads/2016/02/default-placeholder.png" alt=""> @endif </div> <div class="tripInfo"> <div class="tripName"> <p>' + value.trip_name + '</p> </div> <div class="tripDescription"> <p>' + value.small_description + '</p> </div> <div class="tripDate"> <p>' + value.startDate + ' - ' + value.endDate + '</p> </div> <div class="moreInfo"> <p class="tripPrice">€' + value.price + ',-</p> <button class="moreInfoButton"> <a class="moreInfoA" href="{{ route('reizen.show', $trip->trip_id) }}">more info</a> </button> </div> </div> </div>';
                                 
-                                $('.tripsCon').append(item);
-                            });
-                        }
-                    });
-                });
-            });
+            //                     $('.tripsCon').append(item);
+            //                 });
+            //             }
+            //         });
+            //     });
+            // });
         </script>
 </div> 
